@@ -1,0 +1,104 @@
+<div id="footer">
+    <div class="inner">
+          <div class="download">
+              <p class="footer_title">下载QQ音乐客户端</p>
+              <ul class="download_ul">
+                  <li class="download_item">
+                      <a href="" class="tupian_a">
+                        <div class="download_div">
+                            <i class="tupian"></i> PC版
+                         </div>
+                      </a>
+                  </li>
+                  
+                  <li class="download_item">
+                      <a href="" class="tupian_a">
+                        <div class="download_div">
+                            <i class="tupian_MAC"></i> MAC版
+                         </div>
+                      </a>
+                  </li>
+                  
+                  <li class="download_item">
+                      <a href="" class="tupian_a">
+                        <div class="download_div">
+                            <i class="tupian_Android"></i>Android版
+                         </div>
+                      </a>
+                  </li>
+                  
+                  <li class="download_item">
+                      <a href="" class="tupian_a">
+                        <div class="download_div">
+                            <i class="tupian_Iphone"></i>Iphone版
+                         </div>
+                      </a>
+                  </li> 
+              </ul>
+         </div>
+         
+          <div class="product">
+              <p class="footer_title2">特色产品</p>
+              <ul class="download_ul">
+                  <li class="download_item">
+                      <a href="" class="tupian_a">
+                        <div class="download_div">
+                            <i class="tupian_Kge"></i>全民K歌
+                         </div>
+                      </a>
+                  </li>
+                  
+                  <li class="download_item">
+                      <a href="" class="tupian_a">
+                        <div class="download_div">
+                            <i class="tupian_SuperSound"></i> Super Sound
+                         </div>
+                      </a>
+                  </li> 
+                  
+                  <li class="download_item">
+                      <a href="" class="tupian_a">
+                        <div class="download_div">
+                            <i class="tupian_Qplay"></i>Qplay
+                         </div>
+                      </a>
+                  </li> 
+                 
+              </ul>
+               <span class="download_item_sp"><a href="">车载互联</a></span>
+                  <span class="download_item_sp"><a href="">QQ演出</a></span>
+         </div>
+          <div class="link">
+               <p class="footer_title3">合作链接</p>
+               <ul class="link_ul" >
+               <li class="link_txt"><a href="">腾讯视频</a></li>
+               <li class="link_txt"><a href="">手机QQ空间</a></li>
+               <li class="link_txt"><a href="">最新版QQ</a></li>
+               <li class="link_txt"><a href="">QQ浏览器</a></li>
+               <li class="link_txt"><a href="">腾讯视频</a></li>
+               <li class="link_txt"><a href="">手机QQ空间</a></li>
+               <li class="link_txt"><a href="">最新版QQ</a></li>
+               <li class="link_txt"><a href="">腾讯视频</a></li>
+               <li class="link_txt"><a href="">手机QQ空间</a></li>
+               <li class="link_txt"><a href="">最新版QQ</a></li>
+               </ul>
+          </div>
+          <div class="footer_platform">
+                    <div class="open">开放平台</div>
+                    <ul class="download_ul">
+                        <li class="footer_platform_list__item"><a href="">原创音乐平台</a></li>
+                        <li class="footer_platform_list__item"><a href="">音乐号认证</a></li>
+                        <li class="footer_platform_list__item"><a href="">上传视频</a></li>
+                        
+                        
+                    </ul>
+             </div>
+             <div class="copy_Right">
+                 <p><a href="">关于腾讯</a> | <a href="">About Tencent</a> | <a href="">服务条款</a> | <a href="">用户服务协议</a> | <a href="">隐私策略</a> | <a href="">广告服务</a> | <a href="">腾讯招聘</a> | <a href="">客服中心</a> | <a href="">网站导航</a></p>
+                 <p>Copyright &copy; 1998 - <a href="">ll Rights Reserved.</a></p>
+	<p>腾讯公司  <a href="">版权所有 </a><a href="">腾讯网络文化经营许可证</a> </p>
+             </div>
+          </div>
+          
+            
+</div>

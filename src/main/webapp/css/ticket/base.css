@@ -1,0 +1,60 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dd,
+dt {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "΢���ź�";
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #31c27c;
+  text-decoration: none;
+}
+strong,
+em,
+li {
+  font-weight: 400;
+  font-style: normal;
+}
+img,
+input {
+  border: 0 none;
+  outline-style: none;
+  padding: 0;
+  display: block;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}

@@ -1,0 +1,58 @@
+﻿/*
+* @Author: dhl
+* @Date:   2018-11-26 11:09:25
+* @Last Modified by:   dhl
+* @Last Modified time: 2018-11-27 11:28:26
+*/
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, dl, dt, dd, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #050505;
+}
+
+a {
+    text-decoration: none;
+    color: #050505;
+}
+
+    a:hover {
+        color: #ca0000;
+    }
+
+strong, em, i {
+    font-weight: 400;
+    font-style: normal;
+}
+
+img, input {
+    border: 0 none;
+    outline-style: none;
+    padding: 0;
+    /* 解决底部3像素空白 */
+    vertical-align: bottom;
+    /* display: block; */
+}
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.w {
+    width: 1194px;
+    margin: 0 auto;
+}
+

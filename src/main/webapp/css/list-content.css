@@ -1,0 +1,458 @@
+.main a {
+  text-decoration: none;
+}
+.main a:hover {
+  text-decoration: none;
+}
+.main .mod_data {
+  position: relative;
+  height: 250px;
+  padding-left: 305px;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+.main .mod_data .data__cover {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main .mod_data .data__cover img {
+  width: 100%;
+  height: 100%;
+}
+.main .mod_data .data__cont {
+  padding-top: 13px;
+}
+.main .mod_data .data__cont .data__tit {
+  font-size: 31px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  margin-right: 10px;
+}
+.main .mod_data .data__cont .data_autor span {
+  display: inline-table;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icon_sprite@2x.png) -20px -240px;
+  background-size: 200px 340px;
+  margin: 5px 7px 0 0;
+}
+.main .mod_data .data__cont .data__info {
+  padding-top: 8px;
+}
+.main .mod_data .data__cont .data__info li {
+  height: 27px;
+  line-height: 27px;
+  font-weight: 400;
+}
+.main .mod_data .data__cont .data__actions {
+  position: absolute;
+  bottom: 23px;
+}
+.main .mod_data .data__cont .data__actions .mod_btn {
+  min-width: 122px;
+  text-align: center;
+  padding: 0 18px;
+  border: 1px solid #c9c9c9;
+  color: #000;
+  border-radius: 2px;
+  font-size: 14px;
+  margin-right: 6px;
+  padding: 0 23px;
+  height: 38px;
+  line-height: 38px;
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.main .mod_data .data__cont .data__actions .mod_btn:hover {
+  background-color: #f1f0f0;
+}
+.main .mod_data .data__cont .data__actions .mod_btn i {
+  display: inline-table;
+  width: 20px;
+  height: 16px;
+  background: url(../img/icon_sprite@2x.png) -80px -220px;
+  background-size: 200px 340px;
+  margin-right: 6px;
+  vertical-align: -3px;
+}
+.main .mod_data .data__cont .data__actions .mod_btn .sou {
+  background-position: -60px 0;
+}
+.main .mod_data .data__cont .data__actions .mod_btn .ping {
+  background-position: -140px -120px;
+}
+.main .mod_data .data__cont .data__actions .mod_btn .duo {
+  width: 16px;
+  height: 16px;
+  background-position: -20px -80px;
+}
+.main .mod_data .data__cont .data__actions .green {
+  border: 1px solid #31c27c;
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .mod_data .data__cont .data__actions .green:hover {
+  background-color: #29a86b;
+}
+.main .detail_layout {
+  position: relative;
+  padding-right: 343px;
+}
+.main .detail_layout .detail_layout__main {
+  float: left;
+  height: 1110px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist {
+  padding-bottom: 60px;
+  font-size: 14px;
+  width: 857px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .mod_songlist ul:nth-child(2n-1) {
+  background-color: red;
+}
+.main .detail_layout .detail_layout__main .mod_songlist a {
+  font-family: "Malgun Gothic";
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__header {
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  background-color: #fbfbfd;
+  position: relative;
+  padding-left: 46px;
+  padding-right: 100px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__header li {
+  float: left;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__header .songlist__header_name {
+  width: 54%;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__header .songlist__header_autor {
+  width: 20%;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__header .songlist__header_zhuanji {
+  width: 20%;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__header .songlist__header_time {
+  position: absolute;
+  top: 0;
+  right: 38px;
+  width: 50px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list {
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  background-color: #fbfbfd;
+  position: relative;
+  padding-left: 46px;
+  padding-right: 100px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list li {
+  float: left;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_num {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  widows: 36px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name {
+  width: 54%;
+  position: relative;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .songlist__songname_txt {
+  max-width: 25%;
+  box-sizing: border-box;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  margin-right: 8px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .songlist__songname_txt a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .songlist__list {
+  display: inline-block;
+  width: 34px;
+  height: 16px;
+  background: url(../img/icon_sprite@2x.png) -80px -280px;
+  background-size: 200px 340px;
+  vertical-align: middle;
+  padding: 0;
+  margin-left: 10px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .songlist__list_mv {
+  background-position: -40px -280px;
+  margin-left: 0;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  overflow: hidden;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .mod_list_menus {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url(../img/icon_list_menu.png) 0 0;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .mod_list_menus:hover {
+  background-position: -40px 0;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .add {
+  background-position: 0 -80px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .add:hover {
+  background-position: -40px -80px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .down {
+  background-position: 0 -120px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .down:hover {
+  background-position: -40px -120px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .fenx {
+  background-position: 0 -40px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name .mod_list_menu a .fenx:hover {
+  background-position: -40px -40px;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_autor {
+  width: 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_zhuanji {
+  width: 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_time {
+  position: absolute;
+  top: 0;
+  right: 38px;
+  width: 50px;
+}
+.main .detail_layout .mod_comment {
+  float: left;
+  margin-top: 30px;
+}
+.main .detail_layout .mod_comment .commentbox {
+  width: 850px;
+  margin: 20px auto;
+}
+.main .detail_layout .mod_comment .commentbox h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 58px;
+}
+.main .detail_layout .mod_comment #comment {
+  background-color: #31c27c;
+  border-color: #31c27c;
+}
+.main .detail_layout .mod_comment .mytextarea {
+  width: 100%;
+  padding: 10px 10px;
+  overflow: auto;
+  word-break: break-all;
+  height: 100px;
+  background-color: #f5f5f5;
+  color: #000;
+  font-size: 1em;
+  resize: none;
+  border: none;
+  outline-style: none;
+  border: solid 1px #ececec;
+}
+.main .detail_layout .mod_comment .zi {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.main .detail_layout .mod_comment .comment-list {
+  width: 850px;
+  margin: 20px auto;
+  clear: both;
+  padding-top: 20px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info {
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info header {
+  width: 7%;
+  position: absolute;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info header img {
+  width: 100%;
+  border-radius: 50%;
+  padding: 5px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right {
+  padding: 5px 0px 5px 8%;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right h3 {
+  margin: 5px 0px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-header {
+  height: 25px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-header span,
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-footer span {
+  padding-right: 2em;
+  color: #aaa;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-header span,
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .comment-content-footer span.reply-btn,
+.main .detail_layout .mod_comment .send,
+.main .detail_layout .mod_comment .reply-list-btn {
+  cursor: pointer;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list {
+  border-left: 3px solid #ccc;
+  padding-left: 7px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list .reply {
+  border-bottom: 1px dashed #ccc;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list .reply div span {
+  padding-left: 10px;
+}
+.main .detail_layout .mod_comment .comment-list .comment-info .comment-right .reply-list .reply p span {
+  padding-right: 2em;
+  color: #aaa;
+}
+.main .detail_layout .mod_comment .mod_page {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.main .detail_layout .mod_comment .mod_page .mod_page_index {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  padding: 0 21px;
+  box-sizing: border-box;
+  min-width: 24px;
+  color: #a2a2a2;
+  text-decoration: none;
+}
+.main .detail_layout .mod_comment .mod_page .mod_page_index:hover {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .detail_layout .mod_comment .mod_page .current {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .detail_layout .mod_comment .mod_page .more {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  padding: 0 21px;
+  box-sizing: border-box;
+  min-width: 24px;
+  color: #a2a2a2;
+}
+.main .detail_layout .detail_layout__other {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 290px;
+  padding-bottom: 20px;
+}
+.main .detail_layout .detail_layout__other .mod_about {
+  line-height: 22px;
+  margin-bottom: 25px;
+  margin-top: -8px;
+}
+.main .detail_layout .detail_layout__other .mod_about .mod_tit {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 46px;
+}
+.main .detail_layout .detail_layout__other .mod_about .mod_cont {
+  max-height: 88px;
+  overflow: hidden;
+}
+.main .detail_layout .detail_layout__other .mod_about .about__more {
+  margin-right: 10px;
+}
+.main .detail_layout .popup_data_detail {
+  display: none;
+  position: absolute;
+  top: 85px;
+  right: 305px;
+  width: 580px;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  z-index: 100;
+}
+.main .detail_layout .popup_data_detail .popup_data_detail__cont {
+  max-height: 400px;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 30px 15px;
+  overflow-y: auto;
+}
+.main .detail_layout .popup_data_detail .popup_data_detail__cont h3 {
+  line-height: 22px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 0 20px;
+  margin: 0 24px 0 19px;
+}
+.main .detail_layout .popup_data_detail .popup_data_detail__cont p {
+  min-height: 22px;
+  text-align: justify;
+  word-break: break-all;
+  margin: 0 24px 0 19px;
+}
+.main .detail_layout .popup_data_detail span {
+  position: absolute;
+  top: 36px;
+  right: -16px;
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.35);
+}

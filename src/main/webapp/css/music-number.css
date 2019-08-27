@@ -1,0 +1,892 @@
+.box {
+  width: 100%;
+  height: 100%;
+}
+.box .bj {
+  width: 100%;
+  position: relative;
+}
+.box .bj .bj1 {
+  width: 100%;
+  height: 320px;
+  background: black url(../img/bg1.jpg) no-repeat center;
+}
+.box .bj .bj2 {
+  width: 100%;
+  height: 359px;
+  background: black url(../img/bg2.jpg) no-repeat center;
+}
+.box .bj .tcbj {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  opacity: 0.3;
+  position: fixed;
+  z-index: 55;
+  display: none;
+}
+.box .bj .tc {
+  width: 600px;
+  height: 500px;
+  position: fixed;
+  background-color: #ffffff;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 666;
+  border-radius: 10px;
+  display: none;
+}
+.box .bj .tc .tca {
+  width: 100%;
+  height: 50px;
+  padding-top: 20px;
+  border-bottom: #eeeeee 1px solid;
+}
+.box .bj .tc .tca ul a:hover {
+  color: #00f3b1;
+}
+.box .bj .tc .tca ul .active {
+  color: #00f3b1;
+}
+.box .bj .tc .tca ul li:nth-child(1) {
+  width: 100px;
+  margin-left: 223px;
+}
+.box .bj .tc .tca ul li:nth-child(1) a {
+  width: 100%;
+}
+.box .bj .tc .tca ul li:nth-child(2) a {
+  width: 100%;
+}
+.box .bj .tc .tca ul li:nth-child(3) {
+  font-family: '微软雅黑';
+  width: 30px;
+}
+.box .bj .tc .tca ul li:nth-child(3) a {
+  width: 10px;
+  color: #7f9999;
+}
+.box .bj .tc .tca ul li:nth-child(3) a:hover {
+  color: #00f3b1;
+}
+.box .bj .tc .tce {
+  background-color: #00f3b1;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  opacity: 0;
+  display: none;
+}
+.box .bj .tc .tcd {
+  display: block;
+}
+.box .bj .tc .tcd .tcb {
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  margin: 0 auto;
+  border-left: #eeeeee 2px solid;
+  border-right: #eeeeee 2px solid;
+}
+.box .bj .tc .tcd .tcb p:nth-child(1) {
+  font-size: 25px;
+}
+.box .bj .tc .tcd .tcb p:nth-child(2) {
+  margin: 5px ;
+  font-size: 20px;
+}
+.box .bj .tc .tcd .tcb p:nth-child(2) a {
+  color: cornflowerblue;
+}
+.box .bj .tc .tcd .tcb p:nth-child(3) {
+  font-size: 20px;
+}
+.box .bj .tc .tcd .tcb .tcba {
+  width: 300px;
+  height: 300px;
+  background: url(../img/登录二维码.png) no-repeat left;
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  opacity: 0;
+  display: none;
+}
+.box .bj .tc .tcd .tcb .tcbb {
+  width: 300px;
+  height: 300px;
+  background: url(../img/登录手机界面.png) no-repeat right;
+  position: absolute;
+  top: 143px;
+  left: 160px;
+  opacity: 0;
+  display: none;
+}
+.box .bj .tc .tcd .tcc {
+  padding: 0 10px;
+}
+.box .bj .tc .tcd .tcc input {
+  width: 15px;
+  height: 15px;
+}
+.box .bj .tc .tcd .tcc .right li a {
+  font-size: 13px;
+}
+.box .bj .tc .tcd .tcc .right li a:hover {
+  color: #333333;
+}
+.box .bj .denglu {
+  width: 1200px;
+  position: absolute;
+  top: 0;
+}
+.box .bj .denglu .right {
+  color: white;
+  margin-top: 20px;
+}
+.box .bj .denglu .right:hover {
+  color: #00f3b1;
+}
+.box .bj .denglu .imga {
+  text-align: center;
+  margin-top: 200px;
+}
+.box .bj .denglu .imga .img1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 430px;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+}
+.box .bj .denglu .imga .img2 {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 700px;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+}
+.box .bj .denglu .imga .ljktbj {
+  width: 290px;
+  height: 70px;
+  border-radius: 70px;
+  background-color: aqua;
+  position: absolute;
+  bottom: -350px;
+  left: 455px;
+  opacity: 0.2;
+  display: none;
+}
+.box .bj .denglu .imga .ljkt {
+  width: 280px;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 25px;
+  background-color: #00f3b1;
+  border-radius: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 840px;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  border: 0px solid #00f3b1;
+}
+.box .bj .denglu .imga .ljkt .ljkt1 {
+  width: 100%;
+}
+.box .bj .denglu .imga .ljkt .ljkt1:hover {
+  color: white;
+}
+.box .bannera {
+  width: 100%;
+  height: 700px;
+  background-color: #ffffff;
+}
+.box .bannera .banner1 {
+  position: relative;
+}
+.box .bannera .banner1 .bj {
+  width: 100%;
+  position: relative;
+}
+.box .bannera .banner1 .bj .bj1 {
+  height: 700px;
+  background: url(../img/circle.png) no-repeat left;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 30px;
+  opacity: 0;
+}
+.box .bannera .banner1 .bj .bj2 {
+  height: 700px;
+  background: url(../img/mobile.png) no-repeat left;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 111px;
+}
+.box .bannera .banner1 .bj .bj3 {
+  width: 300px;
+  height: 692px;
+  background: url(../img/mobile_cont_1.jpg) no-repeat left;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 143px;
+}
+.box .bannera .banner1 .bj .bj4 {
+  width: 300px;
+  height: 692px;
+  background: url(../img/mobile_cont_2.jpg) no-repeat left;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 260px;
+  opacity: 0;
+}
+.box .bannera .banner1 .right {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.box .bannera .banner1 .right p:nth-child(1) {
+  width: 350px;
+  font-size: 40px;
+  position: absolute;
+  top: 170px;
+  left: 50px;
+  opacity: 0;
+}
+.box .bannera .banner1 .right p:nth-child(2) {
+  width: 450px;
+  position: absolute;
+  top: 240px;
+  left: 50px;
+  opacity: 0;
+}
+.box .bannera .banner1 .right p:nth-child(3) {
+  width: 450px;
+  position: absolute;
+  top: 270px;
+  left: 50px;
+  opacity: 0;
+}
+.box .bannera .banner1 .right .tu {
+  width: 500px;
+  height: 200px;
+}
+.box .bannera .banner1 .right .tu img {
+  position: absolute;
+  width: 80%;
+  top: 330px;
+  opacity: 0;
+  left: 50px;
+}
+.box .bannerb {
+  width: 100%;
+  height: 700px;
+  background-color: #f5f5f5;
+}
+.box .bannerb .banner1 {
+  height: 100%;
+  position: relative;
+}
+.box .bannerb .banner1 .left p:nth-child(1) {
+  font-size: 40px;
+  position: absolute;
+  top: 180px;
+  opacity: 0;
+}
+.box .bannerb .banner1 .left p:nth-child(2) {
+  position: absolute;
+  top: 220px;
+  opacity: 0;
+}
+.box .bannerb .banner1 .left p:nth-child(3) {
+  position: absolute;
+  top: 260px;
+  opacity: 0;
+}
+.box .bannerb .banner1 .left p:nth-child(4) {
+  position: absolute;
+  top: 300px;
+  opacity: 0;
+}
+.box .bannerb .banner1 .left .tu {
+  width: 40%;
+  height: 200px;
+  position: absolute;
+  top: 330px;
+  opacity: 0;
+}
+.box .bannerb .banner1 .left .tu img {
+  width: 40%;
+}
+.box .bannerb .banner1 .right {
+  position: absolute;
+  top: 0;
+  right: 250px;
+  width: 100%;
+  height: 700px;
+}
+.box .bannerb .banner1 .right .bj1 {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 100%;
+  height: 700px;
+  background: url(../img/mobile.png) no-repeat right;
+  opacity: 0;
+}
+.box .bannerb .banner1 .right .bj2 {
+  position: absolute;
+  left: -48px;
+  height: 693px;
+  background: url(../img/mobile_cont_3.jpg) no-repeat right;
+  opacity: 0;
+}
+.box .bannerc {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+.box .bannerc .bannerca {
+  overflow: hidden;
+}
+.box .bannerc .bannerca .bjc {
+  position: relative;
+  height: 100%;
+}
+.box .bannerc .bannerca .bjc .bjca {
+  top: 150px;
+  left: 20px;
+  z-index: 1;
+  position: absolute;
+}
+.box .bannerc .bannerca .bjc .bjcb {
+  top: 194px;
+  left: 18px;
+  z-index: 2;
+  position: absolute;
+  opacity: 0;
+}
+.box .bannerc .bannerca .bjcca {
+  width: 600px;
+  height: 700px;
+  position: relative;
+  left: 50px;
+}
+.box .bannerc .bannerca .bjcca p:nth-child(1) {
+  font-size: 40px;
+  position: absolute;
+  top: 160px;
+}
+.box .bannerc .bannerca .bjcca p:nth-child(2) {
+  position: absolute;
+  top: 210px;
+  opacity: 0;
+}
+.box .bannerc .bannerca .bjcca p:nth-child(3) {
+  position: absolute;
+  top: 220px;
+  opacity: 0;
+}
+.box .bannerc .bannerca .bjcca p:nth-child(4) {
+  position: absolute;
+  top: 230px;
+  opacity: 0;
+}
+.box .bannerc .bannerca .bjcca .tu {
+  width: 80%;
+  height: 200px;
+  position: absolute;
+  top: 500px;
+  opacity: 0;
+}
+.box .bannerc .bannerca .bjcca .tu img {
+  width: 68%;
+  margin-top: 60px;
+}
+.box .bannerd {
+  width: 100%;
+  height: 700px;
+  background-color: #f5f5f5;
+}
+.box .bannerd .bannerda {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.box .bannerd .bannerda .bjda {
+  width: 500px;
+  padding-top: 50px;
+  width: 50%;
+}
+.box .bannerd .bannerda .bjda p:nth-child(1) {
+  font-size: 40px;
+  position: absolute;
+  top: 150px;
+  opacity: 0;
+}
+.box .bannerd .bannerda .bjda p:nth-child(2) {
+  position: absolute;
+  top: 190px;
+  opacity: 0;
+}
+.box .bannerd .bannerda .bjda p:nth-child(3) {
+  position: absolute;
+  top: 460px;
+  opacity: 0;
+}
+.box .bannerd .bannerda .bjda .tu {
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  top: 460px;
+  opacity: 0;
+}
+.box .bannerd .bannerda .bjda .tu img {
+  width: 30%;
+  margin-top: 30px;
+}
+.box .bannerd .bannerda .bjdb {
+  width: 50%;
+  position: relative;
+}
+.box .bannerd .bannerda .bjdb .bjdba {
+  top: 123px;
+  left: 50px;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+}
+.box .bannerd .bannerda .bjdb .bjdbb {
+  top: 66px;
+  left: 50px;
+  z-index: 2;
+  position: absolute;
+  opacity: 0;
+}
+.box .bannerd .bannerda .bjdb .bjdbc {
+  top: 146px;
+  left: 79px;
+  z-index: 3;
+  position: absolute;
+  opacity: 0;
+}
+.box .bannere {
+  width: 100%;
+  height: 120px;
+  background-color: #ffffff;
+}
+.box .bannere .bannerea {
+  height: 100%;
+  position: relative;
+}
+.box .bannere .bannerea .bjea {
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.box .bannere .bannerea .bjea .bjeaa {
+  width: 800px;
+  height: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  z-index: 1;
+  top: 66px;
+  left: 180px;
+}
+.box .bannere .bannerea .bjea .bjeab {
+  width: 250px;
+  font-size: 30px;
+  margin: 50px auto;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 475px;
+  text-align: center;
+  background-color: white;
+}
+.box .bannere .bannerea .bjeb {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 50px;
+}
+.box .bannere .bannerea .bjeb .bjeba {
+  width: 50%;
+  height: 130px;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb {
+  width: 130px;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) {
+  display: block;
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a1 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a2 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a3 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a4 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a5 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a6 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a7 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) .a8 {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(1) img {
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+  position: absolute;
+  top: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebb a:nth-child(2) {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebc {
+  margin-top: 35px;
+  margin-left: 60px;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebc p:nth-child(1) {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.box .bannere .bannerea .bjeb .bjeba .bjebc p a:hover {
+  color: #00f3b1;
+}
+.box .bannere .bannerea .bjf {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.box .bannere .bannerea .bjf .bjfa {
+  font-size: 25px;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid black;
+  border-radius: 70px;
+  margin: 50px auto;
+}
+.box .bannere .bannerea .bjf .bjfa a {
+  display: block;
+  width: 300px;
+  height: 50px;
+}
+.box .bannere .bannerea .bjf .bjfa a:hover {
+  color: #00f3b1;
+}
+.box .di {
+  width: 100%;
+  height: 550px;
+  background-color: #333333;
+  overflow: hidden;
+  margin-top: 900px;
+}
+.box .di .dia {
+  height: 100%;
+  overflow: hidden;
+}
+.box .di .dia .zuo {
+  width: 33%;
+  height: 200px;
+  margin-top: 80px;
+  color: #7f9999;
+}
+.box .di .dia .zuo .bt {
+  margin-bottom: 15px;
+}
+.box .di .dia .zuo .left {
+  margin-right: 45px;
+  margin-top: 20px;
+  text-align: center;
+}
+.box .di .dia .zuo a {
+  margin-bottom: 10px;
+  color: #7f9999;
+}
+.box .di .dia .zuo a:first-child {
+  display: block;
+  width: 36px;
+  height: 43px;
+  background: url(../img/footer1.png) no-repeat left;
+}
+.box .di .dia .zuo a:first-child:hover {
+  display: block;
+  width: 36px;
+  height: 43px;
+  background: url(../img/footer1.png) no-repeat left;
+}
+.box .di .dia .zuo a:hover {
+  color: #00f3b1;
+}
+.box .di .dia .zuo .bta a:first-child {
+  width: 47px;
+  background-position: 0px -6px;
+}
+.box .di .dia .zuo .bta a:first-child:hover {
+  background-position: 0px -55px;
+}
+.box .di .dia .zuo .btaa a:first-child {
+  width: 47px;
+  background-position: -91px -6px;
+}
+.box .di .dia .zuo a:first-child:hover {
+  width: 47px;
+  background-position: -91px -55px;
+}
+.box .di .dia .zuo .btab a:first-child {
+  margin-left: 13px;
+  width: 41px;
+  height: 43px;
+  background-position: -190px -3px;
+}
+.box .di .dia .zuo .btab a:first-child:hover {
+  width: 47px;
+  background-position: -190px -52px;
+}
+.box .di .dia .zuo .btac {
+  margin-right: 0;
+}
+.box .di .dia .zuo .btac a:first-child {
+  height: 41px;
+  margin-left: 10px;
+  background-position: -278px -5px;
+}
+.box .di .dia .zuo .btac a:first-child:hover {
+  width: 47px;
+  background-position: -278px -54px;
+}
+.box .di .dia .zhong {
+  width: 29%;
+  height: 200px;
+  margin-top: 80px;
+  color: #7f9999;
+  padding-left: 50px;
+  overflow: hidden;
+}
+.box .di .dia .zhong .bt {
+  margin-bottom: 15px;
+}
+.box .di .dia .zhong .left {
+  margin-right: 45px;
+  margin-top: 20px;
+  text-align: center;
+}
+.box .di .dia .zhong a {
+  margin-bottom: 10px;
+  color: #7f9999;
+}
+.box .di .dia .zhong a:first-child {
+  display: block;
+  width: 36px;
+  height: 43px;
+  background: url(../img/footer1.png) no-repeat left;
+}
+.box .di .dia .zhong a:first-child:hover {
+  display: block;
+  width: 36px;
+  height: 43px;
+  background: url(../img/footer1.png) no-repeat left;
+}
+.box .di .dia .zhong a:hover {
+  color: #00f3b1;
+}
+.box .di .dia .zhong .bta {
+  overflow: hidden;
+}
+.box .di .dia .zhong .bta a:last-child {
+  line-height: 4;
+}
+.box .di .dia .zhong .bta a:first-child {
+  width: 47px;
+  background-position: -366px -6px;
+}
+.box .di .dia .zhong .bta a:first-child:hover {
+  background-position: -366px -55px;
+}
+.box .di .dia .zhong .btaa {
+  overflow: hidden;
+}
+.box .di .dia .zhong .btaa a:first-child {
+  margin-left: 15px;
+  width: 47px;
+  background-position: -456px -4px;
+}
+.box .di .dia .zhong .btaa .hou {
+  background: none;
+  margin-top: 15px;
+  line-height: 4;
+}
+.box .di .dia .zhong .btaa a:first-child:hover {
+  width: 47px;
+  background-position: -456px -53px;
+}
+.box .di .dia .zhong .btab a:first-child {
+  margin-left: 10px;
+  width: 47px;
+  height: 43px;
+  background-position: -563px -4px;
+}
+.box .di .dia .zhong .btab a:first-child:hover {
+  width: 47px;
+  background-position: -563px -53px;
+}
+.box .di .dia .you {
+  width: 26%;
+  height: 200px;
+  margin-top: 80px;
+  color: #7f9999;
+  padding-left: 90px;
+}
+.box .di .dia .you .hz {
+  margin-bottom: 15px;
+}
+.box .di .dia .you ul {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.box .di .dia .you ul li {
+  margin-top: 15px;
+}
+.box .di .dia .you ul li a {
+  display: block;
+  color: #7f9999;
+  margin-left: 10px;
+}
+.box .di .dia .you ul li a:hover {
+  color: #00f3b1;
+}
+.box .di .dia .you ul:nth-child(1) {
+  margin: 0;
+}
+.box .di .dia .btm {
+  color: #7f9999;
+}
+.box .di .dia .btm .btma ul {
+  overflow: hidden;
+}
+.box .di .dia .btm .btma ul li {
+  display: block;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+.box .di .dia .btm .btma ul li a {
+  color: #7f9999;
+}
+.box .di .dia .btm .btma ul li a:hover {
+  color: #00f3b1;
+}
+.box .di .dia .btm .btmb {
+  overflow: hidden;
+  text-align: center;
+  margin: 80px auto;
+  width: 100%;
+  line-height: 30px;
+}
+.box .di .dia .btm .btmb .btmba {
+  width: 684px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.box .di .dia .btm .btmb .btmba li {
+  font-size: 14px;
+  color: #7f9999;
+}
+.box .di .dia .btm .btmb .btmba li a {
+  color: #7f9999;
+}
+.box .di .dia .btm .btmb .btmba li a:hover {
+  color: #00f3b1;
+}
+.box .di .dia .btm .btmb .btmbb {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.box .di .dia .btm .btmb .btmbb li {
+  width: 100%;
+  font-size: 14px;
+  color: #7f9999;
+}
+.box .di .dia .btm .btmb .btmbb li a {
+  color: #7f9999;
+}
+.box .di .dia .btm .btmb .btmbb li a:hover {
+  color: #00f3b1;
+}

@@ -1,0 +1,39 @@
+
+/*初始化页面*/
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	   color:#31c27c; 
+}
+img,input{
+	border:none;
+	outline-style: none;
+	padding:0;
+}
+.clearfix::after{
+content: "";
+display: block;
+clear: both;
+height: 0;
+line-height: 0;
+visibility: hidden;
+}
+.wraper{
+	width: 1200px;
+	margin:0 auto;
+}
+.left{
+	float: left;
+}
+.right{
+float: right;
+}

@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* CSS Document */
+
+#footer{
+	width:100%;
+	height:589px;
+	color: #999;
+    background-color: #333;
+    clear: both;
+
+	}
+#footer a{
+	    color: #999;
+		text-decoration:none;
+	}
+#footer a:hover{
+	color:#6c6
+	}
+.inner{
+	width:1200px;
+	height:589px;
+	margin:auto;
+	}
+.download{
+	width:380px;
+	height:229px;
+	float:left;
+	margin-left:10px;
+	
+	}
+.product{
+	width:304px;
+	height:286px;
+	
+	float:left;
+	margin-left:100px;
+	}
+.link{
+	width:300px;
+	height:280px;
+	
+	float:left;
+	margin-left:100px;
+	}
+.footer_title{
+	font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 46px;
+	text-indent:29px;
+	}
+.footer_title2{
+	font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 46px;
+	text-indent:23px;
+	}
+.footer_title3{
+	font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 46px;
+	
+	}
+.download_ul {
+	list-style:none;
+	}
+.download_item{
+	float:left;
+    text-align: center;
+     
+   
+	}
+.download_item_sp{
+	float:left;
+	
+	margin-top:20px;
+	text-indent:20px;
+	}
+.download_div{
+	margin-left:0px;
+	margin-top:0px;
+	width:95px;
+	height:81px;
+	}
+
+
+.tupian{
+	font-style:normal;
+
+	width:37px;
+	height:48px;
+	float:left;
+	margin:0px 29px 12px;
+	    
+	}
+
+	
+.download_div:hover{
+	color:#6c6;
+	}
+.tupian_MAC{
+
+	width:46px;
+	height:48px;
+	float:left;
+	background-position:-92px 0px;
+	margin:0px 24.5px 12px;
+	}
+
+.tupian_Android{
+
+	width:37px;
+	height:48px;
+	float:left;
+	background-position:-190px 0px;
+	margin:0px 29px 12px;
+	}	
+.tupian_Iphone{
+
+	width:34px;
+	height:48px;
+	float:left;
+	background-position:-279px 0px;
+	margin:0px 30.5px 12px;
+	}	
+.tupian_Kge{
+
+	width:41px;
+	height:48px;
+	float:left;
+	background-position:-370px 0px;
+	margin:0px 22px 12px;
+	}
+.tupian_SuperSound	{
+
+	width:37px;
+	height:48px;
+	float:left;
+	background-position:-464px 0px;
+	margin:0px 29px 12px;
+	
+	}
+.tupian_Qplay{
+
+	width:40px;
+	height:48px;
+	float:left;
+	background-position:-563px 0px;
+	margin:0px 27.5px 12px;
+	}
+.download_div:hover .tupian{
+	background-position:0px -49px;
+	}
+.download_div:hover .tupian_MAC{
+	background-position:-92px -49px;
+	}
+.download_div:hover .tupian_Android{
+	background-position:-190px -49px;
+	}
+.download_div:hover .tupian_Iphone{
+	background-position:-279px -49px;
+	}
+.download_div:hover .tupian_Kge{
+	background-position:-370px -49px;
+	}
+.download_div:hover .tupian_SuperSound{
+	background-position:-464px -49px;
+	}
+.download_div:hover .tupian_Qplay{
+	background-position:-563px -49px;
+	}	
+.link_ul{
+	list-style:none;
+	}
+.link_txt{
+	width:30%;
+	float:left;
+	margin-bottom:15px;
+}
+.open{
+	width:1200px;
+	float:left;
+	margin:0px 0px 50px;
+	text-indent:29px;
+	}
+.footer_platform_list__item{
+	float:left;
+	margin: 0 25px 12px 0;
+	text-indent:29px;
+	}
+.copy_Right{
+	width:700px;
+	height:100px;
+	float:left;
+	margin-top:100px;
+	text-align:center;
+	line-height:28px;
+	font-size:12px;
+	
+	}

@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+#main{
+	width:1200px;
+	height:1489px;
+	margin:0 auto;
+	}
+.singer-tag{
+	width:1160px;
+	height:126px;
+	background-color: #fbfbfb;
+    padding: 34px 0 17px 40px;
+    margin: 30px 0 20px;
+	}
+.singer-tag-area{
+	width:1160px;
+	height:80px;
+	margin-bottom:3px;
+	}
+.singer_tag_item_select{
+	background-color: #31c27c;
+    color: #fff;
+    margin-right: 28px;
+    height: 26px;
+    line-height: 27px;
+    overflow: hidden;
+	float: left;
+	margin: 0 12px 14px 0;
+    text-decoration: none;
+    padding: 0px 8px;
+		
+	}
+.singer_tag_item_select:hover{
+	color:#fff;
+	}
+.singer_tag_item{
+	margin-right: 28px;
+	height: 26px;
+    line-height: 27px;
+    overflow: hidden;
+	float: left;
+	margin: 0 12px 14px 0;
+   text-decoration: none;
+	color: #333;
+	padding: 0px 8px;
+}
+.mode_singer_list{
+	width:1220px;
+	height:534px;
+	overflow: hidden;
+    text-align: center;
+	font-size:16px;
+	margin-bottom:4px;
+	}
+.mode_singer_list_ul{
+	    list-style:none;
+	}
+.mode_singer_list_li{
+    float: left;
+	margin-bottom:22px;
+    
+}
+	
+.mode_singer_list_box{
+	width:224px;
+	height:195px;
+	margin-right: 20px;
+	padding: 25px 0;
+	background: #fbfbfb;
+	}
+.mode_singer_list_pic{
+	width: 140px;
+    height: 140px;
+    border-radius: 126px;
+	}
+.mode_singer_list_name{
+	margin-top:13px;
+	}
+a{
+	 color: #333;
+	 text-decoration:none;
+	 }
+.singer_list_txt{
+	margin-left: 75px;
+	margin-right: -75px;
+    overflow: hidden;
+	}
+
+.singer_list_txt_name{
+	list-style: none;
+	float:left;
+	width:20%;
+	height:36px;
+	}
+.pages{
+	width:1200px;
+	height:50px;
+	text-align:center;
+	margin:0px auto 60px;
+	}
+.page{
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+	color:#a2a2a2;
+	text-decoration: none;
+	text-align: center;
+	
+	}
+.page:hover{
+	color: #fff;
+    background-color: #31c27c;
+	}
+.current{
+	font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+	color: #fff;
+    background-color: #31c27c;
+	}
+a:hover{
+	color:#6C6;
+	}
+strong{
+	font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+	}
+.more:hover{
+	
+	background:#31c27c;
+	color: #fff;
+	}

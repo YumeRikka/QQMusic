@@ -1,0 +1,452 @@
+@charset "utf-8";
+/* CSS Document */
+
+<style>
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+#diolog_mask{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4000;
+    background-color: #000;
+    opacity: 0.3;
+    display:none;
+}
+#OGdiamond{
+	background-color: #fff;
+     font-family: "Microsoft Yahei";
+	position: fixed;
+	left: 343px;
+    top: 13.5px;
+    width: 690px;
+    z-index: 5000;
+    display:none;
+
+}
+#G-head{
+	width:690px;
+	height:41px;
+	background:#F4F4F4;
+	border-bottom:#d8d8d8 solid 1px;
+	font-size: 16px;
+}
+
+#G-center{
+	height:251px;
+	width:690px;
+	background:#f9f9f9;
+	border-bottom: 1px solid #e5e5e5;
+	}
+	
+#G-footer{
+	height:268px;
+	width:550px;
+	padding:20px 70px 40px;
+	background:#fff;
+}
+.sp1{
+	font-size:16px;
+	line-height:41px;
+	float:left;
+	margin: 0 5px;
+	
+	}
+.sp2{
+	line-height:41px;
+	
+	
+	}
+.sp2 a{
+	color: #969696;
+    text-decoration: underline;
+	}
+.agreeWrap{
+	float:left;
+	padding-top:3px;font-size:12px;
+}
+.agreeWrap_check-box{
+	background:url(../img/singer/headerSprite.png);
+	width:12px;
+	height:12px;
+	background-position:0px -29px;
+	display: inline-block;
+    font-size: 0;
+    background-repeat: no-repeat;
+	cursor: pointer;
+}
+.G-head_close{
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	z-index: 2;	
+	
+}
+.G-head_icon_close{
+	display: block;
+	margin: 6px auto;
+	width: 12px;
+	height: 12px;
+	background:url(../img/singer/headerSprites.png);
+	background-position: 0 0px;
+}
+.G-center_inner{
+	height:190px;
+	width:550px;
+	padding:30px 70px;
+	
+}
+.G-center_id{
+	
+	margin-bottom:20px;
+	
+	line-height: 30px;
+	}
+.G-center_open{
+	font-size:14px;
+	color: rgb(49, 49, 49);
+    float:left;
+	
+	}
+.G-center_change{
+	font-size:12px;
+	color:#2a69b6;
+	cursor: pointer;
+
+
+	
+	
+	
+}
+.G-center_change_pic{
+	background:url(../img/singer/sprite.png);
+	width:12px;
+	height:12px;
+	margin-right:5px;
+	background-position:-200px -16px;
+	display: inline-block;
+	
+	
+}
+.num{
+	font-size:14px;
+	float:left;
+	margin-left:20px;
+	margin-right:20px;
+	
+
+	}
+.goods{
+	width:560px;
+	height:160px;
+	
+	}
+.goods_items{
+	width:128px;
+	height:148px;
+	margin-right:10px;
+	margin-bottom:10px;
+	float:left;
+	background:#fff;
+    border: 1px solid #e5e5e5;
+	position:relative;
+	cursor:pointer;
+	transition:border-color 0.3s linear;
+	}
+.goods_items:hover{
+	border: 1px solid #3387ef;
+	
+	}
+.money{
+	width:104px;
+	height:87px;
+    border-bottom: 1px dashed #e3e3e3;
+	margin:0px 12px;
+	padding-top:20px;
+	text-align:center;
+	
+	}
+.goods_items_checked{
+	border: 1px solid #3387ef;
+	}
+.goods_items_pic{
+    height:25px;
+	width:25px;
+	background:url(../img/singer/sprite.png);
+	background-position:-29px -138px;
+	position:absolute;
+	left:103px;
+	top:-1px;
+	
+}
+.sp3{
+	font-size:38px;
+	font-style:normal;
+	font-weight:500;
+    color: #313131;
+	font-family:"Microsoft YaHei UI";
+	}
+.month{
+	color: #313131;
+	width:128px;
+	height:40px;
+	text-align:center;
+	line-height:20px;
+	font-size:16px;
+	line-height: 40px
+	}
+.pay-title{
+	
+	font-size:14px;
+	font-weight:400;
+	}
+.payWay{
+	width:560px;
+	height:40px;
+	position:relative;
+	}
+
+.way{
+	width:128px;
+	height:38px;
+	margin-right:10px;
+	border: 1px solid #e5e5e5;
+	text-align:center;
+	line-height:38px;
+	float:left;
+	position:relative;
+	cursor:pointer;
+	transition:border-color 0.3s linear;
+	
+	}
+.payWay_checked{
+	border: 1px solid #3387ef;
+	}
+.way:hover{
+	border: 1px solid #3387ef;
+}
+.payWay_pic{
+	height:25px;
+	width:25px;
+	background:url(../img/singer/sprite.png);
+	background-position:-29px -138px;
+	position:absolute;
+	left:103px;
+	top:0px;
+	
+	
+}
+.dis{
+	margin-left: 4px;
+    padding: 1px 2px;
+    background: #ff6d33;
+    color: #fff;
+    border-radius: 1px;
+    line-height: 1;
+    font-size: 12px;
+	font-style: normal;
+	}
+.code-wx{
+	position: relative;
+    display: inline-block;
+    padding: 9px;
+    border: 1px solid #e5e5e5;
+    border-bottom-color: #00c800;
+	margin-left:220px;
+	cursor:pointer;
+	
+	}
+.code-txt{
+	text-align:center;
+	margin-bottom:10px;	
+	margin-top:30px;
+	font-size: 14px;
+	}
+.more_arrow{
+	height:7px;
+	width:8px;
+	background:url(../img/singer/sprite.png);
+	background-position:-170px -67px;
+	display: inline-block;
+    font-size: 0;
+    background-repeat: no-repeat;
+	}
+.wxMoney{
+	font-size: 20px;
+    font-weight: 400;
+    margin: 0 2px;
+	font-style: normal;
+}
+.weixinPay{
+	height:14px;
+	width:16px;
+	background:url(../img/singer/sprite.png);
+	background-position:-20px -168px;
+	display: inline-block;
+    font-size: 0;
+    background-repeat: no-repeat;
+	margin-right:5px;
+	
+}
+.moreWay{
+	width:128px;
+	height:119px;
+	/*margin-left:10px;*/
+	border: 1px solid #e5e5e5;
+	text-align:center;
+	line-height:38px;
+	float:left;
+	position:relative;
+
+	background:red;
+	}
+.morewWay_open{
+	width:128px;
+	
+	height:38px;
+	border: 1px solid #e5e5e5;
+	line-height:38px;
+	position:absolute;
+	left:420px;
+	transition:all .3s;
+	overflow:hidden;
+	cursor:pointer;
+}
+.morewWay_open:hover{
+	width:128px;
+	height:114px;
+	border: 1px solid #3387ef;
+}
+
+
+/*.morewWay:hover{
+	border: 1px solid #3387ef;
+	pacity:1;
+}
+*/
+.moreWay_arrow{
+	text-align:center;
+}	
+.moreWay:hover{
+    	border: 1px solid #e5e5e5;
+}
+/*.morewWay_open_txt{
+	text-indent:30px;
+   float:left;	
+}*/
+.moreWay_other{
+	text-align:left;
+}
+.moreWay_other:hover{
+	background:#3387ef;
+	color:#fff;
+}
+
+.more_dis{
+	height:16px;
+	width:16px;
+	background:url(../img/singer/sprite.png);
+	background-position:-181px -81px;
+	display: inline-block;
+    font-size: 0;
+	margin:0px 4px;
+    background-repeat: no-repeat;
+}
+.goods_items_inner{
+	position: relative;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+	
+	}
+.goods_items_month{
+	height: 42px;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+	font-size:16px;
+	
+	    position: absolute
+	}	
+.reduce{
+	position: absolute;
+    display: block;
+    height: 100%;
+    width: 38px;
+    top: 0;
+    padding-top: 5px;
+    text-align: center;
+    border: none;
+    background: #fafafa;
+    cursor: pointer;
+    transition: background .3s linear;
+    outline: 0;
+	}
+.reduce:hover{
+	background:#F3F3F3;
+}
+.month_monus{
+	background:url(../img/singer/sprite.png);
+	background-position: -136px -138px;
+    width: 16px;
+    height: 14px;
+	display: inline-block;
+	
+	}
+.input_area{
+	 margin: 0 38px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+	
+	}
+.input_area_txt{
+	height:36px;
+	width:20px;
+	border:none;
+	font-size:16px;
+	text-align:center;
+	float:left;
+	margin-top:2px;
+}
+.add{
+	border-left: 1px solid #e5e5e5;
+    right: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+	position: absolute;
+    display: block;
+    height: 100%;
+    width: 38px;
+    top: 0;
+    padding-top: 5px;
+    text-align: center;
+    border:0;
+    background: #fafafa;
+    cursor: pointer;
+    transition: background .3s linear;
+    outline: 0;
+	}
+.add:hover{
+	background:#F3F3F3;
+}	
+.month_add{
+	
+	background-image:url(../img/singer/sprite.png);
+    background-position: -156px -138px;
+    width: 16px;
+    height: 14px;
+	display: inline-block;
+	}
+</style>

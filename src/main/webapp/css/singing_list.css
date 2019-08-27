@@ -1,0 +1,259 @@
+.main .main_palylist {
+  padding: 60px 0 32px 0;
+  position: relative;
+  margin-right: -24px;
+}
+.main .main_palylist .main_playlist_list {
+  width: 238px;
+  float: left;
+  position: relative;
+  margin-right: 22px;
+}
+.main .main_palylist .main_playlist_list h3 {
+  font-weight: 400;
+  font-size: 14px;
+  padding-left: 8px;
+  margin-bottom: 8px;
+  margin-top: -6px;
+  color: #999;
+}
+.main .main_palylist .main_playlist_list li {
+  float: left;
+  width: 76px;
+  margin-bottom: 4px;
+  line-height: 26px;
+  font-size: 14px;
+}
+.main .main_palylist .main_playlist_list li a {
+  float: left;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 68px;
+}
+.main .main_palylist .main_playlist_list li a .gengduo {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url(../img/icon_sprite@2x.png) -120px -260px;
+  background-size: 200px 340px;
+  margin-top: 5px;
+}
+.main .main_palylist .main_playlist_list li a .gengduo:hover {
+  background-position: -140px -260px;
+}
+.main .main_palylist .main_playlist_list .active {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .main_palylist .main_playlist_list .right_line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 108px;
+  background-color: #eeeef0;
+}
+.main .main_palylist .one {
+  width: 160px;
+}
+.main .main_palylist .popup_tag {
+  position: absolute;
+  top: 175px;
+  left: 0;
+  right: 24px;
+  background-color: #fff;
+  padding: 19px 0 15px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(183, 183, 183, 0.65);
+}
+.main .main_palylist .popup_tag ul {
+  margin-left: 16px;
+  line-height: 26px;
+}
+.main .main_palylist .popup_tag ul .popup_tag_list {
+  float: left;
+  margin-right: 32px;
+}
+.main .song_meau {
+  height: 60px;
+}
+.main .song_meau .song_meau_tit {
+  position: relative;
+}
+.main .song_meau .song_meau_tit .part_detail__tit {
+  float: left;
+  font-weight: 400;
+  font-size: 24px;
+  height: 58px;
+}
+.main .song_meau .song_meau_tit .part_tags {
+  position: relative;
+  float: left;
+  line-height: 38px;
+  margin: 8px 6px 8px 0;
+  padding: 0 25px 0 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.main .song_meau .song_meau_tit .part_tags:hover {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .song_meau .song_meau_tit .part_tags:hover a {
+  background-position: -160px -80px;
+}
+.main .song_meau .song_meau_tit .part_tags a {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icon_sprite@2x.png) -160px -120px;
+  background-size: 200px 340px;
+  overflow: hidden;
+}
+.main .song_meau .song_meau_tit .sortbox {
+  width: 124px;
+  height: 40px;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.main .song_meau .song_meau_tit .sortbox .boxs {
+  display: block;
+  position: absolute;
+  padding: 0 16px;
+  line-height: 40px;
+  box-sizing: border-box;
+}
+.main .song_meau .song_meau_tit .sortbox .sortbox_left {
+  background-color: #31c27c;
+  border: 1px solid #31c27c;
+  left: 0;
+  top: 0;
+  color: #fff;
+}
+.main .song_meau .song_meau_tit .sortbox .sortbox_right {
+  border: 1px solid #ccc;
+  right: 0;
+  top: 0;
+}
+.main .song_meau .song_meau_all .meau_list {
+  width: 20%;
+  float: left;
+  padding-bottom: 44px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box {
+  margin-right: 18px;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_h3 {
+  max-width: 100%;
+  margin-top: 18px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  line-height: 22px;
+  max-height: 44px;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_cover_img {
+  position: relative;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_cover_img .meau_cover_link {
+  display: block;
+  width: 224px;
+  height: 224px;
+  transform: scale(1) translateZ(0);
+  transition: 0.65s;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_cover_img .meau_cover_link:hover {
+  transform: scale(1.07);
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_cover_img .play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -35px;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  transform: scale(0.7) translateZ(0);
+  zoom: 1;
+  background: url(../img/radio.png) no-repeat;
+  background-size: 70px 70px;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_cover_img .play_hover {
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.7s;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_autor a {
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 22px;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_autor a:hover {
+  color: #31c27c;
+}
+.main .song_meau .song_meau_all .meau_list .meau_box .meau_other {
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 22px;
+  font-size: 13px;
+}
+.main .mod_page {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.main .mod_page .mod_page_index {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  padding: 0 21px;
+  box-sizing: border-box;
+  min-width: 24px;
+  color: #a2a2a2;
+}
+.main .mod_page .mod_page_index:hover {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .mod_page .current {
+  background-color: #31c27c;
+  color: #fff;
+}
+.main .mod_page .more {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+  padding: 0 21px;
+  box-sizing: border-box;
+  min-width: 24px;
+  color: #a2a2a2;
+}

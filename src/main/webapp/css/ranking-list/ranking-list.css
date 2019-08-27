@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* CSS Document */
+#leaderboard_main{
+   width:1200px;
+   height:2752px;
+   
+   padding-top:60px;
+   margin-left:78px;
+}
+.toplist_nav_left{
+   width:178px;
+   height:1040px;
+   float:left;
+   border:1px solid rgba(153,153,153,.2);
+}
+.toplist_right{
+   width:990px;
+   height:2586px;
+   float:left;
+  
+}
+.toplist_nav_left1{
+	 width:178px;
+     height:500px;
+     margin-bottom: 20px;
+	
+}
+.toplist_nav_left1_tit{
+	font-size:20px;
+	float:left;
+	width:145px;
+	height:45px;
+	margin:12px 7px 10px 15px;
+	border-bottom:1px solid rgba(153,153,153,.2);
+}
+
+ul{
+	list-style:none;
+}
+ul .toplist_nav_left1_tit_current a{
+	padding:8px 52px 8px 17px;
+	font-size:15px;
+	background:#31c27c;
+	color:#fff;
+	float:left;
+
+	}
+ul .toplist_nav_left1_tit_current:hover{
+	color:#fff;
+}
+.toplist_nav_left1_tit_other{
+	padding:8px 17px;
+	font-size:15px;
+	float:left;
+	}
+.toplist_right_nav1{
+	width:990px;
+	height:64px;
+    line-height: 64px;
+	padding-left:30px;
+	margin-bottom:5px;
+}
+.toplist_right_nav2 {
+	width:990px;
+	height:38px;
+	line-height: 38px;
+	padding-left:30px;
+	margin-bottom:20px;
+}
+.toplist_all{
+	width:990px;
+	height:1450px;
+	padding-left:30px;
+}
+.toplist_right_tit{
+	font-size:24px;
+	font-weight:400;
+	float:left;
+	margin-right:15px;
+	
+	
+}
+.toplist_right_date{
+	color:#CCC;
+	float:left;
+	margin-right:15px;
+	
+}
+.toplist_right_rule{
+	float:left;
+	margin-right:15px;
+	
+}
+.toplist_right_nav2_playCurrent a {
+	float:left;
+
+	padding:0px 23px;
+	background:#31c27c;
+	margin-right:6px;
+	border:1px solid #31c27c;
+	color:#fff;
+	border-radius:2px;
+}
+.toplist_right_nav2_playCurrent a:hover{
+	color:#fff;
+}
+.toplist_right_nav2_play{
+	float:left;
+	padding:0px 23px;
+	margin-right:6px;
+	border:1px solid #c9c9c9;
+}
+.toplist_all_head{
+	float:left;
+	width:768px;
+	height:50px;
+	line-height:50px;
+	padding-left: 122px;
+	padding-right: 100px;
+	background-color: #fbfbfd;
+    color: #999;
+	
+}
+.toplist_all_head_name{
+	float:left;
+	width:72%;
+}
+.toplist_all_head_singer{
+    width: 23.611111%;
+	float:left;
+	padding-left:3px;
+}
+.toplist_all_head_time{
+    position: absolute;
+	float: left;
+	right: 230px;
+}
+.sing_info_dan{
+    width:990px;
+	height:80px;
+	line-height:80px;
+	float:left;
+}
+.sing_info_shuang{
+    width:990px;
+	height:80px;
+	line-height:80px;
+	float:left;
+	background:#fbfbfb;
+	 
+}
+
+.sing_info_numother{
+	width: 45px;
+    top: 2px;
+    left: 0;
+    text-align: right;
+    font-size: 24px;
+	float:left;
+	color#333;
+	
+}
+.sing_info_num {
+    width: 45px;
+    top: 2px;
+    left: 0;
+    text-align: right;
+    font-size: 24px;
+	float:left;
+	color: #ff4222;
+}
+.sing_info_popular{
+	width: 72px;
+	float:left;
+	text-align:center;
+	line-height:20px;
+	font-size:12px;
+	color:#999;
+	
+}
+.jiantou{
+	width:15px;
+	height:15px;
+	float:left;
+	margin:27px 28.5px  0px 28.5px;
+	background:url(../../img/singer/jiantou.png);
+	background-position:0 -60px;
+	
+}
+.sing_info_name{
+	width:553px;
+	height:80px;
+	float:left;
+	}
+.song_img{
+	width:70px;
+	height:70px;
+	float:left;
+	margin-top:5px;
+	margin-right:20px;
+}
+ .suojin{
+    margin-right:20px;
+	float:left;
+ }
+.sing_info_dan:hover .suojin{
+	width:122px;
+
+	float:left;
+	text-overflow:ellipsis;
+	white-space: nowrap; 
+    overflow: hidden;
+}
+.sing_info_shuang:hover .suojin{
+	width:122px;
+
+	float:left;
+	text-overflow:ellipsis;
+	white-space: nowrap; 
+    overflow: hidden;
+}
+	
+}
+.song_name{
+	float:left;
+	
+	margin-right:20px;
+	}
+.dujia{
+	width:34px;
+	height:16px;
+	background:url(../../img/singer/icon_sprite.png);
+	background-position:-80px -280px;
+	float:left;
+	margin-top:32px;
+}
+.fourKey{
+	width:184px;
+	height:36px;
+	float:right;
+	opacity:0;
+	margin-top:22px;
+}
+.sing_info_dan:hover .fourKey{
+	opacity:1;
+	
+	}
+.sing_info_shuang:hover .fourKey{
+	opacity:1;
+	
+}
+.fourKey_play{
+	width:36px;
+	height:36px;
+	float:left;
+	background:url(../../img/singer/icon_list_menu.png);
+	margin-right:10px;
+	
+}
+.fourKey_play:hover{
+	background-position:-40px 0;
+	
+}
+.fourKey_add{
+	width:36px;
+	height:36px;
+	float:left;
+	background:url(../../img/singer/icon_list_menu.png);
+	background-position:0 -80px;
+	margin-right:10px;
+}
+.fourKey_add:hover{
+	background-position:-40px -80px;
+}
+.fourKey_download{
+	width:36px;
+	height:36px;
+	float:left;
+	background:url(../../img/singer/icon_list_menu.png);
+	background-position:0 -120px;
+	margin-right:10px;
+}
+.fourKey_download:hover{
+	background-position:-40px -120px;
+}
+
+.fourKey_share{
+	width:36px;
+	height:36px;
+	float:left;
+	background:url(../../img/singer/icon_list_menu.png);
+	background-position:0 -40px;
+	margin-right:10px;
+}
+.fourKey_share:hover{
+	background-position:-40px -40px;
+}
+.sing_info_singer{
+	width:201px;
+	height:80px;
+	float:left;
+	margin-left:10px;
+}
+.sing_info_time{
+	width:50px;
+	height:80px;
+	float:left;
+	margin-left:10px;
+	color:#999;
+	
+	
+}
+.pages{
+	width:1200px;
+	height:50px;
+	text-align:center;
+	margin-bottom:60px;
+	float:left;
+	margin-top:60px;
+	}
+.page{
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+	color:#a2a2a2;
+	text-decoration: none;
+	text-align: center;
+	
+	}
+.page:hover{
+	color: #fff;
+    background-color: #31c27c;
+	}
+.current{
+	font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+	color: #fff;
+    background-color: #31c27c;
+	}
