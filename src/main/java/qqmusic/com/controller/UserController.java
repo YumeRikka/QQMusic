@@ -31,6 +31,17 @@ public class UserController {
         request.getSession().setAttribute("user",user);
         return user;
     }
+    @RequestMapping("/login")
+    public String login(User user,HttpServletRequest request){
+        System.out.println(user);
+        User user1 = userService.selectByPrimaryKey(user.getUserId());
+        System.out.println(user1);
+        if (user.getUserPwd().equals(user1.getUserPwd()))
+        {
+            request.getSession().setAttribute("user",user1);
+            return "forward:/";
+        }
 
-
+        return "forward:/";
+    }
 }

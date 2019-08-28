@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css">
     <link rel="icon" href="${pageContext.request.contextPath}/indexImg/favicon.ico">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/myMusic/login.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login1.css">
 
 </head>
 
@@ -38,17 +39,16 @@
                 <br>或点击头像授权登录。
             </div>
             <div class="login_img_body" >
-                <form action="" method="post" id="loginform" style="display:none">
-                    <input type="text" value="2059354371" id="form_qq">
+                <form action="${pageContext.request.contextPath}/login" method="post" id="loginform" style="display:none">
+                    <input type="text"  id="form_qq" name="userId" placeholder="QQ">
                     <a href="" class="clear_qq"></a>
-                    <input type="password" id="form_upwd" value="daohaode74">
+                    <input type="password" id="form_upwd" name="userPwd" placeholder="密码">
                     <a href="" class="clear_upwd"></a>
-                    <input type="button" id="form_submit" value="登 录">
+                    <input type="submit" id="form_submit" value="登 录">
                 </form>
                 <div class="safe_login">
                     <div class="login_erwei"> <img src="${pageContext.request.contextPath}/img/login/ptqrshow.jpg" alt="">   </div>
                     <div><a href="my-profile.html"> <img src="${pageContext.request.contextPath}/img/login/qq.jpg" alt="" id="img_login"> </a></div>
-
                     <div class="login_img"></div>
                 </div>
             </div>
@@ -145,6 +145,7 @@
                 <!-- <a href="https://mytimebu.github.io/xuexiao/QQ%E7%99%BB%E5%BD%95.html" class="top_link_login left">登录</a> -->
                 <%
                     User user = (User) session.getAttribute("user");
+
                     if (user==null) {
                         %>
                             <input type = "button" value = "登录" id = "login" class="top_link_login left" >
@@ -152,10 +153,77 @@
                     }
                     else {
                 %>
+                <%--<script type="text/javascript">
+                    $(function () {
+                        $("#wydl").mouseover(function () {
+                            $(".popup_user").addClass("drop");
+                        });
+                        $("#wydl").mouseout(function () {
+                            $(".popup_user").removeClass("drop");
+                        });
+                    });
+                </script>--%>
                 <a href="" class="a_1 left" id="wydl" >
-                    <img  src="${user.userHeadImgUrl}" class="dlty" style="margin-right: 10px"/>
+                    <img  src="<%=user.getUserHeadImgUrl()%>" class="dlty" style="margin-right: 10px"/>
                     <img  src="images/login_qq.png" class="dlqe" style="right: 224px"/>
                 </a>
+
+                <div class="popup_user" id="wydl1">
+                    <div class="popup_user_data" style="width: 140px;">
+                    <a href="" class="popup_user_data__cover_link" onclick="setStatCookie&amp;&amp;setStatCookie();">
+                        <img src="<%=user.getUserHeadImgUrl()%>"  class="popup_user_data__cover js_user_img">
+
+                        <img src="images/login_qq.png" class="popup_user_data__icon">
+
+                    </a>
+
+                    <!-- 自动垂直居中 -->
+                    <div class="popup_user_data__cont">
+                        <div class="popup_user_data__name">
+                            <a href="//y.qq.com/portal/profile.html#stat=y_new.top.pop.user_nickname" onclick="setStatCookie&amp;&amp;setStatCookie();" class="">忆君吻</a>
+                        </div>
+                        <div class="popup_user_data__lv">
+                            <a href="https://y.qq.com/portal/vipportal/index.html" class="js_vip_jump" data-stat="y_new.top.pop.vip_icon" rel="noopener" target="_blank"><img src="//y.gtimg.cn/music/icon/v1/pc/svip_g.png" alt="绿钻" class="popup_user_data__lv_icon"></a><a href="https://y.qq.com/vip/fufeibao/index.html" class="js_vip_jump" data-stat="y_new.top.pop.vip_icon" rel="noopener" target="_blank"><img src="//y.gtimg.cn/music/icon/v1/pc/sui_g.png?max_age=2592000" alt="付费音乐包" class="popup_user_data__lv_icon"></a>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="popup_user_toolbar">
+                        <!--绿钻-->
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit"><a href="//y.qq.com/portal/vipportal/index.html" target="_blank" rel="noopener">绿钻豪华版</a>
+                            </div>
+                            <div class="popup_user_toolbar__desc c_tx_thin">
+
+                                开通立即赠送付费音乐包
+
+                            </div>
+                            <a class="mod_btn_green popup_user_toolbar__btn_vip js_openvip" href="javascript:;" data-aid="music.pc.20318.newyqqhover" data-stat="music.20318.btnclick.pc">开通</a>
+                        </div>
+
+                        <!--付费包-->
+
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit"><a href="//y.qq.com/vip/fufeibao/index.html" target="_blank" rel="noopener">付费音乐包</a>
+                            </div>
+                            <div class="popup_user_toolbar__desc c_tx_thin">
+
+                                畅享千万包月曲库
+
+                            </div>
+                            <a class="mod_btn_green popup_user_toolbar__btn_vip js_openmusic" href="javascript:;" data-aid="music.pc.20320.newyqqhover" data-stat="music.20320.btnclick.pc">开通</a>
+                        </div>
+
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit js_msgcenterdiv"><a href="//y.qq.com/portal/msg_center.html#stat=y_new.top.pop.msg_center" onclick="setStatCookie&amp;&amp;setStatCookie();">评论通知</a>
+                            </div>
+                        </div>
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit"><a href="javascript:;" class="js_logout" data-stat="y_new.top.pop.logout">退出QQ登录</a>
+                            </div>
+                        </div>
+
+                    </div></div>
                 <%
                     }
                 %>
@@ -1304,6 +1372,7 @@
 </footer>
 
 <script src="${pageContext.request.contextPath}/js/jquery-1.12.4.js"></script>
+
 <script src="${pageContext.request.contextPath}/js/index/index.js"></script>
 <script src="${pageContext.request.contextPath}/js/list/list.js"></script>
 <script src="${pageContext.request.contextPath}/js/myMusic/login.js"></script>

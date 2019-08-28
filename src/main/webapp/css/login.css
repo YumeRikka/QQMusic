@@ -72,7 +72,7 @@
 		margin: 6px auto;
 		width: 12px;
 		height: 12px;
-		background:url(../img/singer//icon_popup.png);
+		background:url(../img/singer/icon_popup.png);
 		background-position: 0 -200px;
 	}
 	.popup_icon_close:hover{
@@ -160,7 +160,7 @@
 	.qlogin_list_info:hover .qlogin_list_num_box{
 		opacity:0.6 !important;
 	}
-	.qlogin_list_info:hover ..oneKeylog{
+	.qlogin_list_info:hover .oneKeylog{
 		opacity:0 !important;
 		}
 	.qlogin_list_touxiang{
@@ -180,7 +180,7 @@
 		bottom: 32px;
 		right: 23px;
 		top:63px;
-		background:url(../img/singer//mobile_icon.png);
+		background:url(../img/singer/mobile_icon.png);
 		
 	}
 	.qlogin_list_border{
@@ -189,7 +189,7 @@
 		position: absolute;
         top: -2px;
 		left:-5px;
-		background:url(../img/singer//icon_3_tiny.png) -91px -183px no-repeat;
+		background:url(../img/singer/icon_3_tiny.png) -91px -183px no-repeat;
 	}
 	.qlogin_bottom{
 		height: 16px;
@@ -210,7 +210,7 @@
 		    float: left;
 			height: 18px;
 			width: 18px;
-			background:url(../img/singer//icon_3_tiny.png) -92px -163px no-repeat;
+			background:url(../img/singer/icon_3_tiny.png) -92px -163px no-repeat;
 	}
 	.qlogin_bottom_box_1{
 		

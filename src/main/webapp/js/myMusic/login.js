@@ -3,6 +3,21 @@ $(".login_erwei").hover(function(){
 },function(){
     $(".login_img").css({display:"none"});
 });
+
+$(function () {
+    $("#wydl").mouseover(function () {
+        $(".popup_user").addClass("drop");
+    });
+    $("#wydl1").mouseover(function () {
+        $(".popup_user").addClass("drop");
+    });
+    $("#wydl1").mouseout(function () {
+        $(".popup_user").removeClass("drop");
+    });
+});
+
+
+
 $("#login").click(function(){
     $("#div_dialog").css({display:"inline-block"});
     $("#black_mask").css({display:"inline-block"});
@@ -44,7 +59,7 @@ $(".login_link").click(function(e){
 });
 
 // 检测是否已经登录
-$.ajax({
+/*$.ajax({
     type:"get",
     url:"data/music_user/islogin.php",
     dataType:"json",
@@ -60,11 +75,11 @@ $.ajax({
              $(".user_name").html(`${uname}`);
             // console.log($(".login_pic").css("backgroundImage"));
         }
-        
+
     }
 
-});
-$("#form_submit").click(function(){
+});*/
+/*$("#form_submit").click(function(){
     var qq=$("#form_qq").val();
     var upwd=$("#form_upwd").val();
     $.ajax({
@@ -80,7 +95,7 @@ $("#form_submit").click(function(){
         }
 
     });
-})
+})*/
 // if($(".link_tips").html()=="快速安全登录"){
 $("#quit").click(function(){
     $.ajax({

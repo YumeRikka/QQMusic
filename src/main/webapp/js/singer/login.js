@@ -11,7 +11,6 @@ window.onload = function(){
 							 two[j].style.display ='block';						 
 						  }
 					 }
-					
 				}
 		 })(i)
 	}
@@ -69,7 +68,6 @@ var two = document.getElementsByClassName("singer_type2_type");
 								  iteams[j].style.border = '1px solid #e5e5e5';
 								  pic[j].style.display = 'none';
 							   }
-							   
 						   }
 		          }
 	       })(i)

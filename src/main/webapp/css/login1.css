@@ -1,0 +1,110 @@
+.mod_search_other, .mod_search_result, .popup_user {
+  max-height: 0;
+  visibility: hidden;
+  -webkit-transition: max-height .6s ease-out, visibility 1ms .6s;
+  transition: max-height .6s ease-out, visibility 1ms .6s;
+  overflow: hidden;
+}
+.popup_user {
+  position: absolute;
+  right: 0;
+  top: 90px;
+  width: 288px;
+  background-color: #fff;
+  z-index: 9;
+  line-height: 1.5;
+  border: 1px solid #f2f2f2;
+  font-size: 13px;
+}
+.drop {
+  visibility: visible;
+  max-height: 800px;
+  -webkit-transition: max-height .6s ease-out;
+  transition: max-height .6s ease-out;
+}
+.popup_user_data {
+  display: table;
+  height: 84px;
+  overflow: hidden;
+  text-align: left;
+  padding: 25px 20px 0;
+}
+.popup_user_data__cover_link {
+  position: relative;
+  float: left;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.popup_user_data__cover {
+  float: left;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  margin-right: 10px;
+}
+.popup_user_data__icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  bottom: 0;
+  right: 10px;
+}
+img {
+  border: 0 none;
+  -ms-interpolation-mode: bicubic;
+  image-rendering: optimizeQuality;
+}
+.popup_user_toolbar {
+  padding: 13px 20px 6px;
+  font-size: 15px;
+}
+.popup_user_toolbar__item {
+  position: relative;
+  margin-bottom: 16px;
+}
+.popup_user_toolbar__desc {
+  font-size: 12px;
+  height: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 85%;
+}
+.c_tx_thin {
+  color: #999;
+}
+.popup_user_toolbar__btn_vip {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  height: 30px;
+  line-height: 30px;
+  width: 70px;
+  padding: 0;
+  text-align: center;
+  margin-right: 0;
+}
+.mod_btn_green {
+  border: 1px solid #31c27c;
+  background-color: #31c27c;
+  color: #fff;
+}
+.mod_btn, .mod_btn_green {
+  border-radius: 2px;
+  font-size: 14px;
+  margin-right: 6px;
+  padding: 0 23px;
+  height: 38px;
+  line-height: 38px;
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.popup_user_toolbar__tit a {
+  display: inline-block;
+  line-height: 22px;
+}
