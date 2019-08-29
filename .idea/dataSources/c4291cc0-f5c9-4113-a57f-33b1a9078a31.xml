@@ -1000,6 +1000,8 @@
     <column id="241" parent="212" name="user_head_img_url">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;../img/login/timg.jpg&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="242" parent="212" name="PRIMARY">

@@ -76,6 +76,7 @@
 	text-indent:20px;
 	}
 .download_div{
+
 	margin-left:0px;
 	margin-top:0px;
 	width:95px;
@@ -85,7 +86,7 @@
 
 .tupian{
 	font-style:normal;
-
+	background-image: url("../../img/footer1.png");
 	width:37px;
 	height:48px;
 	float:left;
@@ -98,7 +99,7 @@
 	color:#6c6;
 	}
 .tupian_MAC{
-
+	background-image: url("../../img/footer1.png");
 	width:46px;
 	height:48px;
 	float:left;
@@ -107,7 +108,7 @@
 	}
 
 .tupian_Android{
-
+	background-image: url("../../img/footer1.png");
 	width:37px;
 	height:48px;
 	float:left;
@@ -115,7 +116,7 @@
 	margin:0px 29px 12px;
 	}	
 .tupian_Iphone{
-
+	background-image: url("../../img/footer1.png");
 	width:34px;
 	height:48px;
 	float:left;
@@ -123,7 +124,7 @@
 	margin:0px 30.5px 12px;
 	}	
 .tupian_Kge{
-
+	background-image: url("../../img/footer1.png");
 	width:41px;
 	height:48px;
 	float:left;
@@ -131,7 +132,7 @@
 	margin:0px 22px 12px;
 	}
 .tupian_SuperSound	{
-
+	background-image: url("../../img/footer1.png");
 	width:37px;
 	height:48px;
 	float:left;
@@ -140,7 +141,7 @@
 	
 	}
 .tupian_Qplay{
-
+	background-image: url("../../img/footer1.png");
 	width:40px;
 	height:48px;
 	float:left;

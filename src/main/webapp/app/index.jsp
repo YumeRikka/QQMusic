@@ -81,7 +81,7 @@
             </ul>
             <ul class="top_subnav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="首页" style="color: #31c27c;">首页</a></li>
-                <li class="left"><a href="singer.html" title="歌手">歌手</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
                 <li class="left"><a href="disc.html" title="新碟">新碟</a></li>
                 <li class="left"><a href="ranking-list.html" title="排行榜">排行榜</a></li>
                 <li class="left"><a href="list.html" title="分类歌单">分类歌单</a></li>

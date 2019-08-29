@@ -44,4 +44,5 @@ public class UserController {
 
         return "forward:/";
     }
+
 }

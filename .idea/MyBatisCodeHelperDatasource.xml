@@ -5,7 +5,7 @@
       <ProjectProfile>
         <option name="generateService" value="true" />
         <option name="generateServiceInterface" value="true" />
-        <option name="javaMapperPackage" value="qqmusic.com.dao" />
+        <option name="javaMapperPackage" value="qqmusic.com.mapper" />
         <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
         <option name="javaModelPackage" value="qqmusic.com.entity" />
         <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
@@ -15,7 +15,7 @@
             <entry key="QQMusic">
               <value>
                 <UserPackageAndPathInfoByModule>
-                  <option name="javaMapperPackage" value="qqmusic.com.dao" />
+                  <option name="javaMapperPackage" value="qqmusic.com.mapper" />
                   <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
                   <option name="javaModelPacakge" value="qqmusic.com.entity" />
                   <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
@@ -32,6 +32,16 @@
         </option>
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="qqmusic:qqm_singer">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="singer_id" />
+                  <option name="javaModelName" value="Singer" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="qqmusic:qqm_users">
               <value>
                 <TableGenerateConfig>

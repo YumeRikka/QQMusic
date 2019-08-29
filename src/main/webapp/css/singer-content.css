@@ -12,6 +12,9 @@ a{
 a:hover{
     color: #31C27C;
 }
+body{
+    text-align: center;
+}
 #header{
     width: 100%;
     height: 92px;
@@ -122,6 +125,7 @@ a:hover{
     height: 1980px;
     background:url(../img/bg_detail.jpg) no-repeat;
     float: left;
+    margin: 0 auto;
 }
 #content .jj{
     position:relative;
@@ -261,8 +265,7 @@ a:hover{
 #content .gq{
     width: 1200px;
     height: 600px;
-    margin-left: 75px;
-    float: left;
+    margin: 0 auto;
 }
 #content .bt_sp{
     font-size: 25px;
@@ -387,9 +390,7 @@ a:hover{
 #content .c_zj{
     width: 1220px;
     height: 380px;
-    margin-left: 75px;
-    margin-top: 40px;
-    float: left;
+    margin: 0 auto;
 }
 #content .zj_tp{
     margin-top: 20px;
@@ -472,8 +473,7 @@ a:hover{
 #content .c_mv{
     width: 1220px;
     height: 280px;
-    float: left;
-    margin-left: 75px;
+    margin: 0 auto;
 }
 #content .mv_tp{
     margin-top: 20px;
@@ -571,8 +571,7 @@ a:hover{
 #content .c_xs{
     width: 1250px;
     height: 250px;
-    margin-left: 75px;
-    float: left;
+    margin: 0 auto;
 }
 #content .xs_tp{
     margin-top: 20px;
@@ -614,10 +613,9 @@ a:hover{
 #footer .f_1{
     width: 1220px;
     height: 377px;
-    margin-left: 75px;
     font-size: 15px;
     color: #999;
-    float: left;
+    margin: 0 auto;
 }
 #footer .f_xz{
     width: 386px;
@@ -774,9 +772,9 @@ a:hover{
 #footer .f_bq{
     width: 1220px;
     height: 133px;
-    margin-left: 75px;
+    margin: 0 auto;
     border-top: 1px solid #353535;
-    float: left;
+
 }
 #footer .f_bq .bq_1{
     width: 1220px;
