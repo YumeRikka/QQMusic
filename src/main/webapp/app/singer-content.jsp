@@ -1,4 +1,4 @@
-<%--
+<%@ page import="qqmusic.com.entity.Singer" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/8/28
@@ -13,6 +13,7 @@
     <title>歌手-李易峰</title>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.ico"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/singer-content.css">
+
 </head>
 <body>
 <div id="header">
@@ -44,26 +45,44 @@
 <div id="content">
     <div class="jj">
             <span class="tx">
-                <a  href="" >
-					<img src="${pageContext.request.contextPath}/img/lyf.jpg" alt="李易峰" class="photo">
+                <a  href="#" >
+					<img src="${pageContext.request.contextPath}/${singer.singerImgUrl}" alt="${sinegr.singerName}" class="photo">
 				</a>
             </span>
         <div class="xx">
             <div class="name">
-                    <span class="name_sp" title="李易峰">
-                        李易峰
+                    <span class="name_sp" title="${sinegr.singerName}">
+                        ${singer.singerName}
                     </span>
             </div>
             <div class="jtxx">
                 <div class="jtxx_txt">
-                    国籍：中国&nbsp;&nbsp;
-                    出生地：四川省成都市&nbsp;&nbsp;
-                    生日：1987年5月4日&nbsp;&nbsp;
-                    职业：歌手、演员&nbsp;&nbsp;
-                    代表作品：《古剑奇谭》、《盗墓笔记》、《活色生香》、《千金归来》、《青云志》
+                    <%
+                        Singer singer = (Singer) session.getAttribute("singer");
+                    %>
+                    地区：<%=singer.getSingerName()%>&nbsp;&nbsp;
+                    生日：<%=singer.getSingerArea()%>&nbsp;&nbsp;
+                    介绍：<%=singer.getSingerIntroduce()%>
+
                 </div>
-                <a href="" style="">[更多]</a>
+                    <%
+                        if (singer.getSingerIntroduce().length()>79)
+                        {
+                    %>
+                <a id="jtxx_txt_more" href="javascript:;">[更多]</a>
+                <%
+                    }
+                %>
+                <div class="jtxx_txt1">
+                    地区：<%=singer.getSingerName()%>&nbsp;&nbsp;
+                    生日：<%=singer.getSingerArea()%>&nbsp;&nbsp;
+                    介绍：<%=singer.getSingerIntroduce()%>
+                    <a id="jtxx_txt_more1" href="javascript:;">[不显示]</a>
+                </div>
+
+
             </div>
+
             <ul class="xx_ul">
                 <li class="xx_li">
                     <a href=""><span>单曲</span>
@@ -691,5 +710,8 @@
 
     onscroll();
 </script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.12.4.js"></script>
+<script src="${pageContext.request.contextPath}/js/singer/singer.js"></script>
+
 </body>
 </html>

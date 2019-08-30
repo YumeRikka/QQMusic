@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qqmusic.com.mapper.SongMapper">
+  <resultMap id="BaseResultMap" type="qqmusic.com.entity.Song">
+    <!--@mbg.generated-->
+    <id column="song_id" jdbcType="INTEGER" property="songId" />
+    <result column="song_name" jdbcType="VARCHAR" property="songName" />
+    <result column="song_singer_id" jdbcType="INTEGER" property="songSingerId" />
+    <result column="song_album_id" jdbcType="INTEGER" property="songAlbumId" />
+    <result column="song_play_count" jdbcType="INTEGER" property="songPlayCount" />
+    <result column="song_collection_count" jdbcType="INTEGER" property="songCollectionCount" />
+    <result column="song_release_time" jdbcType="TIMESTAMP" property="songReleaseTime" />
+    <result column="song_url" jdbcType="VARCHAR" property="songUrl" />
+    <result column="song_cyric_url" jdbcType="VARCHAR" property="songCyricUrl" />
+    <result column="song_img_url" jdbcType="VARCHAR" property="songImgUrl" />
+    <result column="song_time" jdbcType="VARCHAR" property="songTime" />
+    <result column="song_type" jdbcType="VARCHAR" property="songType" />
+    <result column="song_language" jdbcType="VARCHAR" property="songLanguage" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    song_id, song_name, song_singer_id, song_album_id, song_play_count, song_collection_count, 
+    song_release_time, song_url, song_cyric_url, song_img_url, song_time, song_type, 
+    song_language
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from qqm_songs
+    where song_id = #{songId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from qqm_songs
+    where song_id = #{songId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="song_id" keyProperty="songId" parameterType="qqmusic.com.entity.Song" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into qqm_songs (song_name, song_singer_id, song_album_id, 
+      song_play_count, song_collection_count, song_release_time, 
+      song_url, song_cyric_url, song_img_url, 
+      song_time, song_type, song_language
+      )
+    values (#{songName,jdbcType=VARCHAR}, #{songSingerId,jdbcType=INTEGER}, #{songAlbumId,jdbcType=INTEGER}, 
+      #{songPlayCount,jdbcType=INTEGER}, #{songCollectionCount,jdbcType=INTEGER}, #{songReleaseTime,jdbcType=TIMESTAMP}, 
+      #{songUrl,jdbcType=VARCHAR}, #{songCyricUrl,jdbcType=VARCHAR}, #{songImgUrl,jdbcType=VARCHAR}, 
+      #{songTime,jdbcType=VARCHAR}, #{songType,jdbcType=VARCHAR}, #{songLanguage,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="song_id" keyProperty="songId" parameterType="qqmusic.com.entity.Song" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into qqm_songs
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="songName != null">
+        song_name,
+      </if>
+      <if test="songSingerId != null">
+        song_singer_id,
+      </if>
+      <if test="songAlbumId != null">
+        song_album_id,
+      </if>
+      <if test="songPlayCount != null">
+        song_play_count,
+      </if>
+      <if test="songCollectionCount != null">
+        song_collection_count,
+      </if>
+      <if test="songReleaseTime != null">
+        song_release_time,
+      </if>
+      <if test="songUrl != null">
+        song_url,
+      </if>
+      <if test="songCyricUrl != null">
+        song_cyric_url,
+      </if>
+      <if test="songImgUrl != null">
+        song_img_url,
+      </if>
+      <if test="songTime != null">
+        song_time,
+      </if>
+      <if test="songType != null">
+        song_type,
+      </if>
+      <if test="songLanguage != null">
+        song_language,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="songName != null">
+        #{songName,jdbcType=VARCHAR},
+      </if>
+      <if test="songSingerId != null">
+        #{songSingerId,jdbcType=INTEGER},
+      </if>
+      <if test="songAlbumId != null">
+        #{songAlbumId,jdbcType=INTEGER},
+      </if>
+      <if test="songPlayCount != null">
+        #{songPlayCount,jdbcType=INTEGER},
+      </if>
+      <if test="songCollectionCount != null">
+        #{songCollectionCount,jdbcType=INTEGER},
+      </if>
+      <if test="songReleaseTime != null">
+        #{songReleaseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="songUrl != null">
+        #{songUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="songCyricUrl != null">
+        #{songCyricUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="songImgUrl != null">
+        #{songImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="songTime != null">
+        #{songTime,jdbcType=VARCHAR},
+      </if>
+      <if test="songType != null">
+        #{songType,jdbcType=VARCHAR},
+      </if>
+      <if test="songLanguage != null">
+        #{songLanguage,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="qqmusic.com.entity.Song">
+    <!--@mbg.generated-->
+    update qqm_songs
+    <set>
+      <if test="songName != null">
+        song_name = #{songName,jdbcType=VARCHAR},
+      </if>
+      <if test="songSingerId != null">
+        song_singer_id = #{songSingerId,jdbcType=INTEGER},
+      </if>
+      <if test="songAlbumId != null">
+        song_album_id = #{songAlbumId,jdbcType=INTEGER},
+      </if>
+      <if test="songPlayCount != null">
+        song_play_count = #{songPlayCount,jdbcType=INTEGER},
+      </if>
+      <if test="songCollectionCount != null">
+        song_collection_count = #{songCollectionCount,jdbcType=INTEGER},
+      </if>
+      <if test="songReleaseTime != null">
+        song_release_time = #{songReleaseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="songUrl != null">
+        song_url = #{songUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="songCyricUrl != null">
+        song_cyric_url = #{songCyricUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="songImgUrl != null">
+        song_img_url = #{songImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="songTime != null">
+        song_time = #{songTime,jdbcType=VARCHAR},
+      </if>
+      <if test="songType != null">
+        song_type = #{songType,jdbcType=VARCHAR},
+      </if>
+      <if test="songLanguage != null">
+        song_language = #{songLanguage,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where song_id = #{songId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="qqmusic.com.entity.Song">
+    <!--@mbg.generated-->
+    update qqm_songs
+    set song_name = #{songName,jdbcType=VARCHAR},
+      song_singer_id = #{songSingerId,jdbcType=INTEGER},
+      song_album_id = #{songAlbumId,jdbcType=INTEGER},
+      song_play_count = #{songPlayCount,jdbcType=INTEGER},
+      song_collection_count = #{songCollectionCount,jdbcType=INTEGER},
+      song_release_time = #{songReleaseTime,jdbcType=TIMESTAMP},
+      song_url = #{songUrl,jdbcType=VARCHAR},
+      song_cyric_url = #{songCyricUrl,jdbcType=VARCHAR},
+      song_img_url = #{songImgUrl,jdbcType=VARCHAR},
+      song_time = #{songTime,jdbcType=VARCHAR},
+      song_type = #{songType,jdbcType=VARCHAR},
+      song_language = #{songLanguage,jdbcType=VARCHAR}
+    where song_id = #{songId,jdbcType=INTEGER}
+  </update>
+</mapper>

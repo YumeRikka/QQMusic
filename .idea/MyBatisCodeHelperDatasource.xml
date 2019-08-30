@@ -32,11 +32,31 @@
         </option>
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="qqmusic:qqm_player_songs">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="song_id" />
+                  <option name="javaModelName" value="PlayerSong" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="qqmusic:qqm_singer">
               <value>
                 <TableGenerateConfig>
                   <option name="generatedKey" value="singer_id" />
                   <option name="javaModelName" value="Singer" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="qqmusic:qqm_songs">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="song_id" />
+                  <option name="javaModelName" value="Song" />
                   <option name="moduleName" value="QQMusic" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>

@@ -131,10 +131,11 @@ body{
     position:relative;
     height:250px;
     padding-left:305px;
-    margin-top:50px;
+
     margin-bottom:35px;
 }
 #content .jj .tx{
+     margin-top: 30px;
      width:250px;
      height:250px;
      position:absolute;
@@ -162,19 +163,33 @@ body{
 }
 #content .jj .xx .jtxx{
     font-size:14px;
-    height:50px;
+
     line-height:50px;
     margin-bottom:4px
 }
 #content .jj .xx .jtxx_txt{
-    float:left;
+    text-align: left;
     max-width:80%;
     white-space:nowrap;
-    overflow:hidden;
+    overflow: hidden;
     text-overflow:ellipsis;
     margin-left:80px;
 }
+#content .jj .xx .jtxx_txt1{
+    text-align: left;
+    height: 100px;
+    margin-bottom: 10px;
+
+    max-width:80%;
+    margin-left:80px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#content .jj .xx #jtxx_txt_more{
+    margin-right: 1020px;
+}
 #content .jj .xx .xx_ul{
+    float: left;
     height:23px;
     line-height:23px;
     margin-left:80px;
@@ -196,6 +211,7 @@ body{
     margin-left:10px
 }
 #content .jj .xx .but{
+    top: 210px;
     position:absolute;
     bottom:23px;
 }
@@ -814,7 +830,7 @@ body{
 #fk .i_2{
     width: 20px;
     height: 20px;
-    background: url("images/xt.jpg");
+    background: url("../img/icon_sprite.png");
     background-position: -180px 0;
     margin: 10px 10px;
     float: left;
@@ -822,7 +838,7 @@ body{
 #fk .i_1{
     width: 20px;
     height: 20px;
-    background: url("images/xt.jpg");
+    background: url("../img/icon_sprite.png");
     background-position: -160px 0;
     margin: 13px 10px;
     float: left;

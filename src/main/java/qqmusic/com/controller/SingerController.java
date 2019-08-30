@@ -19,15 +19,17 @@ public class SingerController {
     private SingerService singerService;
     @RequestMapping("/singer")
     public String singers(@RequestParam(value = "pn", defaultValue = "1") Integer pn, HttpServletRequest request){
-
         PageInfo singers = singerService.findAllwithPage(pn,100);
         request.getSession().setAttribute("singers",singers);
         System.out.println(singers);
         return "singer";
     }
     @RequestMapping(value = "/singer/{id}", method = RequestMethod.GET)
-    public String testRest(@PathVariable Integer id) {
-        System.out.println("singer GET: " + id);
+    public String testRest(@PathVariable Integer id,HttpServletRequest request) {
+        Singer singer = singerService.selectByPrimaryKey(id);
+        System.out.println(singer);
+        request.getSession().setAttribute("singer",singer);
+        System.out.println("singer GET: " + singer);
         return "singer-content";
     }
 }

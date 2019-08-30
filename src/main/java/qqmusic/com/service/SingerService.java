@@ -3,7 +3,8 @@ import java.util.List;
 
 import com.github.pagehelper.PageInfo;
 import qqmusic.com.entity.Singer;
-public interface SingerService{
+
+public interface SingerService {
 
 
     int deleteByPrimaryKey(Integer singerId);
@@ -19,8 +20,8 @@ public interface SingerService{
     int updateByPrimaryKey(Singer record);
 
 
-
-	List<Singer> findAll();
+    List<Singer> findAll();
 
     public PageInfo<Singer> findAllwithPage(int page, int pageSize);
 }
+

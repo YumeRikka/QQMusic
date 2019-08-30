@@ -8,8 +8,9 @@ import javax.annotation.Resource;
 import qqmusic.com.mapper.SingerMapper;
 import qqmusic.com.entity.Singer;
 import qqmusic.com.service.SingerService;
+
 @Service
-public class SingerServiceImpl implements SingerService{
+public class SingerServiceImpl implements SingerService {
 
     @Resource
     private SingerMapper singerMapper;
@@ -44,10 +45,10 @@ public class SingerServiceImpl implements SingerService{
         return singerMapper.updateByPrimaryKey(record);
     }
 
-	@Override
-	public List<Singer> findAll(){
-		 return singerMapper.findAll();
-	}
+    @Override
+    public List<Singer> findAll() {
+        return singerMapper.findAll();
+    }
 
     @Override
     public PageInfo<Singer> findAllwithPage(int page, int pageSize) {
@@ -55,3 +56,4 @@ public class SingerServiceImpl implements SingerService{
         return new PageInfo<>(singerMapper.findAll());
     }
 }
+

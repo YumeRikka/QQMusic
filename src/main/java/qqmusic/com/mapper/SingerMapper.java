@@ -1,8 +1,6 @@
 package qqmusic.com.mapper;
-import org.apache.ibatis.annotations.Param;
-import java.util.List;
 
-import qqmusic.com.entity.Singer;
+import qqmusic.com.entity.Singer;import java.util.List;
 
 public interface SingerMapper {
     int deleteByPrimaryKey(Integer singerId);
@@ -18,6 +16,4 @@ public interface SingerMapper {
     int updateByPrimaryKey(Singer record);
 
     List<Singer> findAll();
-
-
 }

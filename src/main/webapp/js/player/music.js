@@ -8,12 +8,12 @@ $(function(){
 	//0.自定义滚动条
 	$(".music_list").mCustomScrollbar();
 
+	$.ajax()
 	//1.加载歌曲列表
 	getMusicList();
 	function getMusicList(){
 
-		$.getJSON("source/musicList.json",function(data){
-
+		$.getJSON("../songList",function(data){
 			initMusicInfo(data[0]);
 			initMusicLyric(data[0]);
 			player.$musicList = data;

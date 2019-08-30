@@ -1,7 +1,5 @@
 package qqmusic.com.entity;
 
-import java.util.Date;
-
 public class Singer {
     private Integer singerId;
 
@@ -15,11 +13,9 @@ public class Singer {
 
     private String singerIntroduce;
 
-    private Date singerBirthday;
-
     /**
-    * 0 女 1 男 2 组合
-    */
+     * 0 女 1 男 2 组合
+     */
     private Integer singerType;
 
     private String singerImgUrl;
@@ -72,14 +68,6 @@ public class Singer {
         this.singerIntroduce = singerIntroduce;
     }
 
-    public Date getSingerBirthday() {
-        return singerBirthday;
-    }
-
-    public void setSingerBirthday(Date singerBirthday) {
-        this.singerBirthday = singerBirthday;
-    }
-
     public Integer getSingerType() {
         return singerType;
     }
@@ -94,5 +82,19 @@ public class Singer {
 
     public void setSingerImgUrl(String singerImgUrl) {
         this.singerImgUrl = singerImgUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Singer{" +
+                "singerId=" + singerId +
+                ", singerName='" + singerName + '\'' +
+                ", singerAccessCount=" + singerAccessCount +
+                ", singerCollectionCount=" + singerCollectionCount +
+                ", singerArea='" + singerArea + '\'' +
+                ", singerIntroduce='" + singerIntroduce + '\'' +
+                ", singerType=" + singerType +
+                ", singerImgUrl='" + singerImgUrl + '\'' +
+                '}';
     }
 }
