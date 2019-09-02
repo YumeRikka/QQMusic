@@ -132,4 +132,23 @@ public class Song {
     public void setSongLanguage(String songLanguage) {
         this.songLanguage = songLanguage;
     }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "songId=" + songId +
+                ", songName='" + songName + '\'' +
+                ", songSingerId=" + songSingerId +
+                ", songAlbumId=" + songAlbumId +
+                ", songPlayCount=" + songPlayCount +
+                ", songCollectionCount=" + songCollectionCount +
+                ", songReleaseTime=" + songReleaseTime +
+                ", songUrl='" + songUrl + '\'' +
+                ", songCyricUrl='" + songCyricUrl + '\'' +
+                ", songImgUrl='" + songImgUrl + '\'' +
+                ", songTime='" + songTime + '\'' +
+                ", songType='" + songType + '\'' +
+                ", songLanguage='" + songLanguage + '\'' +
+                '}';
+    }
 }

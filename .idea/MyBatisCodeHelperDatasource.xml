@@ -3,6 +3,7 @@
   <component name="MyBatisCodeHelperDatasource">
     <option name="projectProfile">
       <ProjectProfile>
+        <option name="genSqlFilePath" value="$PROJECT_DIR$/src/main/java/qqmusic/com/entity" />
         <option name="generateService" value="true" />
         <option name="generateServiceInterface" value="true" />
         <option name="javaMapperPackage" value="qqmusic.com.mapper" />
@@ -32,6 +33,16 @@
         </option>
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="qqmusic:qqm_album">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="album_id" />
+                  <option name="javaModelName" value="Album" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="qqmusic:qqm_player_songs">
               <value>
                 <TableGenerateConfig>
@@ -67,6 +78,16 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="user_id" />
                   <option name="javaModelName" value="User" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="qqmusic:song_with_singer">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="SongWithSinger" />
                   <option name="moduleName" value="QQMusic" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>

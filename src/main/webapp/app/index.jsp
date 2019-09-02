@@ -1372,7 +1372,6 @@
 </footer>
 
 <script src="${pageContext.request.contextPath}/js/jquery-1.12.4.js"></script>
-
 <script src="${pageContext.request.contextPath}/js/index/index.js"></script>
 <script src="${pageContext.request.contextPath}/js/list/list.js"></script>
 <script src="${pageContext.request.contextPath}/js/myMusic/login.js"></script>

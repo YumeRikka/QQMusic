@@ -13,7 +13,7 @@ $(function(){
 	getMusicList();
 	function getMusicList(){
 
-		$.getJSON("../songList",function(data){
+		$.getJSON("playSongList",function(data){
 			initMusicInfo(data[0]);
 			initMusicLyric(data[0]);
 			player.$musicList = data;

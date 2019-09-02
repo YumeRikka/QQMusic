@@ -830,102 +830,164 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="210" parent="11" name="qqm_singer"/>
-    <table id="211" parent="11" name="qqm_songs"/>
-    <table id="212" parent="11" name="qqm_users"/>
-    <column id="213" parent="210" name="singer_id">
+    <table id="210" parent="11" name="qqm_album"/>
+    <table id="211" parent="11" name="qqm_singer"/>
+    <table id="212" parent="11" name="qqm_songs"/>
+    <table id="213" parent="11" name="qqm_users"/>
+    <table id="214" parent="11" name="song_with_singer">
+      <Comment>song_with_singer</Comment>
+      <Collation>utf8mb4_general_ci</Collation>
+    </table>
+    <column id="215" parent="210" name="album_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="214" parent="210" name="singer_name">
+    <column id="216" parent="210" name="album_name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="215" parent="210" name="singer_access_count">
+    <column id="217" parent="210" name="album_url">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="218" parent="210" name="album_release_date">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <column id="219" parent="210" name="album_singer_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="220" parent="210" name="album_introduce">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="221" parent="210" name="album_collection_count">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="222" parent="210" name="album_status">
+      <Position>8</Position>
+      <Comment>0正常发布状态&#xd;
+1阻塞状态（其中歌曲设置阻塞）</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="223" parent="210" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>album_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="224" parent="211" name="singer_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="225" parent="211" name="singer_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="226" parent="211" name="singer_access_count">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="216" parent="210" name="singer_collection_count">
+    <column id="227" parent="211" name="singer_collection_count">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="217" parent="210" name="singer_area">
+    <column id="228" parent="211" name="singer_area">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="218" parent="210" name="singer_introduce">
+    <column id="229" parent="211" name="singer_introduce">
       <Position>6</Position>
       <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="219" parent="210" name="singer_type">
+    <column id="230" parent="211" name="singer_type">
       <Position>7</Position>
       <Comment>0 女 1 男 2 组合</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="220" parent="210" name="singer_img_url">
+    <column id="231" parent="211" name="singer_img_url">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="221" parent="210" name="PRIMARY">
+    <key id="232" parent="211" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>singer_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="222" parent="211" name="song_id">
+    <column id="233" parent="212" name="song_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="223" parent="211" name="song_name">
+    <column id="234" parent="212" name="song_name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="224" parent="211" name="song_singer_id">
+    <column id="235" parent="212" name="song_singer_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="225" parent="211" name="song_album_id">
+    <column id="236" parent="212" name="song_album_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="226" parent="211" name="song_play_count">
+    <column id="237" parent="212" name="song_play_count">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="227" parent="211" name="song_collection_count">
+    <column id="238" parent="212" name="song_collection_count">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="211" name="song_release_time">
+    <column id="239" parent="212" name="song_release_time">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
@@ -933,64 +995,64 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="229" parent="211" name="song_url">
+    <column id="240" parent="212" name="song_url">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="230" parent="211" name="song_cyric_url">
+    <column id="241" parent="212" name="song_cyric_url">
       <Position>9</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="211" name="song_img_url">
+    <column id="242" parent="212" name="song_img_url">
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="211" name="song_time">
+    <column id="243" parent="212" name="song_time">
       <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="211" name="song_type">
+    <column id="244" parent="212" name="song_type">
       <Position>12</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="211" name="song_language">
+    <column id="245" parent="212" name="song_language">
       <Position>13</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="235" parent="211" name="PRIMARY">
+    <key id="246" parent="212" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>song_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="236" parent="212" name="user_id">
+    <column id="247" parent="213" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="212" name="user_pwd">
+    <column id="248" parent="213" name="user_pwd">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="212" name="user_name">
+    <column id="249" parent="213" name="user_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="212" name="user_email">
+    <column id="250" parent="213" name="user_email">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="212" name="user_vip">
+    <column id="251" parent="213" name="user_vip">
       <Position>5</Position>
       <Comment>0 非会员 1是会员</Comment>
       <DataType>int(11)|0s</DataType>
@@ -998,16 +1060,48 @@
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="212" name="user_head_img_url">
+    <column id="252" parent="213" name="user_head_img_url">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;../img/login/timg.jpg&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="242" parent="212" name="PRIMARY">
+    <key id="253" parent="213" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="254" parent="214" name="id">
+      <Position>1</Position>
+      <Comment>id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="214" name="song_id">
+      <Position>2</Position>
+      <Comment>songId</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="214" name="singer_id">
+      <Position>3</Position>
+      <Comment>singerId</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="257" parent="214" name="ix_singer_id_song_id">
+      <ColNames>singer_id
+song_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="258" parent="214" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

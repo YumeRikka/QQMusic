@@ -1,4 +1,5 @@
 package qqmusic.com.service;
+import java.util.List;
 
 import qqmusic.com.entity.Song;
 public interface SongService{
@@ -15,5 +16,12 @@ public interface SongService{
     int updateByPrimaryKeySelective(Song record);
 
     int updateByPrimaryKey(Song record);
+
+
+
+
+	List<Song> findFirst20OrderBySongPlayCountDesc();
+
+
 
 }

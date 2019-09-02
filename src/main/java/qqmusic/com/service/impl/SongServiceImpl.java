@@ -1,4 +1,5 @@
 package qqmusic.com.service.impl;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -40,5 +41,11 @@ public class SongServiceImpl implements SongService{
     public int updateByPrimaryKey(Song record) {
         return songMapper.updateByPrimaryKey(record);
     }
+
+	@Override
+	public List<Song> findFirst20OrderBySongPlayCountDesc(){
+		 return songMapper.findFirst20OrderBySongPlayCountDesc();
+	}
+
 
 }
