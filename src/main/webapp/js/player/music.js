@@ -4,25 +4,49 @@ $(function(){
 	var progress;
 	var volume;
 	var lyric;
-	
+    var id = 0;
+
 	//0.自定义滚动条
 	$(".music_list").mCustomScrollbar();
 
-	$.ajax()
-	//1.加载歌曲列表
-	getMusicList();
-	function getMusicList(){
 
-		$.getJSON("playSongList",function(data){
-			initMusicInfo(data[0]);
-			initMusicLyric(data[0]);
-			player.$musicList = data;
-			var MusicList = $(".music_list ul");
-			$.each(data,function(index,ele){
-				var item = createMusicList(index,ele);
-				MusicList.append(item);
-			});	
+    $.getJSON("../playSongListFirst",function(data){
+        initMusicInfo(data[0]);
+        initMusicLyric(data[0]);
+        player.$musicList = data;
+        var MusicList = $(".music_list ul");
+
+        $.each(data,function(index,ele){
+            var item = createMusicList(id,ele);
+            MusicList.append(item);
+            id++;
+        });
+        $(".list_li").eq(0).find(".play_btn").trigger('click');
+    });
+
+    //1.加载歌曲列表
+	window.onfocus = function () {
+		getMusicList();
+
+	}
+
+
+    function getMusicList(){
+		$.getJSON("../playSongList",function(data){
+
+			if (data!=""){
+				initMusicInfo(data[0]);
+				initMusicLyric(data[0]);
+				player.$musicList = data;
+				var MusicList = $(".music_list ul");
+				$.each(data,function(index,ele){
+					var item = createMusicList(id,ele);
+					MusicList.append(item);
+					id++;
+				});
+			}
 		})
+
 	}
 	//2.初始化歌曲图片，背景等
 	function initMusicInfo(music){
@@ -191,9 +215,27 @@ $(function(){
 
 		//(5)歌曲删除按钮事件
 		$(".music_list").delegate('.delete_btn', 'click', function(event) {
+			alert($li.get(0).index);
+			alert(player.currentMusic);
+			if($li.get(0).index == player.currentMusic){
+				$(".next").trigger('click');
+			}
 			var $li = $(this).parents(".list_li");
 			//删除页面上的
+			var id = $(this).attr("id");
+
+			$.ajax(
+				{
+					url: "../deleteSong?id="+id,
+					dataType:"jsonp",
+					success:
+						function (result) {
+							console.log(result);
+						}
+				}
+			);
 			$li.remove();
+
 			//删除保存在数组里的
 			player.changeMusic($li.get(0).index);
 			//重新排序
@@ -202,9 +244,7 @@ $(function(){
 				$(ele).find(".number").text(index+1);
 			});
 			//如果删除的是正在播放的音乐，就播放下一首音乐
-			if($li.get(0).index == player.currentMusic){
-				$(".next").trigger('click');
-			}	
+
 		});
 
 		//(6)音量图标点击事件
@@ -362,12 +402,13 @@ $(function(){
 							"<div class=\"singer\"><a href=\"javascript:;\">"+music.singer+"</a></div>\n"+
 							"<div class=\"time\">\n"+
 								"<span>"+music.time+"</span>\n"+
-								"<a href=\"javascript:;\" title=\"删除\" class=\"delete_btn\"></a>\n"+
+								"<a href=\"javascript:;\" id=\""+(index+1)+"\" title=\"删除\" class=\"delete_btn\"></a>\n"+
 							"</div>\n"+
 						"</li>");
-		
+
 		$li.get(0).index = index;
 		$li.get(0).music = music;
+
 		return $li;
 	}
 

@@ -45,4 +45,15 @@ public class UserController {
         return "forward:/";
     }
 
+    @RequestMapping("/myMusic")
+    public String myMusic(HttpServletRequest request){
+        User user = (User) request.getSession().getAttribute("user");
+        if (user==null)
+        {
+            return "myMusic";
+        }
+        else {
+            return "my-profile";
+        }
+    }
 }

@@ -1,3 +1,4 @@
+<%@ page import="qqmusic.com.entity.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -21,7 +22,7 @@
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/greenDiamond.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/register.css">
     <script src="${pageContext.request.contextPath}/js/singer/login.js"></script>
-    <script src="${pageContext.request.contextPath}/js/rank-list/rank-list.js"></script>
+
     <style>
         *{
             margin:0px;
@@ -48,6 +49,22 @@
 </head>
 
 <body>
+<%
+    User user = (User) session.getAttribute("user");
+%>
+<div class="mod_operate_menu" style="position: absolute; display: none; left: 949px; top: 423px;" id="fav_pop">
+    <div class="operate_menu__cont">
+        <a href="javascript:;" class="operate_menu__link js_addto_playlist">播放队列</a>
+        <ul role="menu" class="operate_menu__list operate_menu__top_line operate_menu__bottom_line">
+
+            <li class="operate_menu__item">
+                <a href="javascript:;" class="operate_menu__link js_addto_taogelist operate_menu__link--disabled" data-dirid="201" title="我喜欢"><i class="operate_menu__icon_like"></i>我喜欢</a>
+            </li>
+
+        </ul>
+        <a href="javascript:;" class="operate_menu__link js_addto_new"><i class="operate_menu__icon_add sprite"></i>添加到新歌单</a>
+    </div>
+</div>
 <div class="mainHead">
     <!-- 导航栏头部-->
     <div class="section-inner">
@@ -206,12 +223,30 @@
             <span class="toplist_right_rule"><a href="">榜单规则</a></span>
         </div>
         <div class="toplist_right_nav2">
+            <%
+                if (user==null)
+                {
+                    %>
             <ul>
                 <li class="toplist_right_nav2_playCurrent"><a href=""><i class="playall"></i>播放全部</a></li>
-                <li class="toplist_right_nav2_play"><a href="">添加到</a></li>
+                <li class="toplist_right_nav2_play "><a href="">添加到</a></li>
                 <li class="toplist_right_nav2_play"><a href="">下载<i class="xiazai"></i></a></li>
                 <li class="toplist_right_nav2_play"><a href="">批量操作<i class="batch"></i></a></li>
             </ul>
+            <%
+                }
+                else
+                {
+            %>
+            <ul>
+                <li class="toplist_right_nav2_playCurrent"><a href=""><i class="playall"></i>播放全部</a></li>
+                <li class="toplist_right_nav2_play "><a href="">添加到</a></li>
+                <li class="toplist_right_nav2_play"><a href="">下载<i class="xiazai"></i></a></li>
+                <li class="toplist_right_nav2_play"><a href="">批量操作<i class="batch"></i></a></li>
+            </ul>
+            <%
+                }
+            %>
         </div>
         <div class="toplist_all">
 
@@ -234,17 +269,17 @@
                             </div>
                             <div class="sing_info_name">
 
-                                <a href=""><img class="song_img" src="${pageContext.request.contextPath}/${songvo.song.songImgUrl}"></a>
+                                <a href=""><img class="song_img" src="${pageContext.request.contextPath}/app/${songvo.song.songImgUrl}"></a>
 
                                 <span class="suojin"><a class="song_name" href="#">${songvo.song.songName}</a></span>
 
                                 <i class="dujia" title="独家"></i>
 
                                 <div class="fourKey">
-                                    <a href="${pageContext.request.contextPath}/playSong?id=${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                    <a href=""><i class="fourKey_add" title="添加到歌单"></i></a>
-                                    <a href=""><i class="fourKey_download" title="下载"></i></a>
-                                    <a href=""><i class="fourKey_share" title="分享"></i></a>
+                                    <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
                                 </div>
                             </div>
                             <div class="sing_info_singer">
@@ -276,17 +311,17 @@
                             </div>
                             <div class="sing_info_name">
 
-                                <a href=""><img class="song_img" src="${pageContext.request.contextPath}/${songvo.song.songImgUrl}"></a>
+                                <a href=""><img class="song_img" src="${pageContext.request.contextPath}/app/${songvo.song.songImgUrl}"></a>
 
                                 <span class="suojin"><a class="song_name" href="#">${songvo.song.songName}</a></span>
 
                                 <i class="dujia" title="独家"></i>
 
                                 <div class="fourKey">
-                                    <a href="${pageContext.request.contextPath}/playSong?id=${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                    <a href=""><i class="fourKey_add" title="添加到歌单"></i></a>
-                                    <a href=""><i class="fourKey_download" title="下载"></i></a>
-                                    <a href=""><i class="fourKey_share" title="分享"></i></a>
+                                    <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
                                 </div>
                             </div>
                             <div class="sing_info_singer">
@@ -626,5 +661,8 @@
     </div>
 
 </div>
+<script src="${pageContext.request.contextPath}/js/jquery-1.12.4.js"></script>
+<script src="${pageContext.request.contextPath}/js/rank-list/rank-list.js"></script>
+
 </body>
 </html>

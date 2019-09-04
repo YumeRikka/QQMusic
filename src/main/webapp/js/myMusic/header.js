@@ -1,10 +1,10 @@
 var link=document.createElement("link");
 	link.rel="stylesheet";
-	link.href="css/header.css";
+	link.href="../css/myMusic/header.css";
 	document.head.appendChild(link);
 $("#header").html(`<div id="header_nav">
 <div class="header_logo">
-    <img src="img/logo/l_logo.png" alt="">
+    <img src="../img/logo/l_logo.png" alt="">
 </div>
 <ul id="header_ul_nav" >
         <li class="nav_current">音乐馆</li><li>我的音乐</li><li id="download">客户端</li><li>音乐号</li><li>VIP</li>   
@@ -87,8 +87,8 @@ $("#header").html(`<div id="header_nav">
                         <input type="button" id="form_submit" value="登 录">
                     </form>
                     <div class="safe_login">
-                        <div class="login_erwei"> <img src="img/login/ptqrshow.jpg" alt="">   </div>
-                        <div><a href="my-profile.html"> <img src="img/login/qq.jpg" alt="" id="img_login"><a/></div>
+                        <div class="login_erwei"> <img src="../img/login/ptqrshow.jpg" alt="">   </div>
+                        <div><a href="my-profile.html"> <img src="../img/login/qq.jpg" alt="" id="img_login"><a/></div>
 
 						<div class="login_img"></div>
                     </div>

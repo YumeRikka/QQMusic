@@ -1,5 +1,7 @@
 package qqmusic.com.entity;
 
+import java.util.Objects;
+
 public class PlayerSong {
 
     private String name;
@@ -83,5 +85,24 @@ public class PlayerSong {
                 ", picture='" + picture + '\'' +
                 ", link_lrc='" + link_lrc + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {return true;}
+        if (o == null || getClass() != o.getClass()) {return false;}
+        PlayerSong that = (PlayerSong) o;
+        return Objects.equals(name, that.name) &&
+                Objects.equals(singer, that.singer) &&
+                Objects.equals(album, that.album) &&
+                Objects.equals(time, that.time) &&
+                Objects.equals(link_url, that.link_url) &&
+                Objects.equals(picture, that.picture) &&
+                Objects.equals(link_lrc, that.link_lrc);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, singer, album, time, link_url, picture, link_lrc);
     }
 }

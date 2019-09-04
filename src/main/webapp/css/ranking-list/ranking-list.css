@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+
 #leaderboard_main{
    width:1200px;
    height:2752px;
@@ -7,6 +8,52 @@
    padding-top:60px;
    margin-left:78px;
 }
+
+.mod_operate_menu {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	z-index: 100;
+	color: #4F4F4F;
+	font-size: 14px;
+}
+
+.operate_menu__cont, .operate_menu__sub {
+	width: 168px;
+	padding: 5px 0;
+	background-color: #fff;
+	box-shadow: 0 0 10px 0 rgba(183,183,183,.65);
+	border: 1px solid #bfbfbf;
+}
+
+.operate_menu__link {
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 40px;
+	padding-right: 15px;
+	margin-bottom: 1px;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.operate_menu__bottom_line {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #f0f0f0;
+	margin-bottom: 5px;
+}
+.operate_menu__top_line {
+	padding-top: 5px;
+	border-top: 1px solid #f0f0f0;
+	margin-top: 5px;
+}
+
+.operate_menu__list {
+	max-height: 250px;
+	overflow-y: auto;
+}
+
 .toplist_nav_left{
    width:178px;
    height:1040px;
@@ -157,7 +204,7 @@ ul .toplist_nav_left1_tit_current:hover{
     text-align: right;
     font-size: 24px;
 	float:left;
-	color#333;
+	color:#333;
 	
 }
 .sing_info_num {
@@ -220,7 +267,7 @@ ul .toplist_nav_left1_tit_current:hover{
     overflow: hidden;
 }
 	
-}
+
 .song_name{
 	float:left;
 	
