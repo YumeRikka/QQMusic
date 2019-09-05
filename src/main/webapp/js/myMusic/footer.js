@@ -1,6 +1,6 @@
 var link=document.createElement("link");
 	link.rel="stylesheet";
-	link.href="../css/myMusic/footer.css";
+	link.href="css/myMusic/footer.css";
 	document.head.appendChild(link);
 $("#footer").html(`<div class="section_inner">
 <div class="footer_info">

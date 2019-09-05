@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jdbc:mysql://localhost:3306/qqmusic?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC&amp;rewriteBatchedStatements=true&amp;allowPublicKeyRetrieval=true" uuid="c4291cc0-f5c9-4113-a57f-33b1a9078a31">
+    <data-source source="LOCAL" name="mysql" uuid="c4291cc0-f5c9-4113-a57f-33b1a9078a31">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

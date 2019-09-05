@@ -21,6 +21,10 @@
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/greenDiamond.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/register.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/my-profile/my-profile.css">
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/myMusic/login.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/login1.css">
     <script src="${pageContext.request.contextPath}/js/singer/login.js"></script>
 
     <style>
@@ -52,6 +56,49 @@
 <%
     User user = (User) session.getAttribute("user");
 %>
+<div id="div_dialog" class="mod_popup popup_login" data-aria="popup" style="left: 460px;
+		    top: 150px;">
+    <div class="popup_hd">
+        <h2 class="popup_tit"><a class="popup_tit_item tit_top">QQ登录</a><a class="popup_tit_item ">微信登录</a></h2>
+    </div>
+    <a class="popup_close" title="关闭"></a>
+
+    <div class="popup_bd " id="dialogbox">
+        <div class="login_body">
+            <h1 class="login_body_tit">快速安全登录</h1>
+            <div class="login_body_a">请使用
+                <a class="link_tips" href="#">
+                    QQ手机版
+                </a>扫描二维码，
+                <br>或点击头像授权登录。
+            </div>
+            <div class="login_img_body" >
+                <form action="${pageContext.request.contextPath}/login?path=rank" method="post" id="loginform" style="display:none">
+                    <input type="text"  id="form_qq" name="userId" placeholder="QQ">
+                    <a href="" class="clear_qq"></a>
+                    <input type="password" id="form_upwd" name="userPwd" placeholder="密码">
+                    <a href="" class="clear_upwd"></a>
+                    <input type="submit" id="form_submit" value="登 录">
+                </form>
+                <div class="safe_login">
+                    <div class="login_erwei"> <img src="${pageContext.request.contextPath}/img/login/ptqrshow.jpg" alt="">   </div>
+                    <div><a href="my-profile.html"> <img src="${pageContext.request.contextPath}/img/login/qq.jpg" alt="" id="img_login"> </a></div>
+                    <div class="login_img"></div>
+                </div>
+            </div>
+            <div class="bottom_hide">
+                <div class="login_check">
+                    <a class="auto_login_checked" id="auto_login_check"></a><label class="auto_login">下次自动登录</label>
+                </div>
+                <a href="#" class="login_link">帐号密码登录</a>
+
+                <span class="dotted">|</span>
+                <a href="${pageContext.request.contextPath}/app/reg.jsp" class="link reg_link" target="_blank">注册新帐号</a><span class="dotted">|</span>
+                <a class="link" id="feedback_qlogin" target="_blank">意见反馈</a>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="mod_operate_menu" style="position: absolute; display: none; left: 949px; top: 423px;" id="fav_pop">
     <div class="operate_menu__cont">
         <a href="javascript:;" class="operate_menu__link js_addto_playlist">播放队列</a>
@@ -76,40 +123,40 @@
         </h1>
         <ul class="list">
             <li class="list-nav list-nav-room">
-                <a href="Index.html" class="list-nav-link list-nav-link-current">音乐馆</a>
+                <a href="${pageContext.request.contextPath}/" class="list-nav-link list-nav-link-current">音乐馆</a>
             </li>
             <li class="list-nav list-nav-mine">
-                <a href="My singer_unload.html" class="list-nav-link"> 我的音乐</a>
+                <a href="${pageContext.request.contextPath}/myMusic" class="list-nav-link"> 我的音乐</a>
             </li>
             <li class="list-nav list-nav-download">
-                <a href="" class="list-nav-link">下载客户端</a>
+                <a href="#" class="list-nav-link">下载客户端</a>
             </li>
             <li class="list-nav list-nav-VIP">
-                <a href="" class="list-nav-link">VIP</a>
+                <a href="#" class="list-nav-link">VIP</a>
             </li>
         </ul>
         <ul class="list-two">
             <li class="list-two-nav">
-                <a href="Index.html"  class="list-two-nav-son">首页</a>
+                <a href="${pageContext.request.contextPath}/"  class="list-two-nav-son">首页</a>
             </li>
             <li class="list-two-nav">
-                <a href="singer.html" class="list-two-nav-son">歌手</a>
+                <a href="${pageContext.request.contextPath}/singer" class="list-two-nav-son">歌手</a>
             </li>
             <li class="list-two-nav">
-                <a href="Album.html" class="list-two-nav-son">专辑</a>
+                <a href="#" class="list-two-nav-son">专辑</a>
             </li>
             <li class="list-two-nav">
-                <a href="leaderboard.html" class="list-two-nav-son  list-two-nav-son-current">排行榜</a>
+                <a href="${pageContext.request.contextPath}/rank" class="list-two-nav-son  list-two-nav-son-current">排行榜</a>
             </li>
 
             <li class="list-two-nav">
-                <a href="songList.html" class="list-two-nav-son">分类歌单</a>
+                <a href="#" class="list-two-nav-son">分类歌单</a>
             </li>
             <li class="list-two-nav">
-                <a href="" class="list-two-nav-son">电台</a>
+                <a href="#" class="list-two-nav-son">电台</a>
             </li>
             <li class="list-two-nav">
-                <a href="" class="list-two-nav-son">MV</a>
+                <a href="#" class="list-two-nav-son">MV</a>
             </li>
         </ul>
     </div>
@@ -172,7 +219,76 @@
     </div>
     <div class="top-mon">
          <span class="top-login">
-             <a  class="top-login-link js-login">登录</a>
+             <c:if test="${user==null}">
+                 <a class="top-login-link js-login login">登录</a>
+             </c:if>
+             <c:if test="${user!=null}">
+                <a href="" class="a_1 left" id="wydl" >
+                    <img  src="<%=user.getUserHeadImgUrl()%>" class="dlty" style="margin-right: 10px;vertical-align: -1px;"/>
+                    <img  src="${pageContext.request.contextPath}/images/login_qq.png" class="dlqe" style="right: 244px"/>
+                </a>
+                 <div class="popup_user" id="wydl1">
+                    <div class="popup_user_data" style="width: 140px;">
+                    <a href="" class="popup_user_data__cover_link" onclick="setStatCookie&amp;&amp;setStatCookie();">
+                        <img src="<%=user.getUserHeadImgUrl()%>"  class="popup_user_data__cover js_user_img">
+
+                        <img src="${pageContext.request.contextPath}/images/login_qq.png" class="popup_user_data__icon">
+
+                    </a>
+
+                        <!-- 自动垂直居中 -->
+                    <div class="popup_user_data__cont">
+                        <div class="popup_user_data__name">
+                            <a href="${pageContext.request.contextPath}/myMusic" onclick="setStatCookie&amp;&amp;setStatCookie();" class=""><%=user.getUserName()%></a>
+                        </div>
+                        <div class="popup_user_data__lv">
+                            <a href="#" class="js_vip_jump" data-stat="y_new.top.pop.vip_icon" rel="noopener" target="_blank">
+                                <img src="//y.gtimg.cn/music/icon/v1/pc/svip_g.png" alt="绿钻" class="popup_user_data__lv_icon">
+                            </a>
+                            <a href="#" data-stat="y_new.top.pop.vip_icon" rel="noopener" target="_blank">
+                                <img src="//y.gtimg.cn/music/icon/v1/pc/sui_g.png?max_age=2592000" alt="付费音乐包" class="popup_user_data__lv_icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="popup_user_toolbar">
+                        <!--绿钻-->
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit"><a href="//y.qq.com/portal/vipportal/index.html" target="_blank" rel="noopener">绿钻豪华版</a>
+                            </div>
+                            <div class="popup_user_toolbar__desc c_tx_thin">
+
+                                开通立即赠送付费音乐包
+
+                            </div>
+                            <a class="mod_btn_green popup_user_toolbar__btn_vip js_openvip" href="javascript:;" data-aid="music.pc.20318.newyqqhover" data-stat="music.20318.btnclick.pc">开通</a>
+                        </div>
+
+                        <!--付费包-->
+
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit"><a href="//y.qq.com/vip/fufeibao/index.html" target="_blank" rel="noopener">付费音乐包</a>
+                            </div>
+                            <div class="popup_user_toolbar__desc c_tx_thin">
+
+                                畅享千万包月曲库
+
+                            </div>
+                            <a class="mod_btn_green popup_user_toolbar__btn_vip js_openmusic" href="javascript:;" data-aid="music.pc.20320.newyqqhover" data-stat="music.20320.btnclick.pc">开通</a>
+                        </div>
+
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit js_msgcenterdiv"><a href="//y.qq.com/portal/msg_center.html#stat=y_new.top.pop.msg_center" onclick="setStatCookie&amp;&amp;setStatCookie();">评论通知</a>
+                            </div>
+                        </div>
+                        <div class="popup_user_toolbar__item">
+                            <div class="popup_user_toolbar__tit"><a href="${pageContext.request.contextPath}/logout?path=rank" id="logout" class="js_logout" data-stat="y_new.top.pop.logout">退出QQ登录</a>
+                            </div>
+                        </div>
+
+                    </div></div>
+             </c:if>
              <a class="login-btn-green top-login-openVIP js-openVIP">开通绿钻豪华版</a>
              <a class="login-btn top-login-openVIP js-openmusic">开通付费包</a>
          </span>
@@ -219,7 +335,7 @@
     <div class="toplist_right">
         <div class="toplist_right_nav1">
             <span class="toplist_right_tit">巅峰榜·流行指数</span>
-            <span class="toplist_right_date">2017-07-24</span>
+            <span class="toplist_right_date">2019.8.25-31</span>
             <span class="toplist_right_rule"><a href="">榜单规则</a></span>
         </div>
         <div class="toplist_right_nav2">
@@ -228,10 +344,10 @@
                 {
                     %>
             <ul>
-                <li class="toplist_right_nav2_playCurrent"><a href=""><i class="playall"></i>播放全部</a></li>
-                <li class="toplist_right_nav2_play "><a href="">添加到</a></li>
-                <li class="toplist_right_nav2_play"><a href="">下载<i class="xiazai"></i></a></li>
-                <li class="toplist_right_nav2_play"><a href="">批量操作<i class="batch"></i></a></li>
+                <li class="toplist_right_nav2_playCurrent"><a class="login"><i class="playall"></i>播放全部</a></li>
+                <li class="toplist_right_nav2_play"><a class="login">添加到</a></li>
+                <li class="toplist_right_nav2_play"><a class="login">下载<i class="xiazai"></i></a></li>
+                <li class="toplist_right_nav2_play"><a class="login">批量操作<i class="batch"></i></a></li>
             </ul>
             <%
                 }
@@ -274,13 +390,23 @@
                                 <span class="suojin"><a class="song_name" href="#">${songvo.song.songName}</a></span>
 
                                 <i class="dujia" title="独家"></i>
+                                <c:if test="${user==null}">
+                                    <div class="fourKey">
+                                        <a class="login" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
+                                        <a class="login"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                        <a class="login"><i class="fourKey_download" title="下载"></i></a>
+                                        <a class="login"><i class="fourKey_share" title="分享"></i></a>
+                                    </div>
+                                </c:if>
+                                <c:if test="${user!=null}">
+                                    <div class="fourKey">
+                                        <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
+                                        <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                        <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
+                                        <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
+                                    </div>
+                                </c:if>
 
-                                <div class="fourKey">
-                                    <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
-                                </div>
                             </div>
                             <div class="sing_info_singer">
 
@@ -316,13 +442,22 @@
                                 <span class="suojin"><a class="song_name" href="#">${songvo.song.songName}</a></span>
 
                                 <i class="dujia" title="独家"></i>
-
-                                <div class="fourKey">
-                                    <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
-                                </div>
+                                <c:if test="${user==null}">
+                                    <div class="fourKey">
+                                        <a class="login" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
+                                        <a class="login"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                        <a class="login"><i class="fourKey_download" title="下载"></i></a>
+                                        <a class="login"><i class="fourKey_share" title="分享"></i></a>
+                                    </div>
+                                </c:if>
+                                <c:if test="${user!=null}">
+                                    <div class="fourKey">
+                                        <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
+                                        <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                        <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
+                                        <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
+                                    </div>
+                                </c:if>
                             </div>
                             <div class="sing_info_singer">
                                 <c:forEach items="${songvo.singers}" var="singer" varStatus="id">
@@ -457,79 +592,9 @@
 
 </div> -->
 <div class="mod_mask"></div>
-<div class="mode_popup popup_login" style="position:fixed; z-index:10000;top:125px; margin:10px; left:402px;">
-    <div class="popup_hd">
-        <h2 class="popup_tit">
-            <a href="" class="popup_tit_item popup_tit_item_current"> QQ登录 </a>
-            <a href="" class="popup_tit_item"> 微信登录 </a>
-        </h2>
-    </div>
-    <a href="" class="popup_close">
-        <i class="popup_icon_close sprit" title="关闭"></i>
-    </a>
-    <div id="popup_bd">
-        <div id="center1">
-            <div class="qlogin">
-                <div class="qlogin_title">快速安全登录</div>
-                <div class="qlogin_tips">请使用<a href="" class="qlogin_tips_qq">QQ手机版</a>扫描二维码,<br>或点击头像授权登陆</div>
-            </div>
-            <div class="qlogin_list">
-                <img src="${pageContext.request.contextPath}/img/singer/二维码.png" class="qlogin_list_icon">
-                <div class="qlogin_list_info">
-                    <img src="${pageContext.request.contextPath}/img/singer/g.jpg" class="qlogin_list_touxiang">
-                    <span class="qlogin_list_border"></span>
-                    <span class="oneKeylog"></span>
-                    <span class="qlogin_list_num">1769506953</span>
-                    <div class="qlogin_list_num_box">1769506953</div>
-                </div>
-            </div>
-            <div class="qlogin_bottom">
-                <div class="qlogin_bottom_box_0">
-                    <a class="qlogin_bottom_checked"></a>
-                    <span class="qlogin_bottom_checked_txt" title="为了确保你的信息安全，不建议你在网吧等公共环境勾选此项">下次自动登陆</span>
-                </div>
-                <div class="qlogin_bottom_box_1">
-                    <a class="qlogin_bottom_box_1_txt"> 账号密码登陆</a>  |  <a class="qlogin_bottom_box_1_txt">注册新账号</a>  |  <a  class="qlogin_bottom_box_1_txt">意见反馈</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="center2" style="display:none">
-            <div class="popup_bd_zh">
-                <div class="qlogin">
-                    <div class="qlogin_title">账号密码登录</div>
-                    <div class="qlogin_tips">推荐使用<a href="" class="qlogin_tips_qq">快速安全登录</a>，防止盗号</div>
-                </div>
-                <div class="inputOuter">
-                    <input type="text" class="inputStyle" value="" placeholder="支持QQ号/邮箱/手机号登录" accesskey="s">
-                </div>
-                <div class="psword">
-                    <input type="text" class="inputStyle" placeholder="密码">
-                </div>
-                <div class="submit">
-                    <a href="" class="login_button">
-                        <input type="button" value="登录" class="btn">
-                    </a>
-                </div>
-
-                <div class="qlogin_bottom_zh">
-                    <div class="qlogin_bottom_box_0">
-                        <a class="qlogin_bottom_checked"></a>
-                        <span class="qlogin_bottom_checked_txt" title="为了确保你的信息安全，不建议你在网吧等公共环境勾选此选项">下次自动登陆</span>
-                    </div>
-                    <div class="qlogin_bottom_box_1">
-                        <a href="" class="qlogin_bottom_box_1_txt"> 忘了密码？</a>  |  <a href="" class="qlogin_bottom_box_1_txt">注册新账号</a>  |  <a href="" class="qlogin_bottom_box_1_txt">意见反馈</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
 
 
-    </div>
-</div>
 
-</div>
 
 
 <div id="diolog_mask"></div>
@@ -663,6 +728,8 @@
 </div>
 <script src="${pageContext.request.contextPath}/js/jquery-1.12.4.js"></script>
 <script src="${pageContext.request.contextPath}/js/rank-list/rank-list.js"></script>
+<script src="${pageContext.request.contextPath}/js/myMusic/login.js"></script>
+
 
 </body>
 </html>

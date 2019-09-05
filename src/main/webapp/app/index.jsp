@@ -74,7 +74,7 @@
             </section>
             <ul class="top_nav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="音乐馆">音乐馆</a></li>
-                <li class="left"><a href="myMusic.html" title="我的音乐">我的音乐</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/myMusic" title="我的音乐">我的音乐</a></li>
                 <li class="left"><a href="client.html" title="客户端">客户端</a></li>
                 <li class="left"><a href="music-number.html" title="音乐号">音乐号</a></li>
                 <li class="left"><a href="vip.html" title="VIP">VIP</a></li>
@@ -148,21 +148,12 @@
 
                     if (user==null) {
                         %>
-                            <input type = "button" value = "登录" id = "login" class="top_link_login left" >
+                            <input type = "button" value = "登录" id = "login" class="top_link_login login left" >
                 <%
                     }
                     else {
                 %>
-                <%--<script type="text/javascript">
-                    $(function () {
-                        $("#wydl").mouseover(function () {
-                            $(".popup_user").addClass("drop");
-                        });
-                        $("#wydl").mouseout(function () {
-                            $(".popup_user").removeClass("drop");
-                        });
-                    });
-                </script>--%>
+
                 <a href="" class="a_1 left" id="wydl" >
                     <img  src="<%=user.getUserHeadImgUrl()%>" class="dlty" style="margin-right: 10px"/>
                     <img  src="images/login_qq.png" class="dlqe" style="right: 224px"/>
@@ -219,7 +210,7 @@
                             </div>
                         </div>
                         <div class="popup_user_toolbar__item">
-                            <div class="popup_user_toolbar__tit"><a href="javascript:;" class="js_logout" data-stat="y_new.top.pop.logout">退出QQ登录</a>
+                            <div class="popup_user_toolbar__tit"><a href="${pageContext.request.contextPath}/logout" id="logout" class="js_logout" data-stat="y_new.top.pop.logout">退出QQ登录</a>
                             </div>
                         </div>
 

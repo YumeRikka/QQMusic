@@ -8,6 +8,9 @@ $(function () {
     $("#wydl").mouseover(function () {
         $(".popup_user").addClass("drop");
     });
+    $("#wydl").mouseout(function () {
+        $(".popup_user").removeClass("drop");
+    });
     $("#wydl1").mouseover(function () {
         $(".popup_user").addClass("drop");
     });
@@ -19,6 +22,11 @@ $(function () {
 
 
 $("#login").click(function(){
+    $("#div_dialog").css({display:"inline-block"});
+    $("#black_mask").css({display:"inline-block"});
+    $("body").css({height:"100%",overflow:"hidden"})
+});
+$(".login").click(function(){
     $("#div_dialog").css({display:"inline-block"});
     $("#black_mask").css({display:"inline-block"});
     $("body").css({height:"100%",overflow:"hidden"})
@@ -97,17 +105,15 @@ $(".login_link").click(function(e){
     });
 })*/
 // if($(".link_tips").html()=="快速安全登录"){
-$("#quit").click(function(){
+/*$("#logout").click(function(){
     $.ajax({
         type:"get",
-        url:"data/music_user/signout.php",
+        url:"logout",
         success:function(data){
-            console.log(1);
-            location.reload();
-            
+            console.log("logout");
         }
     })
-})
+})*/
 // }
 // 用户信息表
 var t1;

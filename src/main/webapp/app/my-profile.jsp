@@ -40,10 +40,10 @@
 <div class="profile">
     <div class="inner">
         <div class="profile_cover_link">
-            <img src="${pageContext.request.contextPath}/images/yjw.jpg" class="profile_cover"/>
+            <img src="${pageContext.request.contextPath}/${user.userHeadImgUrl}" class="profile_cover"/>
         </div>
         <h1 class="profile_tit">
-            <span class="profile_name">陪你心动</span>
+            <span class="profile_name">${user.userName}</span>
             <a href="">
                 <img src="${pageContext.request.contextPath}/images/svip_g@2x.png" class="lv_icon"/>
             </a>

@@ -27,8 +27,8 @@
 <div class="top">
     <span class="left"></span>
     <ul class="right">
-        <li><a href="javascript:;"></a><img src="${pageContext.request.contextPath}/img/login_qq.png"></li>
-        <li>5517</li>
+        <li><a href="javascript:;"><img src="${pageContext.request.contextPath}/${user.userHeadImgUrl}"></a></li>
+        <li>${user.userName}</li>
         <li>设置</li>
     </ul>
 </div>

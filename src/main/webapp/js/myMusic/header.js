@@ -1,10 +1,10 @@
 var link=document.createElement("link");
 	link.rel="stylesheet";
-	link.href="../css/myMusic/header.css";
+	link.href="css/myMusic/header.css";
 	document.head.appendChild(link);
 $("#header").html(`<div id="header_nav">
 <div class="header_logo">
-    <img src="../img/logo/l_logo.png" alt="">
+    <img src="img/logo/l_logo.png" alt="">
 </div>
 <ul id="header_ul_nav" >
         <li class="nav_current">音乐馆</li><li>我的音乐</li><li id="download">客户端</li><li>音乐号</li><li>VIP</li>   
@@ -79,22 +79,22 @@ $("#header").html(`<div id="header_nav">
                     <br>或点击头像授权登录。
                 </div>
                 <div class="login_img_body" >
-                    <form action="" method="post" id="loginform" style="display:none">
-                        <input type="text" value="2059354371" id="form_qq">
+                    <form action="login?path=my" method="post" id="loginform" style="display:none">
+                        <input type="text" name="userId" value="10002" id="form_qq">
                         <a href="" class="clear_qq"></a>
-                        <input type="password" id="form_upwd" value="daohaode74">
+                        <input type="password" name="userPwd" id="form_upwd" value="1">
                         <a href="" class="clear_upwd"></a>
-                        <input type="button" id="form_submit" value="登 录">
+                        <input type="submit" id="form_submit" value="登 录">
                     </form>
-                    <div class="safe_login">
-                        <div class="login_erwei"> <img src="../img/login/ptqrshow.jpg" alt="">   </div>
-                        <div><a href="my-profile.html"> <img src="../img/login/qq.jpg" alt="" id="img_login"><a/></div>
+                    <div class="safe_login" style="padding-top: 40px;">
+                        <div class="login_erwei"> <img src="img/login/ptqrshow.jpg" alt="">   </div>
+                        <div><a href="my-profile.html"> <img src="img/login/qq.jpg" alt="" id="img_login"><a/></div>
 
 						<div class="login_img"></div>
                     </div>
                 </div>
-                <div class="bottom_hide">
-                        <div class="login_check">
+                <div class="bottom_hide" style="padding-top: 40px;">
+                        <div class="login_check" style="padding-top: 10px;">
                             <a class="auto_login_checked" id="auto_login_check"></a><label class="auto_login">下次自动登录</label>
                         </div> 
                     <a href="#" class="login_link">帐号密码登录</a>  

@@ -35,8 +35,8 @@ $(function(){
 		$.getJSON("../playSongList",function(data){
 
 			if (data!=""){
-				initMusicInfo(data[0]);
-				initMusicLyric(data[0]);
+				//initMusicInfo(data[0]);
+				//initMusicLyric(data[0]);
 				player.$musicList = data;
 				var MusicList = $(".music_list ul");
 				$.each(data,function(index,ele){
@@ -215,14 +215,13 @@ $(function(){
 
 		//(5)歌曲删除按钮事件
 		$(".music_list").delegate('.delete_btn', 'click', function(event) {
-			alert($li.get(0).index);
-			alert(player.currentMusic);
-			if($li.get(0).index == player.currentMusic){
-				$(".next").trigger('click');
-			}
 			var $li = $(this).parents(".list_li");
 			//删除页面上的
 			var id = $(this).attr("id");
+
+			if($li.get(0).index == player.currentMusic){
+				$(".next").trigger('click');
+			}
 
 			$.ajax(
 				{
