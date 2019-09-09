@@ -19,6 +19,8 @@ public interface SongMapper {
 
     List<Song> findFirst20OrderBySongPlayCountDesc();
 
+    List<Song> findBySongSingerId(@Param("songSingerId")Integer songSingerId);
+
 
 
 

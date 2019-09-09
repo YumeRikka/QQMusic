@@ -63,6 +63,26 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="qqmusic:qqm_song_list">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="songList_id" />
+                  <option name="javaModelName" value="SongList" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="qqmusic:qqm_songlist_with_song">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="SongListWithSong" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="qqmusic:qqm_songs">
               <value>
                 <TableGenerateConfig>

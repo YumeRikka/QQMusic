@@ -77,7 +77,7 @@ $(".foot_list").on("click","li",function(){
         autoPlay();
     }
     else{
-        $bjIphone.css({backgroundImage:"url(img/bj/iphone_play_1.jpg)"});
+        $bjIphone.css({backgroundImage:"url(../img/bj/iphone_play_1.jpg)"});
         clearInterval(timer);
         timer=null;
     }
@@ -87,7 +87,7 @@ var i=1;
      timer=setInterval(function(){
          i%=3;
          i++;
-         url="url(img/bj/iphone_play_"+i+".jpg)";
+         url="url(../img/bj/iphone_play_"+i+".jpg)";
          $bjIphone.css({backgroundImage:url});
      },3000)
  }

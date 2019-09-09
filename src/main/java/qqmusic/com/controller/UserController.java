@@ -3,19 +3,30 @@ package qqmusic.com.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import qqmusic.com.entity.User;
+import qqmusic.com.entity.*;
+import qqmusic.com.service.SongListService;
+import qqmusic.com.service.SongListWithSongService;
+import qqmusic.com.service.SongService;
 import qqmusic.com.service.UserService;
+import qqmusic.com.util.QQMusicUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class UserController {
     @Resource
     private UserService userService;
-
+    @Resource
+    private SongListService songListService;
+    @Resource
+    private SongListWithSongService songListWithSongService;
+    @Resource
+    private SongService songService;
     @RequestMapping("/")
+
     public String index(){
         return "index";
     }
@@ -28,6 +39,11 @@ public class UserController {
         System.out.println(user);
         user = userService.selectByPrimaryKey(user.getUserId());
         System.out.println(user);
+        SongList songList = new SongList();
+        songList.setSonglistName("我喜欢");
+        songList.setSonglistUserId(user.getUserId());
+        songList.setSonglistUserName(user.getUserName());
+        songListService.insert(songList);
         request.getSession().setAttribute("user",user);
         return user;
     }
@@ -65,10 +81,14 @@ public class UserController {
         request.getSession().setAttribute("user",null);
         String path = request.getParameter("path");
         System.out.println(path);
-        if (path.equals("rank"))
+        if (path!=null)
         {
-            return "forward:/rank";
+            if (path.equals("rank"))
+            {
+                return "forward:/rank";
+            }
         }
+
         return "forward:/";
     }
 
@@ -80,6 +100,15 @@ public class UserController {
             return "myMusic";
         }
         else {
+            SongList myLike= songListService.findBySonglistNameAndSonglistUserId("我喜欢",user.getUserId());
+            List<Song> myLikeSongs = new ArrayList<>();
+            List<SongListWithSong> songsVo = songListWithSongService.findBySonglistId(myLike.getSonglistId());
+            for (SongListWithSong vo:songsVo) {
+                myLikeSongs.add(songService.selectByPrimaryKey(vo.getSongId()));
+            }
+            List<SongVo> myLikeSongVos = QQMusicUtils.toSongVo(myLikeSongs);
+            request.getSession().setAttribute("myLikeSongVos",myLikeSongVos);
+            System.out.println(myLikeSongVos);
             return "my-profile";
         }
     }

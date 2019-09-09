@@ -1,7 +1,9 @@
 package qqmusic.com.service;
+import java.util.List;
 
 import qqmusic.com.entity.Album;
-public interface AlbumService{
+
+public interface AlbumService {
 
 
     int deleteByPrimaryKey(Integer albumId);
@@ -16,4 +18,9 @@ public interface AlbumService{
 
     int updateByPrimaryKey(Album record);
 
+
+    List<Album> findAll();
+
+
 }
+

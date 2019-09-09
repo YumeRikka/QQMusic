@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import qqmusic.com.entity.Singer;
+import qqmusic.com.entity.Song;
+import qqmusic.com.entity.SongVo;
 import qqmusic.com.service.SingerService;
+import qqmusic.com.service.SongService;
+import qqmusic.com.util.QQMusicUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +21,8 @@ import java.util.List;
 public class SingerController {
     @Resource
     private SingerService singerService;
+    @Resource
+    private SongService songService;
     @RequestMapping("/singer")
     public String singers(@RequestParam(value = "pn", defaultValue = "1") Integer pn, HttpServletRequest request){
         PageInfo singers = singerService.findAllwithPage(pn,100);
@@ -29,6 +35,9 @@ public class SingerController {
         Singer singer = singerService.selectByPrimaryKey(id);
         System.out.println(singer);
         request.getSession().setAttribute("singer",singer);
+        List<Song> songs = songService.findBySongSingerId(singer.getSingerId());
+        List<SongVo> songVoList = QQMusicUtils.toSongVo(songs);
+        request.getSession().setAttribute("songVoList",songVoList);
         System.out.println("singer GET: " + singer);
         return "singer-content";
     }

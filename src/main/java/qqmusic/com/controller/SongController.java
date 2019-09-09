@@ -11,6 +11,7 @@ import qqmusic.com.service.AlbumService;
 import qqmusic.com.service.SingerService;
 import qqmusic.com.service.SongService;
 import qqmusic.com.service.SongWithSingerService;
+import qqmusic.com.util.QQMusicUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -32,23 +33,8 @@ public class SongController {
     public String rankingList(HttpServletRequest request){
         List<Song> songlist =  songService.findFirst20OrderBySongPlayCountDesc();
         System.out.println(songlist);
-        List<SongVo> rankList = new ArrayList<>();
-        for (Song song:songlist){
-            SongVo songVo = new SongVo();
-            songVo.setSong(song);
-            songVo.setAlbum(albumService.selectByPrimaryKey(song.getSongAlbumId()));
+        List<SongVo> rankList = QQMusicUtils.toSongVo(songlist);
 
-            List<Singer> singers= new ArrayList<>();
-            for (Integer id:songWithSingerService.findSingerIdBySongId(song.getSongId()))
-            {
-                singers.add(singerService.selectByPrimaryKey(id));
-            }
-            songVo.setSingers(singers);
-            rankList.add(songVo);
-            if (singers.size()==0){
-                singers.add(singerService.selectByPrimaryKey(song.getSongSingerId()));
-            }
-        }
         System.out.println(rankList);
         request.getSession().setAttribute("rankList",rankList);
 

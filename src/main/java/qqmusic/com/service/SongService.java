@@ -24,4 +24,9 @@ public interface SongService{
 
 
 
+	List<Song> findBySongSingerId(Integer songSingerId);
+
+
+
+
 }

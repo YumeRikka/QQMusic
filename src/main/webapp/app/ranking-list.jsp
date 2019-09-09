@@ -99,6 +99,7 @@
         </div>
     </div>
 </div>
+
 <div class="mod_operate_menu" style="position: absolute; display: none; left: 949px; top: 423px;" id="fav_pop">
     <div class="operate_menu__cont">
         <a href="javascript:;" class="operate_menu__link js_addto_playlist">播放队列</a>
@@ -112,6 +113,7 @@
         <a href="javascript:;" class="operate_menu__link js_addto_new"><i class="operate_menu__icon_add sprite"></i>添加到新歌单</a>
     </div>
 </div>
+
 <div class="mainHead">
     <!-- 导航栏头部-->
     <div class="section-inner">
@@ -393,7 +395,7 @@
                                 <c:if test="${user==null}">
                                     <div class="fourKey">
                                         <a class="login" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                        <a class="login"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                        <a class="login"><i class="" title="添加到歌单"></i></a>
                                         <a class="login"><i class="fourKey_download" title="下载"></i></a>
                                         <a class="login"><i class="fourKey_share" title="分享"></i></a>
                                     </div>
@@ -401,7 +403,7 @@
                                 <c:if test="${user!=null}">
                                     <div class="fourKey">
                                         <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                        <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                        <a href="javascript:;" class="fourKey_add" id="${songvo.song.songId}"><i class="fourKey_add" title="添加到歌单"></i></a>
                                         <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
                                         <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
                                     </div>
@@ -450,10 +452,11 @@
                                         <a class="login"><i class="fourKey_share" title="分享"></i></a>
                                     </div>
                                 </c:if>
+
                                 <c:if test="${user!=null}">
                                     <div class="fourKey">
                                         <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                        <a href="javascript:;"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                        <a href="javascript:;" class="fourKey_add" id="${songvo.song.songId}"><i class="fourKey_add" title="添加到歌单"></i></a>
                                         <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
                                         <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
                                     </div>

@@ -1,5 +1,10 @@
 package qqmusic.com.entity;
 
+import qqmusic.com.service.AlbumService;
+import qqmusic.com.service.SingerService;
+import qqmusic.com.service.SongWithSingerService;
+
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +15,7 @@ public class SongVo {
     private List<Singer> singers = new ArrayList<>();
 
     private Album album;
+
 
     public Song getSong() {
         return song;
@@ -34,6 +40,7 @@ public class SongVo {
     public void setAlbum(Album album) {
         this.album = album;
     }
+
 
     @Override
     public String toString() {

@@ -20,11 +20,65 @@ $(function () {
             playerWindow = window.open('app/player.jsp', 'player');
             playerWindow.focus();
         } else {
-            playerWindow.focus();
+            /*setTimeout(function () {
+                playerWindow.focus();
+            },500);*/
         }
     });
-    $(".fourKey_add").click(function (ev) {
 
+    $(".js_addto_taogelist").click(function () {
+
+        var url = "addSongList?id=" + $(this).attr("id");
+        console.log(url);
+        $.ajax(
+            {
+                url: url,
+                dataType: "jsonp",
+                success:
+                    function (result) {
+                        console.log(result);
+                        alert(result);
+                    }
+            }
+        );
+        $(".mod_operate_menu").css("display","none");
+
+    })
+
+    $(".js_addto_playlist").click(function () {
+
+        var url = "playSong?id=" + $(this).attr("id");
+        console.log(url);
+        $.ajax(
+            {
+                url: url,
+                dataType: "jsonp",
+                success:
+                    function (result) {
+                        console.log(result);
+                        alert(result);
+                    }
+            }
+        );
+        if (!playerWindow) {
+            playerWindow = window.open('app/player.jsp', 'player');
+            playerWindow.focus();
+        } else if (playerWindow.closed) {
+            playerWindow = window.open('app/player.jsp', 'player');
+            playerWindow.focus();
+        } else {
+            /*setTimeout(function () {
+                playerWindow.focus();
+            },500);*/
+        }
+        $(".mod_operate_menu").css("display","none");
+    });
+
+    $(".fourKey_add").click(function (ev) {
+        var songid =$(this).attr("id");
+        console.log(songid);
+        $(".js_addto_playlist").attr("id",songid);
+        $(".js_addto_taogelist").attr("id",songid);
         var oEvent = ev || event;
         var left = mouseX(oEvent);  // 指定创建的DIV在文档中距离左侧的位置
         var top = mouseY(oEvent);  // 指定创建的DIV在文档中距离顶部的位置
@@ -51,7 +105,16 @@ $(function () {
 
 
     document.onmousedown=function(ev){
-        $(".mod_operate_menu").css("display","none");
+        var oEvent = ev || event;
+        var left = mouseX(oEvent);
+        var top = mouseY(oEvent);
+        var dleft = $(".mod_operate_menu").offset().left;
+        var dtop = $(".mod_operate_menu").offset().top;
+        console.log("left"+left+" top"+top);
+        console.log("dleft"+dleft+" dtop"+dtop);
+        if (!(left>dleft&&top>dtop&&left<(dleft+170)&&top<(dtop+144))){
+            $(".mod_operate_menu").css("display","none");
+        }
     }
 
 

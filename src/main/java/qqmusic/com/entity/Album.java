@@ -13,14 +13,16 @@ public class Album {
 
     private Integer albumSingerId;
 
+    private String albumSingerName;
+
     private String albumIntroduce;
 
     private Integer albumCollectionCount;
 
     /**
-    * 0正常发布状态
-1阻塞状态（其中歌曲设置阻塞）
-    */
+     * 0正常发布状态
+     * 1阻塞状态（其中歌曲设置阻塞）
+     */
     private Integer albumStatus;
 
     public Integer getAlbumId() {
@@ -63,6 +65,14 @@ public class Album {
         this.albumSingerId = albumSingerId;
     }
 
+    public String getAlbumSingerName() {
+        return albumSingerName;
+    }
+
+    public void setAlbumSingerName(String albumSingerName) {
+        this.albumSingerName = albumSingerName;
+    }
+
     public String getAlbumIntroduce() {
         return albumIntroduce;
     }
@@ -95,6 +105,7 @@ public class Album {
                 ", albumUrl='" + albumUrl + '\'' +
                 ", albumReleaseDate=" + albumReleaseDate +
                 ", albumSingerId=" + albumSingerId +
+                ", albumSingerName='" + albumSingerName + '\'' +
                 ", albumIntroduce='" + albumIntroduce + '\'' +
                 ", albumCollectionCount=" + albumCollectionCount +
                 ", albumStatus=" + albumStatus +

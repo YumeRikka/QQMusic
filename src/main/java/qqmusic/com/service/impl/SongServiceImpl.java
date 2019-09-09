@@ -47,5 +47,13 @@ public class SongServiceImpl implements SongService{
 		 return songMapper.findFirst20OrderBySongPlayCountDesc();
 	}
 
+	@Override
+	public List<Song> findBySongSingerId(Integer songSingerId){
+		 return songMapper.findBySongSingerId(songSingerId);
+	}
+
+
+
+
 
 }

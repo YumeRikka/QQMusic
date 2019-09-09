@@ -1,6 +1,6 @@
 package qqmusic.com.mapper;
 
-import qqmusic.com.entity.Album;
+import qqmusic.com.entity.Album;import java.util.List;
 
 public interface AlbumMapper {
     int deleteByPrimaryKey(Integer albumId);
@@ -14,4 +14,6 @@ public interface AlbumMapper {
     int updateByPrimaryKeySelective(Album record);
 
     int updateByPrimaryKey(Album record);
+
+    List<Album> findAll();
 }

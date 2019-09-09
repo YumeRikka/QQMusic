@@ -46,7 +46,6 @@ $(function(){
 				});
 			}
 		})
-
 	}
 	//2.初始化歌曲图片，背景等
 	function initMusicInfo(music){

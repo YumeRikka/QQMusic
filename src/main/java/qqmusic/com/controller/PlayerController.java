@@ -10,7 +10,6 @@ import qqmusic.com.service.AlbumService;
 import qqmusic.com.service.SingerService;
 import qqmusic.com.service.SongService;
 import qqmusic.com.service.SongWithSingerService;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;

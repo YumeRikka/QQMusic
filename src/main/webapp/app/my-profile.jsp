@@ -1,4 +1,8 @@
-<%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="qqmusic.com.entity.User" %>
+<%@ page import="java.util.List" %>
+<%@ page import="qqmusic.com.entity.Song" %>
+<%@ page import="qqmusic.com.entity.SongVo" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/9/3
@@ -15,20 +19,24 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/my-profile/my-profile.css">
 </head>
 <body>
+<%
+    User user = (User) session.getAttribute("user");
+    List<SongVo> myLikeSongVos = (List<SongVo>)session.getAttribute("myLikeSongVos");
+%>
 <div id="header">
     <div class="section_inner">
         <a href=""><img src="${pageContext.request.contextPath}/img/logo.png" class="img_1" /></a>
         <ul class="ul_1">
-            <li class="li_1"><a href="QQ音乐-音乐馆.html" title="音乐馆" >音乐馆</a></li>
-            <li class="li_2"><a href="QQ音乐-我的音乐.html" title="我的音乐" style="color: #fff">我的音乐</a></li>
-            <li><a href="QQ音乐-客户端.html" title="客户端" target="_blank">客户端</a></li>
-            <li><a href="QQ音乐-音乐号.html" title="音乐号" target="_blank">音乐号</a></li>
-            <li class="li_3"><a href="QQ音乐-VIP.html" title="VIP" target="_blank">VIP</a></li>
+            <li class="li_1"><a href="${pageContext.request.contextPath}/" title="音乐馆" >音乐馆</a></li>
+            <li class="li_2"><a href="${pageContext.request.contextPath}/myMusic" title="我的音乐" style="color: #fff">我的音乐</a></li>
+            <li><a href="#" title="客户端" target="_blank">客户端</a></li>
+            <li><a href="#" title="音乐号" target="_blank">音乐号</a></li>
+            <li class="li_3"><a href="#" title="VIP" target="_blank">VIP</a></li>
         </ul>
         <input type="text" placeholder="搜索音乐、MV、歌单、用户" class="inp_1" />
         <a href="" class="ss"></a>
         <a href="" class="a_1" id="wydl">
-            <img  src="${pageContext.request.contextPath}/images/yjw.jpg" class="dlty"/>
+            <img  src="${pageContext.request.contextPath}/<%=user.getUserHeadImgUrl()%>" class="dlty"/>
             <img  src="${pageContext.request.contextPath}/images/login_qq.png" class="dlqe"/>
         </a>
 
@@ -40,10 +48,10 @@
 <div class="profile">
     <div class="inner">
         <div class="profile_cover_link">
-            <img src="${pageContext.request.contextPath}/${user.userHeadImgUrl}" class="profile_cover"/>
+            <img src="${pageContext.request.contextPath}/<%=user.getUserHeadImgUrl()%>" class="profile_cover"/>
         </div>
         <h1 class="profile_tit">
-            <span class="profile_name">${user.userName}</span>
+            <span class="profile_name"><%=user.getUserName()%></span>
             <a href="">
                 <img src="${pageContext.request.contextPath}/images/svip_g@2x.png" class="lv_icon"/>
             </a>
@@ -69,7 +77,7 @@
     </div>
     <div class="js_box" style="display: block">
         <div class="mod_tab">
-            <a href="" class="mod_tab_item" style="color: #31c27c">歌曲  5</a>
+            <a href="" class="mod_tab_item" style="color: #31c27c">歌曲  <%=myLikeSongVos.size()%></a>
             <a href="" class="mod_tab_item">歌单  0</a>
             <a href="" class="mod_tab_item">专辑  0</a>
             <a href="" class="mod_tab_item">MV  0</a>
@@ -101,284 +109,36 @@
                         <li class="li_time">时长</li>
                     </ul>
                     <ul class="list__ul_2">
-                        <li>
-                            <div class="li_div">
-                                <div class="num">1</div>
-                                <div class="gm">
-                                <span class="gm_sp">
-                                    <a href="player.html" title="渺小却伟大 (Live) " target="_blank">渺小却伟大 (Live)</a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="浙江卫视春季盛典" class="album_name">浙江卫视春季盛典</a>
-                                </div>
-                                <div class="sj">03:31</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div">
-                                <div class="num">2</div>
-                                <div class="gm">
-                                    <i class="tp_1" title="独家"></i>
-                                    <a href="" class="tp_2"  title="MV"></a>
-                                    <span class="gm_sp">
-                                    <a href=""  title="剑伤《古剑奇谭》百里屠苏人物主题曲">剑伤
-                                        <span class="gm_sp_1">《古剑奇谭》百里屠苏人物主题曲</span>
-                                    </a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="古剑奇谭 电视剧原声带" class="album_name">古剑奇谭 电视剧原声带</a>
-                                </div>
-                                <div class="sj">03:26</div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div_tb">
-                                <div class="num">3</div>
-                                <div class="gm">
-                                    <a href="" class="tp_2"  title="MV"></a>
-                                    <span class="gm_sp">
-                                    <a href=""  title="请跟我联络 《怦然星动》电影主题曲">请跟我联络
-                                        <span class="gm_sp_1">《怦然星动》电影主题曲</span>
-                                    </a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="请跟我联络" class="album_name">请跟我联络</a>
-                                </div>
-                                <div class="sj">04:04</div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div">
-                                <div class="num">4</div>
-                                <div class="gm">
-                                    <a href="" class="tp_2"  title="MV"></a>
-                                    <span class="gm_sp">
-                                    <a href=""  title="年少有你 《栀子花开》电影正青春推广曲">年少有你
-                                        <span class="gm_sp_1">《栀子花开》电影正青春推广曲</span>
-                                    </a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="栀子花开 电影原声带" class="album_name">栀子花开 电影原声带</a>
-                                </div>
-                                <div class="sj">04:36</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div">
-                                <div class="num">5</div>
-                                <div class="gm">
-                                    <a href="" class="tp_2"  title="MV"></a>
-                                    <span class="gm_sp">
-                                    <a href=""  title="再见再见 《栀子花开》电影毕业季推广曲">再见再见
-                                        <span class="gm_sp_1">《栀子花开》电影毕业季推广曲</span>
-                                    </a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="栀子花开 电影原声带" class="album_name">栀子花开 电影原声带</a>
-                                </div>
-                                <div class="sj">05:08</div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div_tb">
-                                <div class="num">6</div>
-                                <div class="gm">
-                                    <a href="" class="tp_2"  title="MV"></a>
-                                    <span class="gm_sp">
-                                    <a href=""  title="剑心 《古剑奇谭》电视剧插曲">剑心
-                                        <span class="gm_sp_1">《古剑奇谭》电视剧插曲</span>
-                                    </a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="古剑奇谭 电视剧原声带" class="album_name">古剑奇谭 电视剧原声带</a>
-                                </div>
-                                <div class="sj">04:13</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div_tb">
-                                <div class="num">7</div>
-                                <div class="gm">
-                                    <i class="tp_1" title="独家"></i>
-                                    <a href="" class="tp_2"  title="MV"></a>
-                                    <span class="gm_sp">
-                                    <a href=""  title="记得我爱你">记得我爱你</a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="易峰情书" class="album_name">易峰情书</a>
-                                </div>
-                                <div class="sj">04:15</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div_tb">
-                                <div class="num">8</div>
-                                <div class="gm">
-                                    <i class="tp_1" title="独家"></i>
-                                    <a href="" class="tp_2"  title="MV"></a>
-                                    <span class="gm_sp">
-                                    <a href=""  title="心如玄铁 《活色生香》电视剧片尾曲">心如玄铁
-                                        <span class="gm_sp_1">《活色生香》电视剧片尾曲</span>
-                                    </a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="zj">
-                                    <a href="" title="活色生香 电视剧原声带" class="album_name">活色生香 电视剧原声带</a>
-                                </div>
-                                <div class="sj">04:11</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li_div">
-                                <div class="num"></div>
-                                <div class="gm">
+                        <c:forEach items="${myLikeSongVos}" var="songVo" varStatus="num">
+                            <li>
+                                <div class="li_div">
+                                    <div class="num">${num.count}</div>
+                                    <div class="gm">
                                         <span class="gm_sp">
-                                    <a href=""  title="我曾爱过的女孩"></a>
-                                </span>
-                                    <div class="bf_menu">
-                                        <a href="" class="bf_menu_1" title="播放">
-                                            <i class="tp_3"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_2" title="添加到歌单">
-                                            <i class="tp_4"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_3" title="下载">
-                                            <i class="tp_5"></i>
-                                        </a>
-                                        <a href="" class="bf_menu_4" title="分享">
-                                            <i class="tp_6"></i>
-                                        </a>
+                                            <a href="javaScript:;" title="${songVo.song.songName}" target="_blank">${songVo.song.songName}</a>
+                                        </span>
+                                        <div class="bf_menu">
+                                            <a href="javaScript:;" class="bf_menu_1" title="播放">
+                                                <i class="tp_3"></i>
+                                            </a>
+                                            <a href="javaScript:;" class="bf_menu_2" title="添加到歌单">
+                                                <i class="tp_4"></i>
+                                            </a>
+                                            <a href="javaScript:;" class="bf_menu_3" title="下载">
+                                                <i class="tp_5"></i>
+                                            </a>
+                                            <a href="javaScript:;" class="bf_menu_4" title="分享">
+                                                <i class="tp_6"></i>
+                                            </a>
+                                        </div>
                                     </div>
+                                    <div class="zj">
+                                        <a href="#" title="${songVo.album.albumName}" class="album_name">${songVo.album.albumName}</a>
+                                    </div>
+                                    <div class="sj">${songVo.song.songTime}</div>
                                 </div>
-                                <div class="zj">
-                                    <a href="" title="小先生" class="album_name"></a>
-                                </div>
-                                <div class="sj"></div>
-
-                            </div>
-                        </li>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </div>
             </div>
@@ -402,11 +162,11 @@
             <p style="margin-left: 20px">特色产品</p>
             <p style="height: 50px"></p>
             <ul class="cp_ul">
-                <li class="cp_1 "><a href=""  ><i class="cp_kg"></i>全民K歌</a></li>
-                <li class="cp_1 "><a href=""   ><i class="cp_ss"></i>Super Sound</a></li>
-                <li class="cp_1 "><a href=""   ><i class="cp_qp"></i>QPlay</a></li>
-                <li class="cp_2"><a href=""   >车载互联</a></li>
-                <li class="cp_2"><a href=""  >QQ演出</a></li>
+                <li class="cp_1 "><a href="#"  ><i class="cp_kg"></i>全民K歌</a></li>
+                <li class="cp_1 "><a href="#"   ><i class="cp_ss"></i>Super Sound</a></li>
+                <li class="cp_1 "><a href="#"   ><i class="cp_qp"></i>QPlay</a></li>
+                <li class="cp_2"><a href="#"   >车载互联</a></li>
+                <li class="cp_2"><a href="#"  >QQ演出</a></li>
             </ul>
         </div>
         <div class="f_lj">
@@ -469,9 +229,9 @@
     </div>
 </div>
 <div id="fk" style="display: none">
-    <a href="" target="_top" class="a_1"><i class="i_1"></i></a>
-    <a href="" class="a_2">反馈</a>
-    <a href="播放-渺小却伟大.html" target="_blank" class="a_3" ><i class="i_2"></i></a>
+    <a href="#" target="_top" class="a_1"><i class="i_1"></i></a>
+    <a href="#" class="a_2">反馈</a>
+    <a href="${pageContext.request.contextPath}/app/player.jsp" target="_blank" class="a_3" ><i class="i_2"></i></a>
 </div>
 
 <script>

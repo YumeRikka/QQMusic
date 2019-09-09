@@ -48,7 +48,7 @@
                 </form>
                 <div class="safe_login">
                     <div class="login_erwei"> <img src="${pageContext.request.contextPath}/img/login/ptqrshow.jpg" alt="">   </div>
-                    <div><a href="my-profile.html"> <img src="${pageContext.request.contextPath}/img/login/qq.jpg" alt="" id="img_login"> </a></div>
+                    <div><a href="${pageContext.request.contextPath}/myMusic"> <img src="${pageContext.request.contextPath}/img/login/qq.jpg" alt="" id="img_login"> </a></div>
                     <div class="login_img"></div>
                 </div>
             </div>
@@ -75,20 +75,20 @@
             <ul class="top_nav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="音乐馆">音乐馆</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/myMusic" title="我的音乐">我的音乐</a></li>
-                <li class="left"><a href="client.html" title="客户端">客户端</a></li>
-                <li class="left"><a href="music-number.html" title="音乐号">音乐号</a></li>
-                <li class="left"><a href="vip.html" title="VIP">VIP</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/client.jsp" title="客户端">客户端</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/music-number.jsp" title="音乐号">音乐号</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/vip.jsp" title="VIP">VIP</a></li>
             </ul>
             <ul class="top_subnav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="首页" style="color: #31c27c;">首页</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
-                <li class="left"><a href="disc.html" title="新碟">新碟</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
-                <li class="left"><a href="list.html" title="分类歌单">分类歌单</a></li>
-                <li class="left"><a href="radioStation.html" title="电台">电台</a></li>
-                <li class="left"><a href="mv.html" title="MV">MV</a></li>
-                <li class="left"><a href="album.html" title="数字专辑">数字专辑</a></li>
-                <li class="left"><a href="ticket.html" title="票务">票务</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/list.jsp" title="分类歌单">分类歌单</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/mv.jsp" title="MV">MV</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/album.jsp" title="数字专辑">数字专辑</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/ticket.jsp" title="票务">票务</a></li>
             </ul>
             <section class="top_search">
                 <!-- //文本框 -->

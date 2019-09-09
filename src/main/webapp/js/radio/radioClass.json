@@ -5,127 +5,127 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"个性电台",
                 "playCount":"1014.5万",
-                "img":"img/rm01.jpg",
+                "img":"../img/rm01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"热歌",
                 "playCount":"229.4万",
-                "img":"img/rm02.jpg",
+                "img":"../img/rm02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"随心听",
                 "playCount":"545.4万",
-                "img":"img/rm03.jpg",
+                "img":"../img/rm03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"一人一首招牌歌",
                 "playCount":"50.7万",
-                "img":"img/rm04.jpg",
+                "img":"../img/rm04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"KTV必点歌",
                 "playCount":"229.4万",
-                "img":"img/rm05.jpg",
+                "img":"../img/rm05.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"电子",
                 "playCount":"229.4万",
-                "img":"img/rm06.jpg",
+                "img":"../img/rm06.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"车载低音炮",
                 "playCount":"229.4万",
-                "img":"img/rm07.jpg",
+                "img":"../img/rm07.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"伤感",
                 "playCount":"229.4万",
-                "img":"img/rm08.jpg",
+                "img":"../img/rm08.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"睡前",
                 "playCount":"229.4万",
-                "img":"img/rm09.jpg",
+                "img":"../img/rm09.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"咖啡馆",
                 "playCount":"229.4万",
-                "img":"img/rm10.jpg",
+                "img":"../img/rm10.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"情歌",
                 "playCount":"229.4万",
-                "img":"img/rm11.jpg",
+                "img":"../img/rm11.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"网络流行",
                 "playCount":"229.4万",
-                "img":"img/rm12.jpg",
+                "img":"../img/rm12.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"经典翻唱",
                 "playCount":"229.4万",
-                "img":"img/rm13.jpg",
+                "img":"../img/rm13.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"粤语",
                 "playCount":"229.4万",
-                "img":"img/rm14.jpg",
+                "img":"../img/rm14.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"DJ热碟",
                 "playCount":"229.4万",
-                "img":"img/rm15.jpg",
+                "img":"../img/rm15.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"轻音乐",
                 "playCount":"229.4万",
-                "img":"img/rm16.jpg",
+                "img":"../img/rm16.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"新歌",
                 "playCount":"229.4万",
-                "img":"img/rm17.jpg",
+                "img":"../img/rm17.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"劲歌热舞",
                 "playCount":"229.4万",
-                "img":"img/rm18.jpg",
+                "img":"../img/rm18.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"抒情英文歌",
                 "playCount":"229.4万",
-                "img":"img/rm19.jpg",
+                "img":"../img/rm19.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"经典",
                 "playCount":"229.4万",
-                "img":"img/rm20.jpg",
+                "img":"../img/rm20.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"安静",
                 "playCount":"229.4万",
-                "img":"img/rm21.jpg",
+                "img":"../img/rm21.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -136,31 +136,31 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"来一杯咖啡",
                 "playCount":"1014.5万",
-                "img":"img/xw01.jpg",
+                "img":"../img/xw01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"好好工作",
                 "playCount":"229.4万",
-                "img":"img/xw02.jpg",
+                "img":"../img/xw02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"陪你看书",
                 "playCount":"229.4万",
-                "img":"img/xw03.jpg",
+                "img":"../img/xw03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"家务时间",
                 "playCount":"229.4万",
-                "img":"img/xw04.jpg",
+                "img":"../img/xw04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"轻松一刻",
                 "playCount":"229.4万",
-                "img":"img/xw05.jpg",
+                "img":"../img/xw05.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -171,61 +171,61 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"伤感",
                 "playCount":"1014.5万",
-                "img":"img/xq01.jpg",
+                "img":"../img/xq01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"安静",
                 "playCount":"229.4万",
-                "img":"img/xq02.jpg",
+                "img":"../img/xq02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"心痛",
                 "playCount":"229.4万",
-                "img":"img/xq03.jpg",
+                "img":"../img/xq03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"快乐",
                 "playCount":"229.4万",
-                "img":"img/xq04.jpg",
+                "img":"../img/xq04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"甜蜜",
                 "playCount":"229.4万",
-                "img":"img/xq05.jpg",
+                "img":"../img/xq05.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"励志",
                 "playCount":"229.4万",
-                "img":"img/xq06.jpg",
+                "img":"../img/xq06.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"疗伤",
                 "playCount":"229.4万",
-                "img":"img/xq07.jpg",
+                "img":"../img/xq07.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"思念",
                 "playCount":"229.4万",
-                "img":"img/xq08.jpg",
+                "img":"../img/xq08.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"寂寞",
                 "playCount":"229.4万",
-                "img":"img/xq09.jpg",
+                "img":"../img/xq09.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"放松",
                 "playCount":"229.4万",
-                "img":"img/xq10.jpg",
+                "img":"../img/xq10.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -236,79 +236,79 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"热歌",
                 "playCount":"1014.5万",
-                "img":"img/rm02.jpg",
+                "img":"../img/rm02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"一人一首招牌歌",
                 "playCount":"229.4万",
-                "img":"img/rm04.jpg",
+                "img":"../img/rm04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"KTV必点歌",
                 "playCount":"229.4万",
-                "img":"img/rm05.jpg",
+                "img":"../img/rm05.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"车载低音炮",
                 "playCount":"229.4万",
-                "img":"img/rm07.jpg",
+                "img":"../img/rm07.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"网络流行",
                 "playCount":"229.4万",
-                "img":"img/rm12.jpg",
+                "img":"../img/rm12.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"情歌",
                 "playCount":"229.4万",
-                "img":"img/rm11.jpg",
+                "img":"../img/rm11.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"DJ热碟",
                 "playCount":"229.4万",
-                "img":"img/rm15.jpg",
+                "img":"../img/rm15.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"劲歌热舞",
                 "playCount":"229.4万",
-                "img":"img/rm18.jpg",
+                "img":"../img/rm18.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"经典",
                 "playCount":"229.4万",
-                "img":"img/rm20.jpg",
+                "img":"../img/rm20.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"新歌",
                 "playCount":"229.4万",
-                "img":"img/rm17.jpg",
+                "img":"../img/rm17.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"ACG",
                 "playCount":"229.4万",
-                "img":"img/zt11.jpg",
+                "img":"../img/zt11.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"游戏",
                 "playCount":"229.4万",
-                "img":"img/rm03.jpg",
+                "img":"../img/rm03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"影视",
                 "playCount":"229.4万",
-                "img":"img/rm06.jpg",
+                "img":"../img/rm06.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -319,103 +319,103 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"咖啡馆",
                 "playCount":"1014.5万",
-                "img":"img/cj01.jpg",
+                "img":"../img/cj01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"店铺",
                 "playCount":"229.4万",
-                "img":"img/cj02.jpg",
+                "img":"../img/cj02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"工作",
                 "playCount":"229.4万",
-                "img":"img/cj03.jpg",
+                "img":"../img/cj03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"学习",
                 "playCount":"229.4万",
-                "img":"img/cj04.jpg",
+                "img":"../img/cj04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"广场舞",
                 "playCount":"229.4万",
-                "img":"img/cj05.jpg",
+                "img":"../img/cj05.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"运动",
                 "playCount":"229.4万",
-                "img":"img/cj06.jpg",
+                "img":"../img/cj06.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"夜店",
                 "playCount":"229.4万",
-                "img":"img/cj07.jpg",
+                "img":"../img/cj07.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"开车",
                 "playCount":"229.4万",
-                "img":"img/cj08.jpg",
+                "img":"../img/cj08.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"婚礼",
                 "playCount":"229.4万",
-                "img":"img/cj09.jpg",
+                "img":"../img/cj09.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"雨天",
                 "playCount":"229.4万",
-                "img":"img/cj10.jpg",
+                "img":"../img/cj10.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"旅行",
                 "playCount":"229.4万",
-                "img":"img/cj11.jpg",
+                "img":"../img/cj11.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"睡前",
                 "playCount":"229.4万",
-                "img":"img/cj12.jpg",
+                "img":"../img/cj12.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"约会",
                 "playCount":"229.4万",
-                "img":"img/cj13.jpg",
+                "img":"../img/cj13.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"校园",
                 "playCount":"229.4万",
-                "img":"img/cj14.jpg",
+                "img":"../img/cj14.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"起床",
                 "playCount":"229.4万",
-                "img":"img/cj15.jpg",
+                "img":"../img/cj15.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"胎教",
                 "playCount":"229.4万",
-                "img":"img/cj16.jpg",
+                "img":"../img/cj16.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"在路上",
                 "playCount":"229.4万",
-                "img":"img/cj17.jpg",
+                "img":"../img/cj17.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -426,91 +426,91 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"轻音乐",
                 "playCount":"1014.5万",
-                "img":"img/qf01.jpg",
+                "img":"../img/qf01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"流行",
                 "playCount":"229.4万",
-                "img":"img/qf02.jpg",
+                "img":"../img/qf02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"古风",
                 "playCount":"229.4万",
-                "img":"img/qf03.jpg",
+                "img":"../img/qf03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"R&B",
                 "playCount":"229.4万",
-                "img":"img/qf04.jpg",
+                "img":"../img/qf04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"民谣",
                 "playCount":"229.4万",
-                "img":"img/qf05.jpg",
+                "img":"../img/qf05.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"乡村",
                 "playCount":"229.4万",
-                "img":"img/qf06.jpg",
+                "img":"../img/qf06.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"中国风",
                 "playCount":"229.4万",
-                "img":"img/qf07.jpg",
+                "img":"../img/qf07.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"舞曲",
                 "playCount":"229.4万",
-                "img":"img/qf08.jpg",
+                "img":"../img/qf08.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"爵士",
                 "playCount":"229.4万",
-                "img":"img/qf09.jpg",
+                "img":"../img/qf09.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"Hip-Hop",
                 "playCount":"229.4万",
-                "img":"img/qf20.jpg",
+                "img":"../img/qf20.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"电子",
                 "playCount":"229.4万",
-                "img":"img/qf21.jpg",
+                "img":"../img/qf21.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"民歌",
                 "playCount":"229.4万",
-                "img":"img/qf22.jpg",
+                "img":"../img/qf22.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"摇滚",
                 "playCount":"229.4万",
-                "img":"img/qf23.jpg",
+                "img":"../img/qf23.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"古典",
                 "playCount":"229.4万",
-                "img":"img/qf24.jpg",
+                "img":"../img/qf24.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"华语嘻哈",
                 "playCount":"229.4万",
-                "img":"img/qf25.jpg",
+                "img":"../img/qf25.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -521,67 +521,67 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"英语",
                 "playCount":"1014.5万",
-                "img":"img/yy01.jpg",
+                "img":"../img/yy01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"粤语",
                 "playCount":"229.4万",
-                "img":"img/yy02.jpg",
+                "img":"../img/yy02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"华语",
                 "playCount":"229.4万",
-                "img":"img/yy03.jpg",
+                "img":"../img/yy03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"怀旧粤语",
                 "playCount":"229.4万",
-                "img":"img/yy04.jpg",
+                "img":"../img/yy04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"怀旧华语",
                 "playCount":"229.4万",
-                "img":"img/yy05.jpg",
+                "img":"../img/yy05.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"韩语",
                 "playCount":"229.4万",
-                "img":"img/yy06.jpg",
+                "img":"../img/yy06.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"日语",
                 "playCount":"229.4万",
-                "img":"img/yy07.jpg",
+                "img":"../img/yy07.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"怀旧英语",
                 "playCount":"229.4万",
-                "img":"img/yy08.jpg",
+                "img":"../img/yy08.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"闽南语",
                 "playCount":"229.4万",
-                "img":"img/yy09.jpg",
+                "img":"../img/yy09.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"法语",
                 "playCount":"229.4万",
-                "img":"img/yy10.jpg",
+                "img":"../img/yy10.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"抒情英文歌",
                 "playCount":"229.4万",
-                "img":"img/yy11.jpg",
+                "img":"../img/yy11.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -592,31 +592,31 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"80后",
                 "playCount":"1014.5万",
-                "img":"img/rq01.jpg",
+                "img":"../img/rq01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"90后",
                 "playCount":"229.4万",
-                "img":"img/rq02.jpg",
+                "img":"../img/rq02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"儿童",
                 "playCount":"229.4万",
-                "img":"img/rq03.jpg",
+                "img":"../img/rq03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"00后",
                 "playCount":"229.4万",
-                "img":"img/rq04.jpg",
+                "img":"../img/rq04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"70后",
                 "playCount":"229.4万",
-                "img":"img/rq05.jpg",
+                "img":"../img/rq05.jpg",
                 "music":"mp3路径"
             }
         ]
@@ -627,37 +627,37 @@ var activeCreateModeItems = {"radioStation":[
             {
                 "name":"钢琴",
                 "playCount":"1014.5万",
-                "img":"img/yq01.jpg",
+                "img":"../img/yq01.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"吉他",
                 "playCount":"229.4万",
-                "img":"img/yq02.jpg",
+                "img":"../img/yq02.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"小提琴",
                 "playCount":"229.4万",
-                "img":"img/yq03.jpg",
+                "img":"../img/yq03.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"古筝",
                 "playCount":"229.4万",
-                "img":"img/yq04.jpg",
+                "img":"../img/yq04.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"笛子",
                 "playCount":"229.4万",
-                "img":"img/yq05.jpg",
+                "img":"../img/yq05.jpg",
                 "music":"mp3路径"
             },
             {
                 "name":"萨克斯",
                 "playCount":"229.4万",
-                "img":"img/yq06.jpg",
+                "img":"../img/yq06.jpg",
                 "music":"mp3路径"
             }
         ]

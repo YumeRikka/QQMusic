@@ -1,12 +1,14 @@
 package qqmusic.com.service.impl;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import qqmusic.com.mapper.AlbumMapper;
 import qqmusic.com.entity.Album;
 import qqmusic.com.service.AlbumService;
+
 @Service
-public class AlbumServiceImpl implements AlbumService{
+public class AlbumServiceImpl implements AlbumService {
 
     @Resource
     private AlbumMapper albumMapper;
@@ -41,4 +43,11 @@ public class AlbumServiceImpl implements AlbumService{
         return albumMapper.updateByPrimaryKey(record);
     }
 
+    @Override
+    public List<Album> findAll() {
+        return albumMapper.findAll();
+    }
+
+
 }
+
