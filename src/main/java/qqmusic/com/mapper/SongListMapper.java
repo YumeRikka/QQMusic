@@ -19,6 +19,9 @@ public interface SongListMapper {
 
     SongList findBySonglistNameAndSonglistUserId(@Param("songlistName")String songlistName,@Param("songlistUserId")Integer songlistUserId);
 
+    List<SongList> findBySonglistUserId(@Param("songlistUserId")Integer songlistUserId);
+
+    List<SongList> findAll();
 
 
 

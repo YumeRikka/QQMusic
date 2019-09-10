@@ -56,6 +56,12 @@
 <%
     User user = (User) session.getAttribute("user");
 %>
+
+
+<%--成功添加到歌单--%>
+<div class="mod_popup_tips" id="popup" style="z-index: 2147483647; left: 661px; top: 324px; display: none;"><i class="popup_tips__icon"></i><h2 class="popup_tips__tit">已成功添加到歌单</h2></div>
+
+<%--登录模态框--%>
 <div id="div_dialog" class="mod_popup popup_login" data-aria="popup" style="left: 460px;
 		    top: 150px;">
     <div class="popup_hd">
@@ -105,9 +111,12 @@
         <a href="javascript:;" class="operate_menu__link js_addto_playlist">播放队列</a>
         <ul role="menu" class="operate_menu__list operate_menu__top_line operate_menu__bottom_line">
 
-            <li class="operate_menu__item">
-                <a href="javascript:;" class="operate_menu__link js_addto_taogelist operate_menu__link--disabled" data-dirid="201" title="我喜欢"><i class="operate_menu__icon_like"></i>我喜欢</a>
-            </li>
+            <c:forEach items="${mySongLists}" var="songlist">
+                <li class="operate_menu__item">
+                    <a href="javascript:;" class="operate_menu__link js_addto_taogelist operate_menu__link--disabled" listid="${songlist.songlistId}" title="${songlist.songlistName}"><i class="operate_menu__icon_like"></i>${songlist.songlistName}</a>
+                </li>
+            </c:forEach>
+
 
         </ul>
         <a href="javascript:;" class="operate_menu__link js_addto_new"><i class="operate_menu__icon_add sprite"></i>添加到新歌单</a>
@@ -131,10 +140,10 @@
                 <a href="${pageContext.request.contextPath}/myMusic" class="list-nav-link"> 我的音乐</a>
             </li>
             <li class="list-nav list-nav-download">
-                <a href="#" class="list-nav-link">下载客户端</a>
+                <a href="${pageContext.request.contextPath}/app/client.jsp" class="list-nav-link">下载客户端</a>
             </li>
             <li class="list-nav list-nav-VIP">
-                <a href="#" class="list-nav-link">VIP</a>
+                <a href="${pageContext.request.contextPath}/app/vip.jsp" class="list-nav-link">VIP</a>
             </li>
         </ul>
         <ul class="list-two">
@@ -145,20 +154,20 @@
                 <a href="${pageContext.request.contextPath}/singer" class="list-two-nav-son">歌手</a>
             </li>
             <li class="list-two-nav">
-                <a href="#" class="list-two-nav-son">专辑</a>
+                <a href="${pageContext.request.contextPath}/disc" class="list-two-nav-son">专辑</a>
             </li>
             <li class="list-two-nav">
                 <a href="${pageContext.request.contextPath}/rank" class="list-two-nav-son  list-two-nav-son-current">排行榜</a>
             </li>
 
             <li class="list-two-nav">
-                <a href="#" class="list-two-nav-son">分类歌单</a>
+                <a href="${pageContext.request.contextPath}/list" class="list-two-nav-son">分类歌单</a>
             </li>
             <li class="list-two-nav">
-                <a href="#" class="list-two-nav-son">电台</a>
+                <a href="${pageContext.request.contextPath}/app/radio.jsp" class="list-two-nav-son">电台</a>
             </li>
             <li class="list-two-nav">
-                <a href="#" class="list-two-nav-son">MV</a>
+                <a href="${pageContext.request.contextPath}/app/mv.jsp" class="list-two-nav-son">MV</a>
             </li>
         </ul>
     </div>
@@ -395,7 +404,7 @@
                                 <c:if test="${user==null}">
                                     <div class="fourKey">
                                         <a class="login" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                        <a class="login"><i class="" title="添加到歌单"></i></a>
+                                        <a class="login"><i class="fourKey_add" title="添加到歌单"></i></a>
                                         <a class="login"><i class="fourKey_download" title="下载"></i></a>
                                         <a class="login"><i class="fourKey_share" title="分享"></i></a>
                                     </div>

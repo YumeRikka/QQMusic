@@ -6,7 +6,7 @@ $(function () {
         $.ajax(
             {
                 url: songid,
-                dataType: "jsonp",
+                dataType: "json",
                 success:
                     function (result) {
                         console.log(result);
@@ -20,24 +20,47 @@ $(function () {
             playerWindow = window.open('app/player.jsp', 'player');
             playerWindow.focus();
         } else {
-            /*setTimeout(function () {
+            setTimeout(function () {
                 playerWindow.focus();
-            },500);*/
+            },500);
         }
     });
 
     $(".js_addto_taogelist").click(function () {
 
-        var url = "addSongList?id=" + $(this).attr("id");
+        var url = "addSongList?id=" + $(this).attr("id")+"&listid="+$(this).attr("listid");
         console.log(url);
         $.ajax(
             {
                 url: url,
-                dataType: "jsonp",
+                dataType: "json",
                 success:
                     function (result) {
-                        console.log(result);
-                        alert(result);
+                        if (result==1) {
+                            console.log("success");
+                            $(".popup_tips__tit").html("已成功添加到歌单")
+
+                            $(".mod_popup_tips").css("display","block");
+                            setTimeout(function () {
+                                $(".mod_popup_tips").css("display","none");
+                            },1500);
+                        }else if(result==0)
+                        {
+                            $(".popup_tips__tit").html("歌曲已存在！")
+                            $(".mod_popup_tips").css("display","block");
+                            setTimeout(function () {
+                                $(".mod_popup_tips").css("display","none");
+                            },1500);
+                            console.log("defeat");
+                        }else {
+                            console.log("null");
+                            alert("null");
+                        }
+                    },
+                error:
+                    function (e) {
+                        console.log(e);
+                        alert("error");
                     }
             }
         );
@@ -117,5 +140,5 @@ $(function () {
         }
     }
 
-
+    $
 });

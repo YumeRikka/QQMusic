@@ -19,7 +19,7 @@
 
 </head>
 <body>
-<audio autoplay="autoplay" preload="auto" loop="loop" src="${pageContext.request.contextPath}/背景音乐.mp3"></audio>
+<audio autoplay="autoplay" preload="auto" loop="loop" src="${pageContext.request.contextPath}/source/爱你的宿命.m4a"></audio>
 <div class="one clearfix">
     <img class="logo" src="${pageContext.request.contextPath}/images/logo1.png" />
     <ul class="logo_1">

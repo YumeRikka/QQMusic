@@ -18,4 +18,14 @@ public interface SongListService{
     int updateByPrimaryKey(SongList record);
 
 	SongList findBySonglistNameAndSonglistUserId(String songlistName,Integer songlistUserId);
+
+
+
+	List<SongList> findBySonglistUserId(Integer songlistUserId);
+
+
+
+	List<SongList> findAll();
+
+
 }

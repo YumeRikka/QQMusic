@@ -54,40 +54,40 @@
         </h1>
         <ul class="list">
             <li class="list-nav list-nav-room">
-                <a href="Index.html" class="list-nav-link list-nav-link-current">音乐馆</a>
+                <a href="${pageContext.request.contextPath}/" class="list-nav-link list-nav-link-current">音乐馆</a>
             </li>
             <li class="list-nav list-nav-mine">
-                <a href="My singer_unload.html" class="list-nav-link"> 我的音乐</a>
+                <a href="${pageContext.request.contextPath}/myMusic" class="list-nav-link"> 我的音乐</a>
             </li>
             <li class="list-nav list-nav-download">
-                <a href="https://y.qq.com/download/index.html" class="list-nav-link">下载客户端</a>
+                <a href="${pageContext.request.contextPath}/app/client.jsp" class="list-nav-link">下载客户端</a>
             </li>
             <li class="list-nav list-nav-VIP">
-                <a href="https://y.qq.com/vipportal/" class="list-nav-link">VIP</a>
+                <a href="${pageContext.request.contextPath}/app/vip.jsp" class="list-nav-link">VIP</a>
             </li>
         </ul>
         <ul class="list-two">
             <li class="list-two-nav">
-                <a href="Index.html" class="list-two-nav-son">首页</a>
+                <a href="${pageContext.request.contextPath}/" class="list-two-nav-son">首页</a>
             </li>
             <li class="list-two-nav">
-                <a href="singer.html" class="list-two-nav-son  list-two-nav-son-current">歌手</a>
+                <a href="${pageContext.request.contextPath}/singer" class="list-two-nav-son  list-two-nav-son-current">歌手</a>
             </li>
             <li class="list-two-nav">
-                <a href="Album.html" class="list-two-nav-son">专辑</a>
+                <a href="${pageContext.request.contextPath}/disc" class="list-two-nav-son">专辑</a>
             </li>
             <li class="list-two-nav">
-                <a href="leaderboard.html" class="list-two-nav-son">排行榜</a>
+                <a href="${pageContext.request.contextPath}/rank" class="list-two-nav-son">排行榜</a>
             </li>
 
             <li class="list-two-nav">
-                <a href="songList.html" class="list-two-nav-son">分类歌单</a>
+                <a href="${pageContext.request.contextPath}/list" class="list-two-nav-son">分类歌单</a>
             </li>
             <li class="list-two-nav">
-                <a href="" class="list-two-nav-son">电台</a>
+                <a href="${pageContext.request.contextPath}/app/radio.jsp" class="list-two-nav-son">电台</a>
             </li>
             <li class="list-two-nav">
-                <a href="" class="list-two-nav-son">MV</a>
+                <a href="${pageContext.request.contextPath}/app/mv.jsp" class="list-two-nav-son">MV</a>
             </li>
         </ul>
     </div>

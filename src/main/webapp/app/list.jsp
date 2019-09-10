@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -35,22 +36,22 @@
                 <a href=":;:;">QQ音乐</a>
             </section>
             <ul class="top_nav clearfix">
-                <li class="left"><a href=":;:;" title="音乐馆">音乐馆</a></li>
-                <li class="left"><a href=":;:;" title="我的音乐">我的音乐</a></li>
-                <li class="left"><a href="https://williams0724.github.io/QQ/exe.html" title="客户端">客户端</a></li>
-                <li class="left"><a href="javascript:;" title="音乐号">音乐号</a></li>
-                <li class="left"><a href="https://mytimebu.github.io/xuexiao/QQ%E9%9F%B3%E4%B9%90VIP.html" title="VIP">VIP</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/" title="音乐馆">音乐馆</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/myMusic" title="我的音乐">我的音乐</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/client.jsp" title="客户端">客户端</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/music-number.jsp" title="音乐号">音乐号</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/vip.jsp" title="VIP">VIP</a></li>
             </ul>
             <ul class="top_subnav clearfix">
-                <li class="left"><a href="https://li1xue2wei3.github.io/shouye/" title="首页">首页</a></li>
-                <li class="left"><a href="javascript:;" title="歌手">歌手</a></li>
-                <li class="left"><a href="https://liyaxuxue.github.io/QQ-/Album.html" title="新碟">新碟</a></li>
-                <li class="left"><a href="javascript:;" title="排行榜">排行榜</a></li>
-                <li class="left"><a href="https://bbx-wangyouduye.github.io/list/05.index.html" title="分类歌单" style="color: #31c27c;">分类歌单</a></li>
-                <li class="left"><a href="https://yummylucky.github.io/qqMusicRadioStation/radioStation.html" title="电台">电台</a></li>
-                <li class="left"><a href="https://woshiwodecode.github.io/practice/mv.html" title="MV">MV</a></li>
-                <li class="left"><a href="https://thisliuyang.github.io/qqmusic/index.html" title="数字专辑">数字专辑</a></li>
-                <li class="left"><a href="https://jiajunhui163.github.io/piaowu/piaowu.html" title="票务">票务</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/" title="首页">首页</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单" style="color: #31c27c;">分类歌单</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/mv.jsp" title="MV">MV</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/album.jsp" title="数字专辑">数字专辑</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/ticket.jsp" title="票务">票务</a></li>
             </ul>
             <section class="top_search">
                 <!-- //文本框 -->
@@ -254,6 +255,21 @@
             </section>
             <section class="song_meau_all">
                 <ul>
+                    <c:forEach items="${songLists}" var="songlist">
+                        <li class="meau_list">
+                            <section class="meau_box">
+                                <section class="meau_cover_img">
+                                    <a href="${pageContext.request.contextPath}/list/${songlist.songlistId}" class="meau_cover_link" title="${songlist.songlistName}">
+                                        <img src="${pageContext.request.contextPath}/img/1.jpg" alt="${songlist.songlistName}" width="224" height="224" class="cover_img">
+                                        <i class="play"></i>
+                                    </a>
+                                </section>
+                                <h3 class="meau_h3"><a href="${pageContext.request.contextPath}/list/${songlist.songlistId}">${songlist.songlistName}</a></h3>
+                                <section class="meau_autor"><a href="javascript:;">${songlist.songlistUserName}</a></section>
+                                <section class="meau_other">播放量： ${songlist.songlistPlayCount}</section>
+                            </section>
+                        </li>
+                    </c:forEach>
                     <li class="meau_list">
                         <section class="meau_box">
                             <section class="meau_cover_img">
@@ -278,307 +294,6 @@
                             <h3 class="meau_h3"><a href="javascript:;">互联网公司年会背景音乐</a></h3>
                             <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
                             <section class="meau_other">播放量： 94.7万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="舒缓英伦风 · 完美英音进化论">
-                                    <img src="${pageContext.request.contextPath}/img/2.jpg" alt="舒缓英伦风 · 完美英音进化论" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">舒缓英伦风 · 完美英音进化论</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">冬不拉唔系西不啦</a></section>
-                            <section class="meau_other">播放量： 7.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="仲记唔记得追过边D香港组合啊？">
-                                    <img src="${pageContext.request.contextPath}/img/4.jpg" alt="仲记唔记得追过边D香港组合啊？" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">仲记唔记得追过边D香港组合啊？</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">MouYong LynLyn</a></section>
-                            <section class="meau_other">播放量： 10万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="轻缓华语｜工作狂录备案消乏剂">
-                                    <img src="${pageContext.request.contextPath}/img/5.jpg" alt="轻缓华语｜工作狂录备案消乏剂" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">轻缓华语｜工作狂录备案消乏剂</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">Music Fans</a></section>
-                            <section class="meau_other">播放量： 42.8万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="复古趴当然要选波普&融合爵士！">
-                                    <img src="${pageContext.request.contextPath}/img/6.jpg" alt="复古趴当然要选波普&融合爵士！" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">复古趴当然要选波普&融合爵士！</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">Jammy_J</a></section>
-                            <section class="meau_other"> 播放量： 2.4万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="失恋静心剂 · 感情治愈系">
-                                    <img src="${pageContext.request.contextPath}/img/7.jpg" alt="失恋静心剂 · 感情治愈系" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">失恋静心剂 · 感情治愈系</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">私に闻いて风i</a></section>
-                            <section class="meau_other">播放量： 34.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="让心在疗愈声线里小憩片刻
-                                    蘑菇
-                                    播放量： 21.9万">
-                                    <img src="${pageContext.request.contextPath}/img/8.jpg" alt="让心在疗愈声线里小憩片刻" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">让心在疗愈声线里小憩片刻</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">私に闻いて风i</a></section>
-                            <section class="meau_other">播放量： 34.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="在Dream Pop的梦里遨游">
-                                    <img src="${pageContext.request.contextPath}/img/9.jpg" alt="在Dream Pop的梦里遨游" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">在Dream Pop的梦里遨游</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">LAN费曼</a></section>
-                            <section class="meau_other">播放量： 17.7万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="适合学习听的古典奏鸣曲">
-                                    <img src="${pageContext.request.contextPath}/img/10.jpg" alt="适合学习听的古典奏鸣曲" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">适合学习听的古典奏鸣曲</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">吐不图巴河拉勒</a></section>
-                            <section class="meau_other">播放量： 33.9万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="90首唯美剧情推荐：歌尽桃花扇底风">
-                                    <img src="${pageContext.request.contextPath}/img/11.jpg" alt="90首唯美剧情推荐：歌尽桃花扇底风" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">90首唯美剧情推荐：歌尽桃花扇底风</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">五品带砖侍卫</a></section>
-                            <section class="meau_other">播放量： 106.2万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="沧笙踏歌 | 和声点缀的古风">
-                                    <img src="${pageContext.request.contextPath}/img/12.jpg" alt="沧笙踏歌 | 和声点缀的古风" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">沧笙踏歌 | 和声点缀的古风</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">你的耳机是我的</a></section>
-                            <section class="meau_other">播放量： 32.9万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="Urban R&B：轻快的抓耳节奏">
-                                    <img src="${pageContext.request.contextPath}/img/13.jpg" alt="Urban R&B：轻快的抓耳节奏" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">Urban R&B：轻快的抓耳节奏</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">Eight Weeks</a></section>
-                            <section class="meau_other">播放量： 377.2万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="下午茶的清甜香：无损法语">
-                                    <img src="${pageContext.request.contextPath}/img/14.jpg" alt="下午茶的清甜香：无损法语" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">下午茶的清甜香：无损法语</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">夏目杏林</a></section>
-                            <section class="meau_other">播放量： 5.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="室内民谣 | 阅读时吹来的微风">
-                                    <img src="${pageContext.request.contextPath}/img/15.jpg" alt="室内民谣 | 阅读时吹来的微风" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">室内民谣 | 阅读时吹来的微风</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">LAN费曼</a></section>
-                            <section class="meau_other">播放量： 4.1万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="给生活加点糖！甜系华语小调">
-                                    <img src="${pageContext.request.contextPath}/img/16.jpg" alt="给生活加点糖！甜系华语小调" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">给生活加点糖！甜系华语小调</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">DJ顾念晨</a></section>
-                            <section class="meau_other">播放量： 32.9万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/17.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/18.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/19.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/20.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/21.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/22.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/23.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/24.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="专属日系宅男宅女手机铃声">
-                                    <img src="${pageContext.request.contextPath}/img/25.jpg" alt="专属日系宅男宅女手机铃声" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">专属日系宅男宅女手机铃声</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 40.6万</section>
                         </section>
                     </li>
 

@@ -34,11 +34,11 @@
             </h2>
             <!--顶部导航-->
             <ul class="left clearfix">
-                <li class="left"><a href="#">音乐馆</a></li>
-                <li class="left"><a href="#">我的音乐</a></li>
-                <li class="left"><a href="https://williams0724.github.io/QQ/exe.html">客户端</a></li>
-                <li class="left"><a href="https://hanipang.github.io/QQyinyuehao/index.html">音乐号</a></li>
-                <li class="left"><a href="https://mytimebu.github.io/xuexiao/QQ%E9%9F%B3%E4%B9%90VIP.html">VIP</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/">音乐馆</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/myMusic">我的音乐</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/client.jsp">客户端</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/music-number.jsp">音乐号</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/vip.jsp">VIP</a></li>
             </ul>
             <!--顶部搜素框-->
             <div class="header_search left">
@@ -106,15 +106,15 @@
     <div class="nav">
         <div class="w">
             <ul>
-                <li><a href="https://li1xue2wei3.github.io/shouye/">首页</a></li>
-                <li><a href="https://liukaiwen19971208.github.io/-i/">歌手</a></li>
-                <li><a href="https://liyaxuxue.github.io/QQ-/Album.html">专辑</a></li>
-                <li><a href="#">排行榜</a></li>
-                <li><a href="https://bbx-wangyouduye.github.io/list/05.index.html">分类歌单</a></li>
-                <li><a href="https://yummylucky.github.io/qqMusicRadioStation/radioStation.html">电台</a></li>
-                <li><a href="https://woshiwodecode.github.io/practice/mv.html">MV</a></li>
-                <li><a href="https://thisliuyang.github.io/qqmusic/index.html">数字专辑</a></li>
-                <li><a href="https://jiajunhui163.github.io/piaowu/piaowu.html">票务</a></li>
+                <li><a href="${pageContext.request.contextPath}/">首页</a></li>
+                <li><a href="${pageContext.request.contextPath}/singer">歌手</a></li>
+                <li><a href="${pageContext.request.contextPath}/disc">专辑</a></li>
+                <li><a href="${pageContext.request.contextPath}/rank">排行榜</a></li>
+                <li><a href="${pageContext.request.contextPath}/list">分类歌单</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/radio.jsp">电台</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/mv.jsp">MV</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/album.jsp">数字专辑</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/ticket.jsp">票务</a></li>
             </ul>
         </div>
     </div>

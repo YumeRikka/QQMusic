@@ -34,11 +34,11 @@
             <img src="${pageContext.request.contextPath}/images/logo2x.png" alt="QQ音乐" class="qqmusic_logo"></a></h1>
 
         <ul class = 'nav '>
-            <li class='bian'><a href="">音乐馆</a></li>
-            <li class='bian'><a href="">我的音乐</a></li>
-            <li class='bian'><a href="">客户端</a></li>
-            <li class='bian'><a href="">音乐号</a></li>
-            <li class='bian'><a href="">VIP  </a></li>
+            <li class='bian'><a href="${pageContext.request.contextPath}/">音乐馆</a></li>
+            <li class='bian'><a href="${pageContext.request.contextPath}/myMusic">我的音乐</a></li>
+            <li class='bian'><a href="${pageContext.request.contextPath}/app/client.jsp">客户端</a></li>
+            <li class='bian'><a href="${pageContext.request.contextPath}/app/music-number.jsp">音乐号</a></li>
+            <li class='bian'><a href="${pageContext.request.contextPath}/app/vip.jsp">VIP  </a></li>
         </ul>
         <div class='search '>
             <input class="input " aria-label="请输入搜索内容" type="text" placeholder="搜索音乐、MV、歌单、用户" accesskey="s">

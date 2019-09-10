@@ -110,7 +110,7 @@
 }
 .main .detail_layout .detail_layout__main {
   float: left;
-  height: 1110px;
+  height: 200px;
 }
 .main .detail_layout .detail_layout__main .mod_songlist {
   padding-bottom: 60px;
@@ -166,7 +166,7 @@
   position: absolute;
   top: 0;
   left: 10px;
-  widows: 36px;
+  widows: 36;
 }
 .main .detail_layout .detail_layout__main .mod_songlist .songlist__list .songlist__list_name {
   width: 54%;

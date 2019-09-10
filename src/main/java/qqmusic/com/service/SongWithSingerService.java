@@ -22,4 +22,9 @@ public interface SongWithSingerService{
 	List<Integer> findSingerIdBySongId(Integer songId);
 
 
+
+	List<Integer> findSongIdBySingerId(Integer singerId);
+
+
+
 }

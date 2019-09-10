@@ -93,6 +93,7 @@
   position: absolute;
   right: -7px;
   top: 11px;
+  cursor:pointer;
 }
 .main_body .header .section__inner .top_search .serach_other {
   background-color: #fff;

@@ -17,7 +17,7 @@ a{
     color: #31C27C;
 }
 #header{
-	padding-left: 90px;
+
     background-color: #fff;
     position: relative;
     z-index: 4;
@@ -26,7 +26,7 @@ a{
     float: left;
 }
 .section_inner{
-
+    padding-left: 90px;
 
 }
 #header .img_1{
@@ -135,7 +135,7 @@ a{
     height: 14px;
     bottom: 24px;
     top: 53px;
-    right: 455px;
+    right: 365px;
     z-index: 1;
 }
 .wydl:hover{

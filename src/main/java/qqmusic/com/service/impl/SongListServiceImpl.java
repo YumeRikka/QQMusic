@@ -48,6 +48,22 @@ public class SongListServiceImpl implements SongListService{
 		 return songListMapper.findBySonglistNameAndSonglistUserId(songlistName,songlistUserId);
 	}
 
+	@Override
+	public List<SongList> findBySonglistUserId(Integer songlistUserId){
+		 return songListMapper.findBySonglistUserId(songlistUserId);
+	}
+
+	@Override
+	public List<SongList> findAll(){
+		 return songListMapper.findAll();
+	}
+
+
+
+
+
+
+
 
 
 

@@ -391,3 +391,37 @@ ul .toplist_nav_left1_tit_current:hover{
 	color: #fff;
     background-color: #31c27c;
 	}
+
+
+
+
+
+/*添加格单*/
+.mod_popup_tips {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	padding: 37px 46px 25px;
+	line-height: 22px;
+	border-radius: 3px;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=true, startColorstr='#B2000000', endColorstr='#B2000000');
+	background: rgba(0,0,0,.7);
+	z-index: 999;
+	text-align: center;
+}
+.popup_tips__icon {
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-position: 0 -150px;
+	margin: 0 auto 16px;
+}
+.popup_tips__tit {
+	font-size: 14px;
+	color: #fff;
+	font-weight: 400;
+}
+.popup__icon_close, .popup__icon_close.sprite, .popup__icon_tips, .popup__icon_tips.sprite, .popup_download__icon, .popup_download__icon.sprite, .popup_tips__icon, .popup_tips__icon.sprite {
+	background-image: url(../../img/logo/icon_popup.png);
+	background-image: -webkit-image-set(url(../../img/logo/icon_popup.png) 1x,url(../../img/logo/icon_popup@2x.png) 2x);
+}

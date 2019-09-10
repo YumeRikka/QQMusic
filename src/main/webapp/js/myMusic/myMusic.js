@@ -21,7 +21,7 @@ window.onresize = Height;
 // 跳转主页
 $("#header_ul_nav>li:eq(0)").click(function(){
     // window.location.href = "myMusic.html";自身跳转
-    window.open("index.html");//新窗口跳转;
+    window.open("app/index.jsp");//新窗口跳转;
 });
 // 滚动楼层效果
 

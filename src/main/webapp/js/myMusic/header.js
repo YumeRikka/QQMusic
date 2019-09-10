@@ -7,7 +7,11 @@ $("#header").html(`<div id="header_nav">
     <img src="img/logo/l_logo.png" alt="">
 </div>
 <ul id="header_ul_nav" >
-        <li class="nav_current">音乐馆</li><li>我的音乐</li><li id="download">客户端</li><li>音乐号</li><li>VIP</li>   
+        <li class="nav_current">音乐馆 </li>
+        <li id="muMusic">我的音乐</li>
+        <li id="download">客户端</li>
+        <li id="music-number">音乐号</li>
+        <li id="vip">VIP</li>   
 </ul>
 <div id="search_nav">
         <input type="text" placeholder=" 搜索音乐、MV、歌单、歌手" >
@@ -109,6 +113,15 @@ $("#header").html(`<div id="header_nav">
 `);
     // 跳转我的音乐;
     $("#download").click(function(){
-        window.open("download.html");
+        window.open("app/client.jsp");
     })
+$("#myMusic").click(function(){
+    window.open("myMusic");
+})
+$("#music-number").click(function(){
+    window.open("app/music-number.jsp");
+})
+$("#vip").click(function(){
+    window.open("app/vip.jsp");
+})
     

@@ -75,16 +75,16 @@
             <ul class="top_nav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="音乐馆">音乐馆</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/myMusic" title="我的音乐">我的音乐</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/app/client.jsp" title="客户端">客户端</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/app/music-number.jsp" title="音乐号">音乐号</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/app/vip.jsp" title="VIP">VIP</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/client.jsp" target="_blank" title="客户端">客户端</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/music-number.jsp" target="_blank" title="音乐号">音乐号</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/app/vip.jsp" target="_blank" title="VIP">VIP</a></li>
             </ul>
             <ul class="top_subnav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="首页" style="color: #31c27c;">首页</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/app/list.jsp" title="分类歌单">分类歌单</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单">分类歌单</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/mv.jsp" title="MV">MV</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/album.jsp" title="数字专辑">数字专辑</a></li>
@@ -94,8 +94,11 @@
                 <!-- //文本框 -->
                 <section class="input_serach">
                     <section class="input_search_text">
-                        <input type="text" placeholder="搜索音乐、MV、歌单、用户" autofocus class="search">
-                        <input type="button" class="btn">
+                        <form method="post" action="${pageContext.request.contextPath}/app/search.jsp">
+                            <input type="text" placeholder="搜索音乐、MV、歌单、用户" autofocus class="search">
+                            <input type="submit" class="btn" value="">
+                        </form>
+
                     </section>
                 </section>
                 <!-- //隐藏其他部分 -->

@@ -109,6 +109,10 @@ public class UserController {
             List<SongVo> myLikeSongVos = QQMusicUtils.toSongVo(myLikeSongs);
             request.getSession().setAttribute("myLikeSongVos",myLikeSongVos);
             System.out.println(myLikeSongVos);
+
+            List<SongList> songLists = songListService.findBySonglistUserId(user.getUserId());
+            request.getSession().setAttribute("songLists",songLists);
+            System.out.println(songLists);
             return "my-profile";
         }
     }

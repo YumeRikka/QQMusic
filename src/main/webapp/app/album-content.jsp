@@ -1,11 +1,11 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2019/9/9
-  Time: 2:24
+  Date: 2019/9/10
+  Time: 10:20
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -213,8 +213,7 @@
                     <div class="mod_cont">
                         <p>${songList.songlistIntroduce}</p>
                     </div>
-                    <a href="javascript:;" class="about__more" id="about_more">[更多]</a>
-                    <a href="javascript:;" class="about__more" id="dis_more">[收起]</a>
+                    <a href="javascript:;" class="about__more">[更多]</a>
                 </div>
             </div>
             <div class="popup_data_detail">

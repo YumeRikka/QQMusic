@@ -52,6 +52,14 @@ public class SongServiceImpl implements SongService{
 		 return songMapper.findBySongSingerId(songSingerId);
 	}
 
+	@Override
+	public List<Song> findBySongAlbumId(Integer songAlbumId){
+		 return songMapper.findBySongAlbumId(songAlbumId);
+	}
+
+
+
+
 
 
 

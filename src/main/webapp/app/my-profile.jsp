@@ -17,21 +17,48 @@
     <title>陪你心动-个人主页</title>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.ico"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/my-profile/my-profile.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/newSongList.css">
 </head>
 <body>
 <%
     User user = (User) session.getAttribute("user");
     List<SongVo> myLikeSongVos = (List<SongVo>)session.getAttribute("myLikeSongVos");
 %>
+
+
+<div id="divdialog_0" class="mod_popup popup_new_list" data-aria="popup" style="position: fixed; z-index: 100000; top: 275px; margin: 10px; width: 520px; height: auto; left: 506.5px;">
+    <div class="popup__hd">
+        <h2 class="popup__tit">创建新歌单</h2>
+        <a href="javascript:;" class="popup__close" title="关闭"><i class="popup__icon_close"></i><i class="icon_txt">关闭</i></a>
+    </div>
+    <form method="post" action="${pageContext.request.contextPath}/newSongList">
+        <div class="popup__bd " id="dialogbox">
+            <label class="form__label">歌单名</label> <div class="mod_form_txt"> <input type="text" value="" class="form_txt__input" id="songListName" name="songListName"><span class="form_txt__tips" id="name_leftnum">20</span></div>
+        </div>
+        <div class="popup__bd " id="dialogbox1">
+            <label class="form__label">歌单描述</label> <div class="mod_form_txt"> <input type="text" value="" class="form_txt__input" id="songListIntroduce" name="songListIntroduce"><span class="form_txt__tips" id="name_leftnum1">20</span></div>
+        </div>
+
+        <div class="popup__ft">
+            <button style="display:;" class="mod_btn upload_btns__item js-button1">取消</button>
+            <input type="submit" value="确定" style="display:;" class="mod_btn_green upload_btns__item js-button2">
+            <%--<button style="display:;" class="mod_btn_green upload_btns__item js-button2">确定</button>--%>
+        </div>
+    </form>
+
+</div>
+
+
+
 <div id="header">
     <div class="section_inner">
         <a href=""><img src="${pageContext.request.contextPath}/img/logo.png" class="img_1" /></a>
         <ul class="ul_1">
             <li class="li_1"><a href="${pageContext.request.contextPath}/" title="音乐馆" >音乐馆</a></li>
             <li class="li_2"><a href="${pageContext.request.contextPath}/myMusic" title="我的音乐" style="color: #fff">我的音乐</a></li>
-            <li><a href="#" title="客户端" target="_blank">客户端</a></li>
-            <li><a href="#" title="音乐号" target="_blank">音乐号</a></li>
-            <li class="li_3"><a href="#" title="VIP" target="_blank">VIP</a></li>
+            <li><a href="${pageContext.request.contextPath}/app/client.jsp" title="客户端" target="_blank">客户端</a></li>
+            <li><a href="${pageContext.request.contextPath}/app/music-number.jsp" title="音乐号" target="_blank">音乐号</a></li>
+            <li class="li_3"><a href="${pageContext.request.contextPath}/app/vip.jsp" title="VIP" target="_blank">VIP</a></li>
         </ul>
         <input type="text" placeholder="搜索音乐、MV、歌单、用户" class="inp_1" />
         <a href="" class="ss"></a>
@@ -69,13 +96,13 @@
 </div>
 <div class="main">
     <div class="mod_tab profile_nav">
-        <a href="" class="mod_tab_item" style="color: #31c27c">我喜欢</a>
-        <a href="" class="mod_tab_item" style="color:  #fff;">我创建的歌单</a>
-        <a href="" class="mod_tab_item" style="color:  #fff;">关注</a>
-        <a href="" class="mod_tab_item" style="color:  #fff;">粉丝</a>
-        <a href="" class="mod_tab_item" style="color:  #fff;">我上传的视频</a>
+        <a href="javascript:;" class="mod_tab_item mod_tab_item_main mod_tab_item_1" style="color: #31c27c">我喜欢</a>
+        <a href="javascript:;" class="mod_tab_item mod_tab_item_main mod_tab_item_2" style="color:  #fff;">我创建的歌单</a>
+        <a href="javascript:;" class="mod_tab_item mod_tab_item_main mod_tab_item_3" style="color:  #fff;">关注</a>
+        <a href="javascript:;" class="mod_tab_item mod_tab_item_main mod_tab_item_4" style="color:  #fff;">粉丝</a>
+        <a href="javascript:;" class="mod_tab_item mod_tab_item_main mod_tab_item_5" style="color:  #fff;">我上传的视频</a>
     </div>
-    <div class="js_box" style="display: block">
+    <div class="js_box js_box_1" style="display: block">
         <div class="mod_tab">
             <a href="" class="mod_tab_item" style="color: #31c27c">歌曲  <%=myLikeSongVos.size()%></a>
             <a href="" class="mod_tab_item">歌单  0</a>
@@ -111,11 +138,11 @@
                     <ul class="list__ul_2">
                         <c:forEach items="${myLikeSongVos}" var="songVo" varStatus="num">
                             <li>
-                                <div class="li_div">
+                                <div class="li_div" >
                                     <div class="num">${num.count}</div>
                                     <div class="gm">
                                         <span class="gm_sp">
-                                            <a href="javaScript:;" title="${songVo.song.songName}" target="_blank">${songVo.song.songName}</a>
+                                            <a href="javaScript:;" class="play-btn" id="${songVo.song.songId}" title="${songVo.song.songName}" target="_blank">${songVo.song.songName}</a>
                                         </span>
                                         <div class="bf_menu">
                                             <a href="javaScript:;" class="bf_menu_1" title="播放">
@@ -144,7 +171,61 @@
             </div>
         </div>
     </div>
+    <div class="js_box js_box_2" style="display: none">
+        <div class="profile_cont">
+            <div class="js_sub">
+                <div class="mod_songlist_tool">
+                    <a href="javascript:;" class="mod_btn fav new_list">
+                        <i class="mod_btn_icon_add"></i>
+                        新建歌单
+                    </a>
+
+                </div>
+                <div class="gq_list">
+                    <ul class="list__ul_1">
+                        <li class="li_name">歌单</li>
+                        <li class="li_zj">歌曲数</li>
+                        <li class="li_time">操作</li>
+                    </ul>
+                    <ul class="list__ul_2">
+                        <c:forEach items="${songLists}" var="songList" varStatus="num1">
+                            <li>
+                                <div class="li_div" >
+                                    <div class="num">${num1.count}</div>
+                                    <div class="gm">
+                                        <span class="gm_sp">
+                                            <a href="javaScript:;" title="${songList.songlistName}" target="_blank">${songList.songlistName}</a>
+                                        </span>
+                                        <div class="bf_menu">
+                                            <a href="javaScript:;" class="bf_menu_1" title="播放">
+                                                <i class="tp_3"></i>
+                                            </a>
+                                            <a href="javaScript:;" class="bf_menu_2" title="添加到歌单">
+                                                <i class="tp_4"></i>
+                                            </a>
+                                            <a href="javaScript:;" class="bf_menu_3" title="下载">
+                                                <i class="tp_5"></i>
+                                            </a>
+                                            <a href="javaScript:;" class="bf_menu_4" title="分享">
+                                                <i class="tp_6"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="zj">
+                                        <a href="javascript:;" title="${songList.songlistIntroduce}" class="album_name">${songList.songlistIntroduce}</a>
+                                    </div>
+                                    <div class="sj"></div>
+                                </div>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 <div id="footer">
     <p style="height: 80px"></p>
     <div class="f_1">
@@ -247,5 +328,9 @@
 
     onscroll();
 </script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.12.4.js"></script>
+<script src="${pageContext.request.contextPath}/js/myMusic/my-profile.js"></script>
+
+
 </body>
 </html>

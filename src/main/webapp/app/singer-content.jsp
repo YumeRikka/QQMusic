@@ -24,9 +24,9 @@
     <ul class="ul_1">
         <li class="li_1"><a href="${pageContext.request.contextPath}/" title="音乐馆" style="color: #fff">音乐馆</a></li>
         <li class="li_2"><a href="${pageContext.request.contextPath}/myMusic" title="我的音乐">我的音乐</a></li>
-        <li><a href="#" title="客户端" target="_blank">客户端</a></li>
-        <li><a href="#" title="音乐号" target="_blank">音乐号</a></li>
-        <li class="li_3"><a href="#" title="VIP" target="_blank">VIP</a></li>
+        <li><a href="${pageContext.request.contextPath}/app/client.jsp" title="客户端" target="_blank">客户端</a></li>
+        <li><a href="${pageContext.request.contextPath}/app/music-number.jsp" title="音乐号" target="_blank">音乐号</a></li>
+        <li class="li_3"><a href="${pageContext.request.contextPath}/app/vip.jsp" title="VIP" target="_blank">VIP</a></li>
     </ul>
     <input type="text" placeholder="搜索音乐、MV、歌单、用户" class="inp_1" />
     <a href="" class="a_1">登录</a>
@@ -37,12 +37,12 @@
     <ul class="ul_2">
         <li><a href="${pageContext.request.contextPath}/">首页</a></li>
         <li><a href="${pageContext.request.contextPath}/singer">歌手</a></li>
-        <li><a href="${pageContext.request.contextPath}/album">数字专辑</a></li>
+        <li><a href="${pageContext.request.contextPath}/disc">数字专辑</a></li>
         <li><a href="${pageContext.request.contextPath}/disc">专辑</a></li>
         <li><a href="${pageContext.request.contextPath}/rank">排行榜</a></li>
         <li><a href="${pageContext.request.contextPath}/list">分类歌单</a></li>
-        <li><a href="${pageContext.request.contextPath}/radio">电台</a></li>
-        <li><a href="${pageContext.request.contextPath}/mv">MV</a></li>
+        <li><a href="${pageContext.request.contextPath}/app/radio.jsp">电台</a></li>
+        <li><a href="${pageContext.request.contextPath}/app/mv.jsp">MV</a></li>
     </ul>
 </div>
 <div id="content">
@@ -128,6 +128,12 @@
                                 <span class="gm_sp">
                                     <a href="javascript:;" class="play-btn" id="${songVo.song.songId}" title="${songVo.song.songName}" target="_blank">${songVo.song.songName}</a>
                                 </span>
+                                <%--<div class="fourKey">
+                                    <a href="javascript:;" class="play-btn" id="${songVo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
+                                    <a href="javascript:;" class="fourKey_add" id="${songVo.song.songId}"><i class="fourKey_add" title="添加到歌单"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
+                                    <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
+                                </div>--%>
                                 <div class="bf_menu">
                                     <a href="" class="bf_menu_1 " title="播放">
                                         <i class="tp_3"></i>

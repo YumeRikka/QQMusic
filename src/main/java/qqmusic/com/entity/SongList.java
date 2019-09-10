@@ -80,4 +80,18 @@ public class SongList {
     public void setSonglistCollectionCount(Integer songlistCollectionCount) {
         this.songlistCollectionCount = songlistCollectionCount;
     }
+
+    @Override
+    public String toString() {
+        return "SongList{" +
+                "songlistId=" + songlistId +
+                ", songlistUserId=" + songlistUserId +
+                ", songlistUserName='" + songlistUserName + '\'' +
+                ", songlistName='" + songlistName + '\'' +
+                ", songlistType='" + songlistType + '\'' +
+                ", songlistPlayCount=" + songlistPlayCount +
+                ", songlistIntroduce='" + songlistIntroduce + '\'' +
+                ", songlistCollectionCount=" + songlistCollectionCount +
+                '}';
+    }
 }

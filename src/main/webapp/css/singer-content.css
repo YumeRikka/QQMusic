@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 li{
     list-style: none;
 }
@@ -14,6 +15,66 @@ a:hover{
 }
 body{
     text-align: center;
+}
+.sing_info_dan:hover .fourKey{
+    opacity:1;
+
+}
+.sing_info_shuang:hover .fourKey{
+    opacity:1;
+
+}
+.fourKey{
+    width:184px;
+    height:36px;
+    float:right;
+    opacity:0;
+    margin-top:22px;
+}
+.fourKey_play{
+    width:36px;
+    height:36px;
+    float:left;
+    background:url(../img/singer/icon_list_menu.png);
+    margin-right:10px;
+
+}
+.fourKey_play:hover{
+    background-position:-40px 0;
+}
+.fourKey_add{
+    width:36px;
+    height:36px;
+    float:left;
+    background:url(../img/singer/icon_list_menu.png);
+    background-position:0 -80px;
+    margin-right:10px;
+}
+.fourKey_add:hover{
+    background-position:-40px -80px;
+}
+.fourKey_download{
+    width:36px;
+    height:36px;
+    float:left;
+    background:url(../img/singer/icon_list_menu.png);
+    background-position:0 -120px;
+    margin-right:10px;
+}
+.fourKey_download:hover{
+    background-position:-40px -120px;
+}
+
+.fourKey_share{
+    width:36px;
+    height:36px;
+    float:left;
+    background:url(../img/singer/icon_list_menu.png);
+    background-position:0 -40px;
+    margin-right:10px;
+}
+.fourKey_share:hover{
+    background-position:-40px -40px;
 }
 #header{
     width: 100%;
@@ -369,7 +430,7 @@ body{
     color:#999;
 }
 #content  .gm{
-    width:48%;
+    width:37%;
     height: 50px;
     line-height: 50px;
     float:left;

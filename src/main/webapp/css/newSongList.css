@@ -1,0 +1,142 @@
+.mod_popup {
+    position: absolute;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    z-index: 999;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+.popup__hd {
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+.popup_new_list .popup__bd {
+    position: relative;
+    margin-top: 39px;
+    padding: 0 40px 0 101px;
+    padding-bottom: 28px;
+    overflow: hidden;
+}
+.popup__ft {
+    padding: 20px 20px 0 0;
+    height: 60px;
+    text-align: right;
+}
+.mod_popup_mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=true, startColorstr='#33000000', endColorstr='#33000000');
+    background: rgba(0,0,0,.2);
+    z-index: 999;
+}
+.popup__tit {
+    font-size: 16px;
+    font-weight: 400;
+}
+.popup__close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    z-index: 2;
+}
+.popup__icon_close {
+    display: block;
+    margin: 6px auto;
+    width: 12px;
+    height: 12px;
+    background-position: 0 -200px;
+}
+.popup__icon_close, .popup__icon_close.sprite, .popup__icon_tips, .popup__icon_tips.sprite, .popup_download__icon, .popup_download__icon.sprite, .popup_tips__icon, .popup_tips__icon.sprite {
+    background-image: url(../img/logo/icon_popup.png);
+    background-image: -webkit-image-set(url(../img/logo/icon_popup.png) 1x,url(../img/logo/icon_popup@2x.png) 2x);
+}
+.icon_txt {
+    font: 0/0 a;
+}
+.popup_new_list .form__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 81px;
+    line-height: 40px;
+    text-align: right;
+}
+.popup_new_list .mod_form_txt {
+    width: 377px;
+    border-color: #e1e1e1;
+}
+.mod_form_txt {
+    position: relative;
+    display: block;
+    width: 498px;
+    height: 38px;
+    background-color: #fff;
+    border: 1px solid #c8cbcc;
+}
+.popup_new_list .form_txt__input {
+    width: 330px;
+}
+.form_txt__input {
+    width: 450px;
+    height: 38px;
+    line-height: 38px;
+    border: 0 none;
+    margin-left: 11px;
+    vertical-align: top;
+    background: 0 0;
+}
+.form_txt__tips {
+    position: absolute;
+    top: 0;
+    right: 11px;
+    color: #999;
+    line-height: 38px;
+}
+.popup__ft .mod_btn, .popup__ft .mod_btn_green {
+    width: auto;
+    min-width: 122px;
+    text-align: center;
+}
+.mod_btn--hover, .mod_btn:hover {
+    background-color: #ededed;
+    color: #333;
+}
+.upload_btns__item {
+    cursor: pointer;
+    width: 122px;
+    margin: 0 3px;
+}
+.mod_btn {
+    border: 1px solid #c9c9c9;
+    color: #000;
+}
+.mod_btn, .mod_btn_green {
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+.mod_btn_green {
+    border: 1px solid #31c27c;
+    background-color: #31c27c;
+    color: #fff;
+}

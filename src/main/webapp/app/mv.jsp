@@ -60,33 +60,19 @@
     <div class="main_list">
         <div class="wraper">
             <ul>
-                <li>
-                    <a href="https://li1xue2wei3.github.io/shouye/">首页</a>
-                </li>
-                <li>
-                    <a href="https://williams0724.github.io/-/singer-list.html">歌手</a>
-                </li>
-                <li>
-                    <a href="https://liyaxuxue.github.io/QQ-/Album.html">专辑</a>
-                </li>
-                <li>
-                    <a href="javascript:;">排行榜</a>
-                </li>
-                <li>
-                    <a href="https://bbx-wangyouduye.github.io/list/05.index.html">分类歌单</a>
-                </li>
-                <li>
-                    <a href="https://yummylucky.github.io/qqMusicRadioStation/radioStation.html">电台</a>
-                </li>
-                <li>
-                    <a href="javascript:;">MV</a>
-                </li>
-                <li>
-                    <a href="https://thisliuyang.github.io/qqmusic/index.html">数字专辑</a>
-                </li>
-                <li>
-                    <a href="https://jiajunhui163.github.io/piaowu/piaowu.html">票务</a>
-                </li>
+
+
+                <li><a href="${pageContext.request.contextPath}/" title="首页">首页</a></li>
+                <li><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
+                <li><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
+                <li><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
+                <li><a href="${pageContext.request.contextPath}/list" title="分类歌单" style="color: #31c27c;">分类歌单</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/mv.jsp" title="MV">MV</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/album.jsp" title="数字专辑">数字专辑</a></li>
+                <li><a href="${pageContext.request.contextPath}/app/ticket.jsp" title="票务">票务</a></li>
+
+
             </ul>
         </div>
     </div>

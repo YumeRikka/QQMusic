@@ -19,5 +19,7 @@ public interface SongWithSingerMapper {
 
     List<Integer> findSingerIdBySongId(@Param("songId")Integer songId);
 
+    List<Integer> findSongIdBySingerId(@Param("singerId")Integer singerId);
+
 
 }
