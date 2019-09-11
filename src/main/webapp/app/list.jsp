@@ -255,7 +255,7 @@
             </section>
             <section class="song_meau_all">
                 <ul>
-                    <c:forEach items="${songLists}" var="songlist">
+                    <c:forEach items="${songLists}" var="songlist" end="4">
                         <li class="meau_list">
                             <section class="meau_box">
                                 <section class="meau_cover_img">
@@ -270,32 +270,7 @@
                             </section>
                         </li>
                     </c:forEach>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="../app/list-content.jsp" class="meau_cover_link" title="舒缓R&B：一个人放松专用">
-                                    <img src="${pageContext.request.contextPath}/img/1.jpg" alt="舒缓R&B：一个人放松专用" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">舒缓R&B：一个人放松专用</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">Smile</a></section>
-                            <section class="meau_other">播放量： 80万</section>
-                        </section>
-                    </li>
-                    <li class="meau_list">
-                        <section class="meau_box">
-                            <section class="meau_cover_img">
-                                <a href="javascript:;" class="meau_cover_link" title="互联网公司年会背景音乐">
-                                    <img src="${pageContext.request.contextPath}/img/3.jpg" alt="互联网公司年会背景音乐" width="224" height="224" class="cover_img">
-                                    <i class="play"></i>
-                                </a>
-                            </section>
-                            <h3 class="meau_h3"><a href="javascript:;">互联网公司年会背景音乐</a></h3>
-                            <section class="meau_autor"><a href="javascript:;">涩涩的大棕熊</a></section>
-                            <section class="meau_other">播放量： 94.7万</section>
-                        </section>
-                    </li>
+
 
 
 

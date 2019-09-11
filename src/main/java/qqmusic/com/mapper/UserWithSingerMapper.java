@@ -17,7 +17,9 @@ public interface UserWithSingerMapper {
 
     int updateByPrimaryKey(UserWithSinger record);
 
-    List<UserWithSinger> findByUserIdAndSingerId(@Param("userId")Integer userId,@Param("singerId")Integer singerId);
+    UserWithSinger findByUserIdAndSingerId(@Param("userId")Integer userId,@Param("singerId")Integer singerId);
+
+    List<UserWithSinger> findByUserId(@Param("userId")Integer userId);
 
 
 }

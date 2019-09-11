@@ -6,7 +6,7 @@ $(function () {
         $.ajax(
             {
                 url: songid,
-                dataType: "jsonp",
+                dataType: "json",
                 success:
                     function (result) {
                         console.log(result);
@@ -25,5 +25,19 @@ $(function () {
             },500);
             //
         }
+    });
+    $(".follow").click(function () {
+        var follow = "../follow";
+        $.ajax(
+            {
+                url: follow,
+                dataType: "json",
+                success:
+                    function (result) {
+                        console.log(result);
+                    }
+            }
+        );
+        $(".follow").html("已关注");
     });
 });

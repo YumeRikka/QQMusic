@@ -4,10 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import qqmusic.com.entity.*;
-import qqmusic.com.service.SongListService;
-import qqmusic.com.service.SongListWithSongService;
-import qqmusic.com.service.SongService;
-import qqmusic.com.service.UserService;
+import qqmusic.com.service.*;
 import qqmusic.com.util.QQMusicUtils;
 
 import javax.annotation.Resource;
@@ -25,6 +22,13 @@ public class UserController {
     private SongListWithSongService songListWithSongService;
     @Resource
     private SongService songService;
+    @Resource
+    private SingerService singerService;
+    @Resource
+    UserWithSingerService userWithSingerService;
+
+
+
     @RequestMapping("/")
     public String index(HttpServletRequest request){
         List<SongList> songLists = songListService.findOrderBySonglistPlayCountDesc();
@@ -115,6 +119,13 @@ public class UserController {
             List<SongList> songLists = songListService.findBySonglistUserId(user.getUserId());
             request.getSession().setAttribute("songLists",songLists);
             System.out.println(songLists);
+
+            List<UserWithSinger> userWithSingers = userWithSingerService.findByUserId(user.getUserId());
+            List<Singer> singers = new ArrayList<>();
+            for (UserWithSinger u:userWithSingers) {
+                singers.add(singerService.selectByPrimaryKey(u.getSingerId()));
+            }
+            request.getSession().setAttribute("singers",singers);
             return "my-profile";
         }
     }

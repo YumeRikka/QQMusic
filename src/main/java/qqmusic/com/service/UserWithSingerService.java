@@ -19,7 +19,12 @@ public interface UserWithSingerService{
 
 
 
-	List<UserWithSinger> findByUserIdAndSingerId(Integer userId,Integer singerId);
+	UserWithSinger findByUserIdAndSingerId(Integer userId,Integer singerId);
+
+
+
+	List<UserWithSinger> findByUserId(Integer userId);
+
 
 
 }

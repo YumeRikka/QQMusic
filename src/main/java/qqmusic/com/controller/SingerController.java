@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import qqmusic.com.entity.*;
-import qqmusic.com.service.AlbumService;
-import qqmusic.com.service.SingerService;
-import qqmusic.com.service.SongService;
-import qqmusic.com.service.SongWithSingerService;
+import qqmusic.com.service.*;
 import qqmusic.com.util.QQMusicUtils;
 
 import javax.annotation.Resource;
@@ -27,7 +24,8 @@ public class SingerController {
     private SongWithSingerService songWithSingerService;
     @Resource
     AlbumService albumService;
-
+    @Resource
+    UserWithSingerService userWithSingerService;
 
     @RequestMapping("/singer")
     public String singers(@RequestParam(value = "pn", defaultValue = "1") Integer pn, HttpServletRequest request){
@@ -59,6 +57,13 @@ public class SingerController {
             request.getSession().setAttribute("albums",albums);
         }
         List<Singer> similarSinger = singerService.findBySingerAreaAndSingerType(singer.getSingerArea(),singer.getSingerType());
+        User user = (User)request.getSession().getAttribute("user");
+        UserWithSinger userWithSinger = new UserWithSinger();
+
+        if (user!=null){
+            userWithSinger = userWithSingerService.findByUserIdAndSingerId(user.getUserId(),singer.getSingerId());
+        }
+        request.getSession().setAttribute("userWithSinger",userWithSinger);
         System.out.println("singer GET: " + singer);
         return "singer-content";
     }

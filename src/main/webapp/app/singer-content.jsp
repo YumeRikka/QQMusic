@@ -115,10 +115,10 @@
                     <a href="${pageContext.request.contextPath}/" class="but_gz"><div class="but_div2"><i class="gz_1"></i></div>关注 ${singer.singerCollectionCount}</a>
                 </c:if>
                 <c:if test="<%=user!=null%>">
-                    <c:if test="">
+                    <c:if test="${userWithSinger==null}">
                         <a href="javascript:;" class="but_gz follow"><div class="but_div2"><i class="gz_1"></i></div>关注 ${singer.singerCollectionCount}</a>
                     </c:if>
-                    <c:if test="">
+                    <c:if test="${userWithSinger!=null}">
                         <a href="javascript:;" class="but_gz unfollow"><div class="but_div2"><i class="gz_1"></i></div>已关注</a>
                     </c:if>
                 </c:if>

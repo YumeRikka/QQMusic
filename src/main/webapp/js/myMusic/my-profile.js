@@ -11,6 +11,12 @@ $(function () {
        $(".js_box").css("display","none");
        $(".js_box_2").css("display","block");
    });
+   $(".mod_tab_item_3").click(function () {
+       $(".mod_tab_item_main").css("color","#fff");
+       $(this).css("color","#31c27c");
+       $(".js_box").css("display","none");
+       $(".js_box_3").css("display","block");
+   });
    $("#divdialog_0").css("display","none");
    $(".new_list").click(function () {
        $("#divdialog_0").css("display","block");
@@ -18,8 +24,8 @@ $(function () {
    $(".js-button1,.popup__close").click(function () {
        $("#divdialog_0").css("display","none");
    });
-    var playerWindow;
-    $(".play-btn").click(function () {
+   var playerWindow;
+   $(".play-btn").click(function () {
         console.log($(this).attr("id"));
         var songid = "playSong?id=" + $(this).attr("id");
         $.ajax(

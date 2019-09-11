@@ -43,9 +43,17 @@ public class UserWithSingerServiceImpl implements UserWithSingerService{
     }
 
 	@Override
-	public List<UserWithSinger> findByUserIdAndSingerId(Integer userId,Integer singerId){
+	public UserWithSinger findByUserIdAndSingerId(Integer userId,Integer singerId){
 		 return userWithSingerMapper.findByUserIdAndSingerId(userId,singerId);
 	}
+
+	@Override
+	public List<UserWithSinger> findByUserId(Integer userId){
+		 return userWithSingerMapper.findByUserId(userId);
+	}
+
+
+
 
 
 

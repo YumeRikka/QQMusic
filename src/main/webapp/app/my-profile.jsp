@@ -2,7 +2,8 @@
 <%@ page import="qqmusic.com.entity.User" %>
 <%@ page import="java.util.List" %>
 <%@ page import="qqmusic.com.entity.Song" %>
-<%@ page import="qqmusic.com.entity.SongVo" %><%--
+<%@ page import="qqmusic.com.entity.SongVo" %>
+<%@ page import="qqmusic.com.entity.Singer" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/9/3
@@ -23,6 +24,7 @@
 <%
     User user = (User) session.getAttribute("user");
     List<SongVo> myLikeSongVos = (List<SongVo>)session.getAttribute("myLikeSongVos");
+    List<Singer> singers = (List<Singer>) session.getAttribute("singers");
 %>
 
 
@@ -85,7 +87,7 @@
         </h1>
         <ul class="mod_user">
             <li class="user_item">
-                <a class="js_tab">4关注</a>
+                <a class="js_tab"><%=singers.size()%>关注</a>
             </li>
             <li class="user_item">
                 <a class="js_tab">0粉丝</a>
@@ -215,6 +217,40 @@
                                         <a href="javascript:;" title="${songList.songlistIntroduce}" class="album_name">${songList.songlistIntroduce}</a>
                                     </div>
                                     <div class="sj"></div>
+                                </div>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="js_box js_box_3" style="display: none">
+        <div class="profile_cont">
+            <div class="js_sub">
+                <div class="mod_songlist_tool">
+
+                </div>
+                <div class="gq_list">
+                    <ul class="list__ul_1">
+                        <li class="li_name">歌手</li>
+                        <li class="li_zj">关注时间</li>
+                        <li class="li_time">操作</li>
+                    </ul>
+                    <ul class="list__ul_2">
+                        <c:forEach items="${singers}" var="singer" varStatus="num2">
+                            <li>
+                                <div class="li_div" >
+                                    <div class="num">${num2.count}</div>
+                                    <div class="gm">
+                                        <span class="gm_sp">
+                                            <a href="${pageContext.request.contextPath}/singer/${singer.singerId}" title="${singer.singerName}" target="_blank">${singer.singerName}</a>
+                                        </span>
+                                    </div>
+                                    <%--<div class="zj">
+                                        <a href="javascript:;" title="${songList.songlistIntroduce}" class="album_name">${songList.songlistIntroduce}</a>
+                                    </div>
+                                    <div class="sj"></div>--%>
                                 </div>
                             </li>
                         </c:forEach>
