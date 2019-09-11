@@ -32,6 +32,11 @@ public interface SongService{
 
 
 
+	List<Song> findBySongNameLike(String likeSongName);
+
+
+
+
 
 
 }

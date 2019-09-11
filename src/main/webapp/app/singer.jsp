@@ -74,7 +74,7 @@
                 <a href="${pageContext.request.contextPath}/singer" class="list-two-nav-son  list-two-nav-son-current">歌手</a>
             </li>
             <li class="list-two-nav">
-                <a href="${pageContext.request.contextPath}/disc" class="list-two-nav-son">专辑</a>
+                <a href="${pageContext.request.contextPath}/album" class="list-two-nav-son">专辑</a>
             </li>
             <li class="list-two-nav">
                 <a href="${pageContext.request.contextPath}/rank" class="list-two-nav-son">排行榜</a>

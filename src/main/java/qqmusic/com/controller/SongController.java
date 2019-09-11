@@ -24,6 +24,8 @@ public class SongController {
     SongWithSingerService songWithSingerService;
     @Resource
     SongListService songListService;
+    @Resource
+    SongListWithSongService songListWithSongService;
 
     @RequestMapping("/rank")
     public String rankingList(HttpServletRequest request){
@@ -40,5 +42,29 @@ public class SongController {
         request.getSession().setAttribute("rankList",rankList);
 
         return "ranking-list";
+    }
+    @RequestMapping("/app/playAllRankingSongList")
+    public String playAllRankingSongList(HttpServletRequest request){
+        List<Song> songlist =  songService.findFirst20OrderBySongPlayCountDesc();
+        System.out.println(songlist);
+        List<PlayerSong> playSongList = QQMusicUtils.listToPlayerSong(songlist);
+        request.getSession().setAttribute("playSongList",playSongList);
+        return "player";
+    }
+    @RequestMapping("/app/playAllSongByList")
+    public String playAllSongByList(HttpServletRequest request){
+        SongList songList = (SongList)request.getSession().getAttribute("songList");
+        System.out.println(songList);
+        songList.setSonglistPlayCount(songList.getSonglistPlayCount()+1);
+        System.out.println(songList);
+        songListService.updateByPrimaryKeySelective(songList);
+        List<Song> songlist =  new ArrayList<>();
+        List<SongListWithSong> songsVo = songListWithSongService.findBySonglistId(songList.getSonglistId());
+        for (SongListWithSong vo:songsVo) {
+            songlist.add(songService.selectByPrimaryKey(vo.getSongId()));
+        }
+        List<PlayerSong> playSongList = QQMusicUtils.listToPlayerSong(songlist);
+        request.getSession().setAttribute("playSongList",playSongList);
+        return "player";
     }
 }

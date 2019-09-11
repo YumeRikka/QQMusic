@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="qqmusic.com.entity.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -82,7 +83,7 @@
             <ul class="top_subnav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="首页" style="color: #31c27c;">首页</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/album" title="新碟">新碟</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单">分类歌单</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>
@@ -94,8 +95,8 @@
                 <!-- //文本框 -->
                 <section class="input_serach">
                     <section class="input_search_text">
-                        <form method="post" action="${pageContext.request.contextPath}/app/search.jsp">
-                            <input type="text" placeholder="搜索音乐、MV、歌单、用户" autofocus class="search">
+                        <form method="post" action="${pageContext.request.contextPath}/search">
+                            <input type="text" name="keyword" placeholder="搜索音乐、MV、歌单、用户" autofocus class="search">
                             <input type="submit" class="btn" value="">
                         </form>
 
@@ -256,23 +257,18 @@
                 <div class="content clearfix">
                     <!-- 第一组图片 -->
                     <ul class="clearfix">
-                        <li>
-                            <a class="active" href="javascript:;">
-                                <img src="${pageContext.request.contextPath}/indexImg/1.jpg" alt="">
-                                <i></i>
-                            </a>
-                            <!--  -->
-                            <div class="aa">每日新歌</div>
-                            <div class="bb">播放量</div>
-                        </li>
-                        <li>
-                            <a class="active" href="javascript:;">
-                                <img src="${pageContext.request.contextPath}/indexImg/2.jpg" alt="">
-                                <i></i>
-                            </a>
-                            <div class="aa">每日新歌</div>
-                            <div class="bb">播放量</div>
-                        </li>
+                        <c:forEach items="${songLists}" var="songList" end="2">
+                            <li>
+                                <a class="active" href="${pageContext.request.contextPath}/list/${songList.songlistId}">
+                                    <img src="${pageContext.request.contextPath}/indexImg/1.jpg" alt="">
+                                    <i></i>
+                                </a>
+                                <!--  -->
+                                <div class="aa">每日新歌</div>
+                                <div class="bb">播放量:${songList.songlistPlayCount}</div>
+                            </li>
+                        </c:forEach>
+
                         <li>
                             <a class="active" href="javascript:;">
                                 <img src="${pageContext.request.contextPath}/indexImg/3.jpg" alt="">

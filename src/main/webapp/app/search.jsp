@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -21,10 +22,12 @@
 <!-- 固定 -->
 <div class="guding" id="gd">
     <div class="mod_search_input2">
-        <input class="search_input__input2" type="text" placeholder="搜索音乐" id="ipt">
-        <button class="search_input__btn2">
-            <i class="icon_search2 sprite" id="icon"></i>
-        </button>
+        <form method="post" action="${pageContext.request.contextPath}/search">
+            <input class="search_input__input2" type="text" name="keyword" placeholder="搜索音乐" id="ipt">
+            <button type="submit" class="search_input__btn2">
+                <i class="icon_search2 sprite" id="icon"></i>
+            </button>
+        </form>
     </div>
 </div>
 <!-- 固定 -->
@@ -55,10 +58,13 @@
 
 <div class="banner">
     <div class="mod_search_input">
-        <input class="search_input__input" type="text" placeholder="搜索关键字" id="ipt2">
-        <button class="search_input__btn">
-            <i class="icon_search sprite"></i>
-        </button>
+        <form method="post" action="${pageContext.request.contextPath}/search">
+            <input class="search_input__input" type="text" name="keyword" placeholder="搜索关键字" id="ipt2">
+            <button type="submit" class="search_input__btn">
+                <i class="icon_search sprite"></i>
+            </button>
+        </form>
+
     </div>
     <div class="xl" id="xl">
         <div class="xl_l">
@@ -81,7 +87,7 @@
     </div>
 </div>
 
-<div class="music_show_one">
+<%--<div class="music_show_one">
     <div class="music_one_left">
         <img src="${pageContext.request.contextPath}/images/T002R150x150M0000040y9o72oLZV9.jpg">
     </div>
@@ -91,7 +97,7 @@
         <span class="m_o_th">发行时间:2018-01-01</span>
         <p class="m_o_p"><i class="m_o_i"></i>播放专辑</p>
     </div>
-</div>
+</div>--%>
 
 <div class="main">
     <div class="main_nav">
@@ -119,126 +125,26 @@
         <li class="music_time">时长</li>
     </ul>
     <ul class="u2" id="music_l">
-        <li>
-            <a href="#" class="name">饿狼传说 <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">张靓颖</a>
-            <a href="#" class="album"><span>梦想的声音第二季</span><span> 第2期</span></a>
-            <span class="time">04:39</span>
-        </li>
-        <li>
-            <a href="#" class="name">心动<span class="sp">原唱:Beyond</span></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">陈洁仪</a>
-            <a href="#" class="album"><span>我是歌手第三季</span><span> 第1期</span></a>
-            <span class="time">05:50</span>
-        </li>
-        <li>
-            <a href="#" class="name">给我一个理由忘记 <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">A-Lin</a>
-            <a href="#" class="album"><span>梦想的声音第三季</span><span> 第1期</span></a>
-            <span class="time">04:31</span>
-        </li>
-        <li>
-            <a href="#" class="name">忘记拥抱<span class="sp2">原唱:潘玮柏</span></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">A-lin</a>
-            <a href="#" class="album"><span>我是歌手第三季</span><span> 第11期</span></a>
-            <span class="time">05:06</span>
-        </li>
-        <li>
-            <a href="#" class="name">乌兰巴托的夜 <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">谭维维</a>
-            <a href="#" class="album"><span>梦想的声音第二季</span><span> 第11期</span></a>
-            <span class="time">05:50</span>
-        </li>
-        <li>
-            <a href="#" class="name">Bang Bang <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">张靓颖</a>
-            <a href="#" class="album"><span>梦想的声音第二季</span><span> 第11期</span></a>
-            <span class="time">05:30</span>
-        </li>
-        <li>
-            <a href="#" class="name">爱与诚 <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">古巨基</a>
-            <a href="#" class="album"><span>梦想的声音第二季</span><span> 第11期</span></a>
-            <span class="time">04:50</span>
-        </li>
-        <li>
-            <a href="#" class="name">那个男人 <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">The One</a>
-            <a href="#" class="album"><span>我是歌手第一季</span><span> 第11期</span></a>
-            <span class="time">05:50</span>
-        </li>
-        <li>
-            <a href="#" class="name">贝加尔湖畔 <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">李健</a>
-            <a href="#" class="album"><span>梦想的声音第二季</span><span> 第11期</span></a>
-            <span class="time">03:50</span>
-        </li>
-        <li>
-            <a href="#" class="name">模特 <i class="dj"></i><i class="mv_o"></i></a>
-            <div class="cz yc">
-                <div class="bf"></div>
-                <div class="tj"></div>
-                <div class="xz2"></div>
-                <div class="fx"></div>
-            </div>
-            <a href="#" class="author">李荣浩</a>
-            <a href="#" class="album"><span>我是歌手第三季</span><span> 第11期</span></a>
-            <span class="time">05:50</span>
-        </li>
+        <c:forEach items="${searchSongVo}" var="songVo">
+            <li>
+                <a href="javascript:;" class="name play-btn" id="${songVo.song.songId}">${songVo.song.songName} <i class="dj"></i><i class="mv_o"></i></a>
+                <div class="cz yc">
+                    <div class="bf"></div>
+                    <div class="tj"></div>
+                    <div class="xz2"></div>
+                    <div class="fx"></div>
+                </div>
+                <c:forEach items="${songVo.singers}" var="singer" varStatus="id">
+                    <c:if test="${id.count==1}">
+                        <a href="${pageContext.request.contextPath}/singer/${singer.singerId}" class="author">${singer.singerName}</a>
+                    </c:if>
+
+                </c:forEach>
+                <a href="${pageContext.request.contextPath}/album/${songVo.album.albumId}" class="album"><span>${songVo.album.albumName}</span></a>
+                <span class="time">${songVo.song.songTime}</span>
+            </li>
+        </c:forEach>
+
     </ul>
 </div>
 
@@ -396,5 +302,8 @@
 
 
 </div>
+<script src="${pageContext.request.contextPath}/js/jquery-1.12.4.js"></script>
+
+<script src="${pageContext.request.contextPath}/js/search.js"></script>
 </body>
 </html>

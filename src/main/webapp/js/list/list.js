@@ -6,6 +6,7 @@ $('.input_serach input[type = text]').blur(function () {
     $('.input_serach input[type = text]')
         .parent()
         .parent()
+        .parent()
         .next()
         .slideUp(500);
     // console.log('5')

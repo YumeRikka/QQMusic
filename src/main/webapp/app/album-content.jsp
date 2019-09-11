@@ -47,9 +47,9 @@
             <ul class="top_subnav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="首页">首页</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/album" title="新碟">新碟</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单" style="color: #31c27c;">分类歌单</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单">分类歌单</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/mv.jsp" title="MV">MV</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/album.jsp" title="数字专辑">数字专辑</a></li>
@@ -120,22 +120,22 @@
     <main class="main w">
         <div class="mod_data">
             <div class="data__cover">
-                <img src="${pageContext.request.contextPath}/img/1.jpg" alt="">
+                <img src="${pageContext.request.contextPath}/img/${album.albumUrl}" alt="">
             </div>
             <div class="data__cont">
-                <h1 class="data__tit">${songList.songlistName}</h1>
+                <h1 class="data__tit">${album.albumName}</h1>
                 <div class="data_autor">
                     <span></span>
-                    <a href="javascript:;">${songList.songlistUserName}</a>
+                    <a href="javascript:;">${album.albumSingerName}</a>
                 </div>
                 <ul class="data__info">
                     <li>
-                        标签：
+                        流派：
                         <a href="javascript:;">R&B</a>
                         <a href="javascript:;">英语</a>
                     </li>
-                    <li>播放量：${songList.songlistPlayCount}</li>
-                    <li>收藏量：${songList.songlistCollectionCount}</li>
+                    <li>发行时间：${album.albumReleaseDate}</li>
+                    <li>收藏量：${album.albumCollectionCount}</li>
                 </ul>
                 <div class="data__actions">
                     <a href="javascript:;" class=" mod_btn green"><i class="bo"></i>播放全部</a>
@@ -154,7 +154,7 @@
                         <li class="songlist__header_zhuanji">专辑</li>
                         <li class="songlist__header_time">时长</li>
                     </ul>
-                    <c:forEach items="${songVos}" var="songVo" varStatus="count">
+                    <c:forEach items="${albumSongVos}" var="songVo" varStatus="count" end="7">
                         <ul class="songlist__list">
                             <li class="songlist__list_num">${count.count}</li>
                             <li class="songlist__list_name">
@@ -211,7 +211,7 @@
                 <div class="mod_about ">
                     <div class="mod_tit">简介</div>
                     <div class="mod_cont">
-                        <p>${songList.songlistIntroduce}</p>
+                        <p>${album.albumIntroduce}</p>
                     </div>
                     <a href="javascript:;" class="about__more">[更多]</a>
                 </div>

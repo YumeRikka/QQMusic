@@ -58,6 +58,14 @@ public class SongListServiceImpl implements SongListService{
 		 return songListMapper.findAll();
 	}
 
+	@Override
+	public List<SongList> findOrderBySonglistPlayCountDesc(){
+		 return songListMapper.findOrderBySonglistPlayCountDesc();
+	}
+
+
+
+
 
 
 

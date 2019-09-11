@@ -26,8 +26,9 @@ public class UserController {
     @Resource
     private SongService songService;
     @RequestMapping("/")
-
-    public String index(){
+    public String index(HttpServletRequest request){
+        List<SongList> songLists = songListService.findOrderBySonglistPlayCountDesc();
+        request.getSession().setAttribute("songLists",songLists);
         return "index";
     }
 
@@ -43,7 +44,8 @@ public class UserController {
         songList.setSonglistName("我喜欢");
         songList.setSonglistUserId(user.getUserId());
         songList.setSonglistUserName(user.getUserName());
-        songListService.insert(songList);
+        System.out.println(songList);
+        songListService.insertSelective(songList);
         request.getSession().setAttribute("user",user);
         return user;
     }

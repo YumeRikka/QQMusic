@@ -48,6 +48,14 @@ public class AlbumServiceImpl implements AlbumService {
         return albumMapper.findAll();
     }
 
+	@Override
+	public List<Album> findByAlbumSingerId(Integer albumSingerId){
+		 return albumMapper.findByAlbumSingerId(albumSingerId);
+	}
+
+
+
+
 
 }
 

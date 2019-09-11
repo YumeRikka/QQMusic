@@ -154,7 +154,7 @@
                 <a href="${pageContext.request.contextPath}/singer" class="list-two-nav-son">歌手</a>
             </li>
             <li class="list-two-nav">
-                <a href="${pageContext.request.contextPath}/disc" class="list-two-nav-son">专辑</a>
+                <a href="${pageContext.request.contextPath}/album" class="list-two-nav-son">专辑</a>
             </li>
             <li class="list-two-nav">
                 <a href="${pageContext.request.contextPath}/rank" class="list-two-nav-son  list-two-nav-son-current">排行榜</a>
@@ -366,10 +366,10 @@
                 {
             %>
             <ul>
-                <li class="toplist_right_nav2_playCurrent"><a href=""><i class="playall"></i>播放全部</a></li>
-                <li class="toplist_right_nav2_play "><a href="">添加到</a></li>
-                <li class="toplist_right_nav2_play"><a href="">下载<i class="xiazai"></i></a></li>
-                <li class="toplist_right_nav2_play"><a href="">批量操作<i class="batch"></i></a></li>
+                <li class="toplist_right_nav2_playCurrent"><a href="${pageContext.request.contextPath}/app/playAllRankingSongList" target="player"><i class="playall"></i>播放全部</a></li>
+                <li class="toplist_right_nav2_play "><a href="szztClient://">添加到</a></li>
+                <li class="toplist_right_nav2_play"><a href="szztClient://">下载<i class="xiazai"></i></a></li>
+                <li class="toplist_right_nav2_play"><a href="szztClient://">批量操作<i class="batch"></i></a></li>
             </ul>
             <%
                 }
@@ -413,8 +413,8 @@
                                     <div class="fourKey">
                                         <a href="javascript:;" class="play-btn" id="${songvo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
                                         <a href="javascript:;" class="fourKey_add" id="${songvo.song.songId}"><i class="fourKey_add" title="添加到歌单"></i></a>
-                                        <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
-                                        <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
+                                        <a href="szztClient://"><i class="fourKey_download" title="下载"></i></a>
+                                        <a href="szztClient://"><i class="fourKey_share" title="分享"></i></a>
                                     </div>
                                 </c:if>
 

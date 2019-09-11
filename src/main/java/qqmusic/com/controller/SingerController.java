@@ -6,10 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import qqmusic.com.entity.Singer;
-import qqmusic.com.entity.Song;
-import qqmusic.com.entity.SongVo;
-import qqmusic.com.entity.SongWithSinger;
+import qqmusic.com.entity.*;
+import qqmusic.com.service.AlbumService;
 import qqmusic.com.service.SingerService;
 import qqmusic.com.service.SongService;
 import qqmusic.com.service.SongWithSingerService;
@@ -27,6 +25,10 @@ public class SingerController {
     private SongService songService;
     @Resource
     private SongWithSingerService songWithSingerService;
+    @Resource
+    AlbumService albumService;
+
+
     @RequestMapping("/singer")
     public String singers(@RequestParam(value = "pn", defaultValue = "1") Integer pn, HttpServletRequest request){
         PageInfo singers = singerService.findAllwithPage(pn,100);
@@ -46,6 +48,17 @@ public class SingerController {
         }
         List<SongVo> songVoList = QQMusicUtils.toSongVo(songs);
         request.getSession().setAttribute("songVoList",songVoList);
+
+        List<Album> albums = albumService.findByAlbumSingerId(id);
+        System.out.println(albums);
+        if (albums.size()!=0)
+        {
+            request.getSession().setAttribute("albums",albums);
+        }
+        else {
+            request.getSession().setAttribute("albums",albums);
+        }
+        List<Singer> similarSinger = singerService.findBySingerAreaAndSingerType(singer.getSingerArea(),singer.getSingerType());
         System.out.println("singer GET: " + singer);
         return "singer-content";
     }

@@ -38,9 +38,9 @@
                 <li class="left"><a href="${pageContext.request.contextPath}/app/vip.jsp" title="VIP">VIP</a></li>
             </ul>
             <ul class="top_subnav clearfix">
-                <li class="left"><a href="${pageContext.request.contextPath}/" title="首页" style="color: #31c27c;">首页</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/" title="首页" >首页</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/album" title="新碟" style="color: #31c27c;">新碟</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单">分类歌单</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/radio" title="电台">电台</a></li>
@@ -252,7 +252,7 @@
                                         <img src="${pageContext.request.contextPath}/discImg/zanting.svg">
                                     </i>
                                 </a>
-                                <h4>${album.albumName}</h4>
+                                <h4><a href="${pageContext.request.contextPath}/album/${album.albumId}" target="_blank">${album.albumName}</a></h4>
                                 <p>${album.albumSingerName}</p>
                                 <p>${album.albumReleaseDate}</p>
                             </li>

@@ -1,4 +1,5 @@
 package qqmusic.com.mapper;
+import org.apache.ibatis.annotations.Param;
 
 import qqmusic.com.entity.Album;import java.util.List;
 
@@ -16,4 +17,8 @@ public interface AlbumMapper {
     int updateByPrimaryKey(Album record);
 
     List<Album> findAll();
+
+    List<Album> findByAlbumSingerId(@Param("albumSingerId")Integer albumSingerId);
+
+
 }

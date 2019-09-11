@@ -47,7 +47,7 @@
             <ul class="top_subnav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="首页">首页</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/album" title="新碟">新碟</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单" style="color: #31c27c;">分类歌单</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>
@@ -138,7 +138,7 @@
                     <li>收藏量：${songList.songlistCollectionCount}</li>
                 </ul>
                 <div class="data__actions">
-                    <a href="javascript:;" class=" mod_btn green"><i class="bo"></i>播放全部</a>
+                    <a href="${pageContext.request.contextPath}/app/playAllSongByList" target="player" class="mod_btn green"><i class="bo"></i>播放全部</a>
                     <a href="javascript:;" class="mod_btn "><i class="sou"></i>收藏</a>
                     <a href="javascript:;" class="mod_btn "><i class="ping"></i>评论</a>
                     <a href="javascript:;" class="mod_btn "><i class="duo"></i>更多</a>
@@ -180,7 +180,7 @@
                                     </c:if>
                                 </c:forEach>
                             </a></li>
-                            <li class="songlist__list_zhuanji"><a href="javascript:;">${songVo.album.albumName}</a></li>
+                            <li class="songlist__list_zhuanji"><a href="{pageContext.request.contextPath}/album/${songVo.album.albumId}">${songVo.album.albumName}</a></li>
                             <li class="songlist__list_time">${songVo.song.songTime}</li>
                         </ul>
                     </c:forEach>

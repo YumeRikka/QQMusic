@@ -1,4 +1,5 @@
 package qqmusic.com.service.impl;
+import qqmusic.com.entity.Singer;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -11,6 +12,8 @@ public class SongServiceImpl implements SongService{
 
     @Resource
     private SongMapper songMapper;
+    @org.springframework.beans.factory.annotation.Autowired
+    private qqmusic.com.mapper.SingerMapper singerMapper;
 
     @Override
     public int deleteByPrimaryKey(Integer songId) {
@@ -56,6 +59,19 @@ public class SongServiceImpl implements SongService{
 	public List<Song> findBySongAlbumId(Integer songAlbumId){
 		 return songMapper.findBySongAlbumId(songAlbumId);
 	}
+
+	@Override
+	public List<Song> findBySongNameLike(String likeSongName){
+		 return songMapper.findBySongNameLike(likeSongName);
+	}
+
+
+
+
+
+
+
+
 
 
 

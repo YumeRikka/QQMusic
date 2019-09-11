@@ -55,5 +55,10 @@ public class SingerServiceImpl implements SingerService {
         PageHelper.startPage(page, pageSize);
         return new PageInfo<>(singerMapper.findAll());
     }
+
+    @Override
+    public List<Singer> findBySingerAreaAndSingerType(String singerArea,Integer singerType){
+        return singerMapper.findBySingerAreaAndSingerType(singerArea,singerType);
+    }
 }
 

@@ -1,7 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="qqmusic.com.entity.Singer" %>
 <%@ page import="qqmusic.com.entity.SongVo" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="qqmusic.com.entity.Album" %>
+<%@ page import="qqmusic.com.entity.User" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/8/28
@@ -37,8 +39,8 @@
     <ul class="ul_2">
         <li><a href="${pageContext.request.contextPath}/">首页</a></li>
         <li><a href="${pageContext.request.contextPath}/singer">歌手</a></li>
-        <li><a href="${pageContext.request.contextPath}/disc">数字专辑</a></li>
-        <li><a href="${pageContext.request.contextPath}/disc">专辑</a></li>
+        <li><a href="${pageContext.request.contextPath}/album">数字专辑</a></li>
+        <li><a href="${pageContext.request.contextPath}/album">专辑</a></li>
         <li><a href="${pageContext.request.contextPath}/rank">排行榜</a></li>
         <li><a href="${pageContext.request.contextPath}/list">分类歌单</a></li>
         <li><a href="${pageContext.request.contextPath}/app/radio.jsp">电台</a></li>
@@ -61,6 +63,7 @@
             <div class="jtxx">
                 <div class="jtxx_txt">
                     <%
+                        User user = (User) session.getAttribute("user");
                         Singer singer = (Singer) session.getAttribute("singer");
                     %>
                     地区：<%=singer.getSingerArea()%>&nbsp;&nbsp;
@@ -87,6 +90,11 @@
             <%
                 List<SongVo> songVoList = (List<SongVo>)session.getAttribute("songVoList");
             %>
+            <%
+                List<Album> albumList = (List<Album>)session.getAttribute("albums");
+                System.out.println(albumList);
+                boolean bool = albumList.size()!=0;
+            %>
             <ul class="xx_ul">
                 <li class="xx_li">
                     <a href=""><span>单曲</span>
@@ -94,7 +102,7 @@
                 </li>
                 <li class="xx_li">
                     <a href="" ><span>专辑</span>
-                        <strong class="li_num">13</strong></a>
+                        <strong class="li_num"><%=albumList.size()%></strong></a>
                 </li>
                 <li class="xx_li_last">
                     <a href=""><span>MV</span>
@@ -103,7 +111,17 @@
             </ul>
             <div class="but">
                 <a href="" class="but_bf"><div class="but_div1"><i class="bf_1"></i></div>播放歌手热门歌曲</a>
-                <a href="" class="but_gz"><div class="but_div2"><i class="gz_1"></i></div>关注 306.3万</a>
+                <c:if test="<%=user==null%>">
+                    <a href="${pageContext.request.contextPath}/" class="but_gz"><div class="but_div2"><i class="gz_1"></i></div>关注 ${singer.singerCollectionCount}</a>
+                </c:if>
+                <c:if test="<%=user!=null%>">
+                    <c:if test="">
+                        <a href="javascript:;" class="but_gz follow"><div class="but_div2"><i class="gz_1"></i></div>关注 ${singer.singerCollectionCount}</a>
+                    </c:if>
+                    <c:if test="">
+                        <a href="javascript:;" class="but_gz unfollow"><div class="but_div2"><i class="gz_1"></i></div>已关注</a>
+                    </c:if>
+                </c:if>
             </div>
         </div>
     </div>
@@ -128,12 +146,7 @@
                                 <span class="gm_sp">
                                     <a href="javascript:;" class="play-btn" id="${songVo.song.songId}" title="${songVo.song.songName}" target="_blank">${songVo.song.songName}</a>
                                 </span>
-                                <%--<div class="fourKey">
-                                    <a href="javascript:;" class="play-btn" id="${songVo.song.songId}"><i class="fourKey_play" title="播放"></i></a>
-                                    <a href="javascript:;" class="fourKey_add" id="${songVo.song.songId}"><i class="fourKey_add" title="添加到歌单"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_download" title="下载"></i></a>
-                                    <a href="javascript:;"><i class="fourKey_share" title="分享"></i></a>
-                                </div>--%>
+
                                 <div class="bf_menu">
                                     <a href="" class="bf_menu_1 " title="播放">
                                         <i class="tp_3"></i>
@@ -150,7 +163,7 @@
                                 </div>
                             </div>
                             <div class="zj">
-                                <a href="" title="${songVo.album.albumName}" class="album_name">${songVo.album.albumName}</a>
+                                <a href="${pageContext.request.contextPath}/album/${songVo.album.albumId}" title="${songVo.album.albumName}" class="album_name">${songVo.album.albumName}</a>
                             </div>
                             <div class="sj">${songVo.song.songTime}</div>
                         </div>
@@ -165,67 +178,26 @@
             <span class="bt_sp">专辑</span>
             <a href="" class="bt_a">全部＞</a>
         </div>
+
         <div class="zj_tp">
-            <div class="zj_1">
-                <em>
-                    <div class="yy">
-                        <img src="${pageContext.request.contextPath}/img/1.jpg" />
-                        <div class="zhezhao">
-                            <div class="play"></div>
-                        </div>
+            <c:if test="<%=bool%>">
+                <c:forEach items="${albums}" var="album" end="4">
+                    <div class="zj_1">
+                        <em>
+                            <div class="yy">
+                                <img src="${pageContext.request.contextPath}/img/${album.albumUrl}" />
+                                <div class="zhezhao">
+                                    <a href="${pageContext.request.contextPath}/album/${album.albumId}" title="${album.albumName}"><div class="play"></div></a>
+
+
+                                </div>
+                            </div>
+                        </em>
+                        <a href="${pageContext.request.contextPath}/album/${album.albumId}" title="${album.albumName}">${album.albumName}</a><br/>
+                        <p>${album.albumReleaseDate}</p>
                     </div>
-                </em>
-                <a href="" title="渺小却伟大">渺小却伟大</a><br/>
-                <p>2018-04-01</p>
-            </div>
-            <div class="zj_1">
-                <em>
-                    <div class="yy">
-                        <img src="${pageContext.request.contextPath}/img/10.jpg" />
-                        <div class="zhezhao">
-                            <div class="play"></div>
-                        </div>
-                    </div>
-                </em>
-                <a href="" title="角色">角色</a><br/>
-                <p>2018-01-01</p>
-            </div>
-            <div class="zj_1">
-                <em>
-                    <div class="yy">
-                        <img src="${pageContext.request.contextPath}/img/11.jpg" />
-                        <div class="zhezhao">
-                            <div class="play"></div>
-                        </div>
-                    </div>
-                </em>
-                <a href="" title="请跟我联络">请跟我联络</a><br/>
-                <p>2015-11-25</p>
-            </div>
-            <div class="zj_1">
-                <em>
-                    <div class="yy">
-                        <img src="${pageContext.request.contextPath}/img/12.jpg" />
-                        <div class="zhezhao">
-                            <div class="play"></div>
-                        </div>
-                    </div>
-                </em>
-                <a href="" title="峰狂2015 Fans Meeting演唱会">峰狂2015 Fans Meeting演唱会</a><br/>
-                <p>2015-01-31</p>
-            </div>
-            <div class="zj_1">
-                <em>
-                    <div class="yy">
-                        <img src="${pageContext.request.contextPath}/img/21.jpg" />
-                        <div class="zhezhao">
-                            <div class="play"></div>
-                        </div>
-                    </div>
-                </em>
-                <a href="" title="我要的现在就要">我要的现在就要</a><br/>
-                <p>2014-12-03</p>
-            </div>
+                </c:forEach>
+            </c:if>
         </div>
     </div>
     <div class="c_mv">

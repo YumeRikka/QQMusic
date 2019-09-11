@@ -45,7 +45,7 @@
             <ul class="top_subnav clearfix">
                 <li class="left"><a href="${pageContext.request.contextPath}/" title="首页">首页</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/singer" title="歌手">歌手</a></li>
-                <li class="left"><a href="${pageContext.request.contextPath}/disc" title="新碟">新碟</a></li>
+                <li class="left"><a href="${pageContext.request.contextPath}/album" title="新碟">新碟</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/rank" title="排行榜">排行榜</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/list" title="分类歌单" style="color: #31c27c;">分类歌单</a></li>
                 <li class="left"><a href="${pageContext.request.contextPath}/app/radio.jsp" title="电台">电台</a></li>

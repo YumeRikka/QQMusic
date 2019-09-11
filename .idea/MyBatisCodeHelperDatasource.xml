@@ -93,6 +93,16 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="qqmusic:qqm_user_with_singer">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="UserWithSinger" />
+                  <option name="moduleName" value="QQMusic" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="qqmusic:qqm_users">
               <value>
                 <TableGenerateConfig>

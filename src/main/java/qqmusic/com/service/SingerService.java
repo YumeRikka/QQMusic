@@ -23,5 +23,10 @@ public interface SingerService {
     List<Singer> findAll();
 
     public PageInfo<Singer> findAllwithPage(int page, int pageSize);
+
+
+
+	List<Singer> findBySingerAreaAndSingerType(String singerArea,Integer singerType);
+
 }
 

@@ -194,7 +194,7 @@
                                     <div class="num">${num1.count}</div>
                                     <div class="gm">
                                         <span class="gm_sp">
-                                            <a href="javaScript:;" title="${songList.songlistName}" target="_blank">${songList.songlistName}</a>
+                                            <a href="${pageContext.request.contextPath}/list/${songList.songlistId}" title="${songList.songlistName}" target="_blank">${songList.songlistName}</a>
                                         </span>
                                         <div class="bf_menu">
                                             <a href="javaScript:;" class="bf_menu_1" title="播放">

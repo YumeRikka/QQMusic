@@ -22,5 +22,10 @@ public interface AlbumService {
     List<Album> findAll();
 
 
+
+	List<Album> findByAlbumSingerId(Integer albumSingerId);
+
+
+
 }
 

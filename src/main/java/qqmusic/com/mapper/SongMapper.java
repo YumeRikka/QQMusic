@@ -24,6 +24,8 @@ public interface SongMapper {
     List<Song> findBySongAlbumId(@Param("songAlbumId")Integer songAlbumId);
 
 
+    List<Song> findBySongNameLike(@Param("likeSongName")String likeSongName);
+
 
 
 

@@ -44,7 +44,7 @@
         <ul>
             <li><a href="${pageContext.request.contextPath}/">首页</a></li>
             <li><a href="${pageContext.request.contextPath}/singer">歌手</a></li>
-            <li><a href="${pageContext.request.contextPath}/disc">专辑</a></li>
+            <li><a href="${pageContext.request.contextPath}/album">专辑</a></li>
             <li><a href="${pageContext.request.contextPath}/rank">排行榜</a></li>
             <li><a href="${pageContext.request.contextPath}/list">分类歌单</a></li>
             <li><a href="${pageContext.request.contextPath}/app/radio.jsp" class="active">电台</a></li>

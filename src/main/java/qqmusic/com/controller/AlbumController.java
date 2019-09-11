@@ -23,7 +23,7 @@ public class AlbumController {
     AlbumService albumService;
     @Resource
     SongService songService;
-    @RequestMapping("/disc")
+    @RequestMapping("/album")
     public String album(HttpServletRequest request){
         List<Album> albumList = albumService.findAll();
         System.out.println(albumList);
@@ -31,7 +31,7 @@ public class AlbumController {
         return "disc";
     }
 
-    @RequestMapping(value = "/disc/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/album/{id}", method = RequestMethod.GET)
     public String testRest(@PathVariable Integer id, HttpServletRequest request) {
         Album album = albumService.selectByPrimaryKey(id);
         request.getSession().setAttribute("album",album);

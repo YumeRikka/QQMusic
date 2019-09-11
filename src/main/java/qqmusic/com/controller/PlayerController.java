@@ -117,4 +117,11 @@ public class PlayerController {
         request.getSession().setAttribute("playSongList",playSongList);
         return "success";
     }
+    @RequestMapping("/deleteAllSong")
+    @ResponseBody
+    public String deleteAllSong(HttpServletRequest request) {
+        List<PlayerSong> playSongList = new ArrayList<>();
+        request.getSession().setAttribute("playSongList",playSongList);
+        return "success";
+    }
 }

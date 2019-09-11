@@ -214,9 +214,10 @@ $(function(){
 
 		//(5)歌曲删除按钮事件
 		$(".music_list").delegate('.delete_btn', 'click', function(event) {
+			console.log($(this).parents(".list_li").children(".number").html());
 			var $li = $(this).parents(".list_li");
 			//删除页面上的
-			var id = $(this).attr("id");
+			var songid = $(this).parents(".list_li").children(".number").html();
 
 			if($li.get(0).index == player.currentMusic){
 				$(".next").trigger('click');
@@ -224,8 +225,8 @@ $(function(){
 
 			$.ajax(
 				{
-					url: "../deleteSong?id="+id,
-					dataType:"jsonp",
+					url: "../deleteSong?id="+songid,
+					dataType:"json",
 					success:
 						function (result) {
 							console.log(result);
@@ -314,6 +315,16 @@ $(function(){
 		//(12)清除列表点击事件
 		var clear_btn = $(".menu").find('.clear_musicList');
 		clear_btn.click(function(){
+			$.ajax(
+				{
+					url: "../deleteAllSong",
+					dataType:"json",
+					success:
+						function (result) {
+							console.log(result);
+						}
+				}
+			);
 			$(".list_li").remove();
 		});
 
@@ -388,7 +399,7 @@ $(function(){
 	function createMusicList(index,music){
 		var $li = $("<li class=\"list_li\">\n"+
 							"<div class=\"check\"><i></i></div>\n"+
-							"<div class=\"number\">"+(index+1)+"</div>\n"+
+							"<div class=\"number\" id="+(index+1)+">"+(index+1)+"</div>\n"+
 							"<div class=\"music_name\">"+music.name+"\n"+
 								"<div class=\"li_menu\">\n"+
 									"<a href=\"javascript:;\" title=\"播放\" class=\"play_btn\"></a>\n"+

@@ -23,6 +23,8 @@ public interface SongListMapper {
 
     List<SongList> findAll();
 
+    List<SongList> findOrderBySonglistPlayCountDesc();
+
 
 
 }

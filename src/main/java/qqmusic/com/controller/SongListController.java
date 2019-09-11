@@ -33,11 +33,11 @@ public class SongListController {
         request.getSession().setAttribute("songLists",songLists);
         return "list";
     }
-
     @RequestMapping(value = "/list/{id}", method = RequestMethod.GET)
     public String testRest(@PathVariable Integer id, HttpServletRequest request) {
         SongList songList = songListService.selectByPrimaryKey(id);
         request.getSession().setAttribute("songList",songList);
+
         List<Song> songlistSongs = new ArrayList<>();
         List<SongListWithSong> songsVo = songListWithSongService.findBySonglistId(id);
         for (SongListWithSong vo:songsVo) {

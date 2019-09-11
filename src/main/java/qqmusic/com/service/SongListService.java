@@ -28,4 +28,9 @@ public interface SongListService{
 	List<SongList> findAll();
 
 
+
+	List<SongList> findOrderBySonglistPlayCountDesc();
+
+
+
 }

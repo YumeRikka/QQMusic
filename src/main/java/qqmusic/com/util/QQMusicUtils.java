@@ -1,9 +1,7 @@
 package qqmusic.com.util;
 
 import org.springframework.stereotype.Component;
-import qqmusic.com.entity.Singer;
-import qqmusic.com.entity.Song;
-import qqmusic.com.entity.SongVo;
+import qqmusic.com.entity.*;
 import qqmusic.com.service.AlbumService;
 import qqmusic.com.service.SingerService;
 import qqmusic.com.service.SongService;
@@ -55,5 +53,40 @@ public class QQMusicUtils {
         }
         System.out.println(songVoList);
         return songVoList;
+    }
+    public static PlayerSong toPlayerSong(Song song){
+        song.setSongPlayCount(song.getSongPlayCount()+1);
+        qqMusicUtils.songService.updateByPrimaryKey(song);
+        PlayerSong playerSong = new PlayerSong();
+        playerSong.setName(song.getSongName());
+        String singerNames = "";
+        if (qqMusicUtils.songWithSingerService.findSingerIdBySongId(song.getSongId()).size()>0) {
+            for (Integer singerId : qqMusicUtils.songWithSingerService.findSingerIdBySongId(song.getSongId())) {
+                if (singerNames.equals("")){
+                    singerNames = singerNames + qqMusicUtils.singerService.selectByPrimaryKey(singerId).getSingerName();
+                }
+                else {
+                    singerNames = singerNames + "/" + qqMusicUtils.singerService.selectByPrimaryKey(singerId).getSingerName();
+                }
+            }
+            System.out.println("singerNames" + singerNames);
+            playerSong.setSinger(singerNames);
+        }
+        else {
+            playerSong.setSinger(qqMusicUtils.singerService.selectByPrimaryKey(song.getSongSingerId()).getSingerName());
+        }
+        playerSong.setAlbum(qqMusicUtils.albumService.selectByPrimaryKey(song.getSongAlbumId()).getAlbumName());
+        playerSong.setTime(song.getSongTime());
+        playerSong.setLink_url(song.getSongUrl());
+        playerSong.setPicture(song.getSongImgUrl());
+        playerSong.setLink_lrc(song.getSongCyricUrl());
+        return playerSong;
+    }
+    public static List<PlayerSong> listToPlayerSong(List<Song> songList) {
+        List<PlayerSong> playerSongs = new ArrayList<>();
+        for (Song song : songList) {
+            playerSongs.add(QQMusicUtils.toPlayerSong(song));
+        }
+        return playerSongs;
     }
 }
